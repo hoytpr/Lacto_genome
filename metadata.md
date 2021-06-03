@@ -31,9 +31,13 @@ Post-sequencing QC:Trimmomatic v. 0.38
 
 Trimmomatic Command: [script 1](/scripts.md#trim01)
 
-Number of Reads Passed Trimmomatic Read1:542255464
+Trimmed reads were repaired using BBTools `re-pair` software v.  
 
-Number of Reads Passed Trimmomatic Read2:542255464
+Number of Reads Passed Trimmomatic Read1:541086972
+
+Number of Reads Passed Trimmomatic Read2:541086972
+
+
 
 
 
