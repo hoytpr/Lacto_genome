@@ -10,7 +10,7 @@ When possible the bioinformatics of this project will be placed in the following
 
 1. [metadata](/metadata.md)
 
-2. [short scripts](/scripts.md)
+2. [custom scripts and commands](/scripts.md)
 
 3. [notes](/notes.md)
 
