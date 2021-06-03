@@ -29,13 +29,13 @@ Number of Reads Passed Filter Read2:144,378,652
 
 Post-sequencing QC:Trimmomatic v. 0.38 
 
-Trimmomatic Command: [script 1](/scripts.md#trim01)
+Trimmomatic Command: ***[script 1](/scripts.md#trim01)**
 
-Orphaned reads from Trimmomatic were discarded and trimmed reads were repaired using BBTools `re-pair` software v. 38.90 [script 2](/scripts.md#BB01)
+Orphaned reads from Trimmomatic were discarded and trimmed reads were repaired using BBTools `re-pair` software v. 38.90 **[script 2](/scripts.md#BB01)**
 
-Number of Reads Passed Trimmomatic and `re-pair` Read1:135271743
+Number of Reads surviving Trimmomatic and `re-pair` Read1:135,271,743
 
-Number of Reads Passed Trimmomatic and `re-pair` Read2:135271743
+Number of Reads surviving Trimmomatic and `re-pair` Read2:135,271,743
 
 
 
