@@ -4,7 +4,7 @@
 
 ### Process/Pipeline
 
-1. [metadata]({{ site.baseurl }}/metadata)
+1. [metadata]({{ site.baseurl }}/metadata.md)
 
 2. short scripts
 
