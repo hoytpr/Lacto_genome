@@ -6,6 +6,6 @@
 
 1. [metadata](/metadata.md)
 
-2. short scripts
+2. [short scripts](/scripts.md)
 
-3. notes
+3. [notes](/notes.md)
