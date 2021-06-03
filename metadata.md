@@ -29,7 +29,7 @@ Number of Reads Passed Filter Read2:577514608
 
 Post-sequencing QC:Trimmomatic v. 0.38 
 
-Trimmomatic Command: [script 1](/scripts#trim01)
+Trimmomatic Command: [script 1](/scripts.md#trim01)
 
 Number of Reads Passed Trimmomatic Read1:542255464
 
