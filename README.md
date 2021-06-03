@@ -4,7 +4,7 @@
 
 ### Process/Pipeline
 
-Recommended start point is [project](/project.md) page.
+Recommended start point is **[project](/project.md)** page.
 
 When possible the bioinformatics of this project will be placed in the following files.
 
