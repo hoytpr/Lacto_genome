@@ -4,4 +4,8 @@
 
 ### Process/Pipeline
 
-1. 
+1. [metadata]({{ site.baseurl }}/metadata)
+
+2. short scripts
+
+3. notes
