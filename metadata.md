@@ -23,19 +23,19 @@ Primary Data Filenames: L_lactis_S1_LALL_R1_001.fastq.gz,L_lactis_S1_LALL_R2_001
 
 Files processed through `bcl2fastq`?: YES
 
-Number of Reads Passed Filter Read1:577514608
+Number of Reads Passed Filter Read1:144,378,652
 
-Number of Reads Passed Filter Read2:577514608
+Number of Reads Passed Filter Read2:144,378,652
 
 Post-sequencing QC:Trimmomatic v. 0.38 
 
 Trimmomatic Command: [script 1](/scripts.md#trim01)
 
-Trimmed reads were repaired using BBTools `re-pair` software v.  
+Orphaned reads from Trimmomatic were discarded and trimmed reads were repaired using BBTools `re-pair` software v. 38.90 [script 2](/scripts.md#BB01)
 
-Number of Reads Passed Trimmomatic Read1:541086972
+Number of Reads Passed Trimmomatic and `re-pair` Read1:135271743
 
-Number of Reads Passed Trimmomatic Read2:541086972
+Number of Reads Passed Trimmomatic and `re-pair` Read2:135271743
 
 
 
