@@ -1,0 +1,18 @@
+<h1 id="scripts-used-specific-for-this-project">Scripts used (specific for this project)</h1>
+
+<p><a name="trim01"></a>
+Trimmomatic Command: <a href="/notes#01">Note 1:</a></p>
+
+<p><code class="highlighter-rouge">java -jar /opt/trimmomatic/0.38/prebuilt/trimmomatic-0.38.jar PE -threads 4 L_lactis_S1_LALL_R1.trim.fastq.gz L_lactis_S1_LALL_R2.trim.fastq.gz \
+            L_lactis_S1_LALL_R1.trim.Gtrim.fastq.gz L_lactis_S1_LALL_R1.trim.un.Gtrim.fastq.gz \
+            L_lactis_S1_LALL_R2.trim.Gtrim.fastq.gz L_lactis_S1_LALL_R2.trim.un.Gtrim.fastq.gz \
+            SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:NexteraPE-PE-G.fa:2:40:15</code></p>
+
+<p><a name="BB01"></a>
+BBTools re-pair script:</p>
+
+<p><code class="highlighter-rouge">./repair.sh -Xmx10g in1=L_lactis_S1_LALL_R1.trim.Gtrim.fastq in2=L_lactis_S1_LALL_R2.trim.Gtrim.fastq out1=L_lactis_S1_LALL_R1.trim.Gtrim.fixed.fastq out2=L_lactis_S1_LALL_R2.trim.Gtrim.fixed.fastq outsingle=single.fq</code></p>
+
+<ol>
+  <li>For <a href="/fig/">figures click here</a></li>
+</ol>

@@ -1,3 +1,5 @@
+---
+---
 # Lacto_genome
 
 ### The Draft Genome of Lactococcus lactis str. PrHT3
@@ -10,7 +12,6 @@ When possible the bioinformatics of this project will be placed in the following
 
 1. [metadata](/metadata.md)
 
-2. [custom scripts and commands](/scripts)
+2. [custom scripts and commands](/scripts.md)
 
-3. [notes]({{ baseurl }}/notes.md)
-
+3. [notes](/notes.md)
