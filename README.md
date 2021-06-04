@@ -16,6 +16,10 @@ When possible the bioinformatics of this project will be placed in the following
 
 1. [metadata]({{ baseurl }}metadata.md) `({{ baseurl }}metadata.md)`
 
+1. [metadata]({{ baseurl }}/metadata.md) `({{ baseurl }}/metadata.md)`
+
+1. [metadata]({{ baseurl }}/metadata) `({{ baseurl }}/metadata)`
+
 2. [custom scripts and commands](/scripts.md)   `(/scripts.md)`
 
 3. [notes](/notes.md)
