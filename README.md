@@ -6,16 +6,12 @@
 
 ### Process/Pipeline
 
-General Description is on the **[project](/project)** page.
+General Description is on the **[project](/project.md)** page.
 
 When possible the bioinformatics of this project will be placed in the following files.
 
-1. [metadata]({{ baseurl }}/metadata.md)
+1. [metadata](/metadata.md)
 
-2. [custom scripts and commands](/scripts)
+2. [custom scripts and commands](/scripts.md)  # doesn't work on github
 
-3. [notes](/notes)
-
-3. [notes](/notes.md)
-
-1. [metadata]({{ baseurl }}/metadata)
+3. [notes](/notes.md)  # doesn't work on github
