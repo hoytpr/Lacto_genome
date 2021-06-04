@@ -6,7 +6,7 @@ github: [metadata]
 encoding: UTF-8
 
 ### Build settings ###
-url: https://github.com/hoytpr/Lacto_genome
+url: https://hoytpr.github.io
 baseurl: /Lacto_genome
 
 kramdown:
