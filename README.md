@@ -12,5 +12,5 @@ When possible the bioinformatics of this project will be placed in the following
 
 2. [custom scripts and commands](/scripts.md)
 
-3. [notes]({{ site.baseurl }}/notes.md)
+3. [notes](/notes.md)
 
