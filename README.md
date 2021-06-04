@@ -12,7 +12,7 @@ When possible the bioinformatics of this project will be placed in the following
 
 1. [metadata]({{ site.baseurl }}/metadata)
 
-2. [custom scripts and commands](/scripts.md)
+2. [custom scripts and commands](/scripts)
 
 3. [notes](/notes.md)
 
