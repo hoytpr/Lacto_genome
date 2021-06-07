@@ -60,8 +60,8 @@ Plasmid output graph pathways are the most important part of this output. In thi
 ![Lactococcus assembly using --plasmid --careful](/fig/graph1.png).
 
 This graph shows several important issues:
-1. The Illumina sequencing was very high quality as there only one (1) "dead-end".
-2. This graph clearly shsows a separate high-copy-number plasmid.
+1. The Illumina sequencing was very high quality as there is only one (1) "dead-end".
+2. This graph clearly shows at least one separate high-copy-number plasmid.
 3. The graph *implies* there is another high-copy region within the genome assembly.
 
 An additional outputs are the files `assembly_graph_with_scaffolds.gfa` and `assembly_graph.fastg` which are the SPAdes predicted plasmid sequence elements. 
@@ -70,8 +70,8 @@ An additional outputs are the files `assembly_graph_with_scaffolds.gfa` and `ass
 
 Now we can see that SPAdes predicts at least two plasmids with one set of predicted plasmid scaffolds having much higher read counts than the other (or the genomic). Based on these data three processes were performed
 
-1. Isolation of the high-copy read plasmid sequences 
-2. Isolation of the lower-copy read plasmid seqeuences
+1. Isolation of the high-copy read plasmid sequences (Plasmid1)
+2. Isolation of the lower-copy read plasmid sequences (Plasmid2)
 3. Removal of the presumptive plasmid reads from the rest of the genomic reads for assembly. 
 
  

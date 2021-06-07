@@ -25,6 +25,7 @@ zcat L_lactis_S1_LALL_R2.trim.Gtrim.fastq.gz | split -l 4000000 - LacR2
 ```
 [Note 2:](/notes.md#02)
 
+<a name="cat01"> </a>
 Creating readfiles of known size and renaming them simultaneously:
 ```
 cat LacR1aa LacR1ab LacR1ac LacR1ad > LacR1aaabacad.fastq
