@@ -6,7 +6,7 @@
 
 ### Process/Pipeline
 
-General Description is on the **[project](/project.md)** page.
+General Description is on the **[project]({{ site.baseurl }}/project.md)** page.
 
 When possible the bioinformatics of this project will be placed in the following files.
 
