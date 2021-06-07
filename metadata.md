@@ -87,10 +87,10 @@ The metadata for the predicted plasmid sequences is shown below:
   | Graph connectivity| 	| Depth	| |
   | :------------- | :----------: | -----------: | ----- |
   | Dead ends:	 |0	|Median depth:	| 57x|
-  | Percentage dead ends:	| 0.0	| Estimated sequence length:	| 2,84 5,043 bp|
-  | Connected components:	 | 1	| 	|  |
-  | Largest component:	 |  2,57 9,211 bp (100.00%}	| 	| |
-  | otal length orphaned nodes:	| 0bp | | |
+  | Percentage dead ends:	| 0.0	| Estimated sequence length:	| 2,845,043 bp|
+  | Connected components:	 | 1%	| 	|  |
+  | Largest component:	 |  2,579,211 bp (100.00%}	| 	| |
+  | Total length orphaned nodes:	| 0 bp | | |
   
    
     
