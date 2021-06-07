@@ -18,7 +18,7 @@
 
 <p>Archive Location: The University of Oklahoma Petastore (soon to be OURRstore)</p>
 
-<p>Primary Data Filenames: L_lactis_S1_LALL_R1_001.fastq.gz,L_lactis_S1_LALL_R2_001.fastq.gz</p>
+<p>Primary Data Filenames: L_lactis_S1_LALL_R1_001.fastq.gz, L_lactis_S1_LALL_R2_001.fastq.gz</p>
 
 <p>Files processed through <code class="language-plaintext highlighter-rouge">bcl2fastq</code>?: YES</p>
 
@@ -36,6 +36,43 @@
 
 <p>Number of Reads surviving Trimmomatic and <code class="language-plaintext highlighter-rouge">re-pair</code> Read2:135,271,743</p>
 
+<h3 id="assembly">ASSEMBLY</h3>
+
+<p>Current readfile names: L_lactis_S1_LALL_R1.trim.Gtrim.fixed.fastq, L_lactis_S1_LALL_R2
+.trim.Gtrim.fixed.fastq</p>
+
+<p>Genome reads are thresholded to 1-million read chunks <strong><a href="/scripts.md#thresh01">script3</a></strong></p>
+
+<p>Thresholded <code class="language-plaintext highlighter-rouge">.fastq</code> files containing 1M-4M reads each are created by <code class="language-plaintext highlighter-rouge">cat</code> at defined sizes to be tested for best assembly. Smaller and larger sizes were tested. The use of ≤4M reads total gave good overall genome coverage for identifying plasmid elements, while higher numbers (8M) could be used with read mapping. 
+<strong><a href="/scripts.md#cat01">script4</a></strong></p>
+
+<p>After testing, 2M read <code class="language-plaintext highlighter-rouge">fastq</code> files were named: <code class="language-plaintext highlighter-rouge">LacR1aaab.fastq</code>, and <code class="language-plaintext highlighter-rouge">LacR2aaab.fastq</code>. Similarly, 4M read <code class="language-plaintext highlighter-rouge">fastq</code> files were named: <code class="language-plaintext highlighter-rouge">LacR1aaabacad.fastq</code>, and <code class="language-plaintext highlighter-rouge">LacR2aaabacad.fastq</code>.</p>
+
+<h4 id="pre-assembly-assembly-with-plasmids">Pre-Assembly (Assembly with plasmids)</h4>
+
+<p>All Reads were assembled using SPAdes 3.15.0 using the –careful and –plasmid options as in <a href="/scripts.md#scr05">script 5</a>. This step was taken to allow for the removal of plasmid sequences from the genomic assembly if plasmids are present.</p>
+
+<p>Plasmid output graph pathways are the most important part of this output. In this case the file <code class="language-plaintext highlighter-rouge">assembly_graph_after_simplification.gfa</code> is output. This file was opened using <code class="language-plaintext highlighter-rouge">Bandage</code> v. 0.8.1 <a href="http://rrwick.github.io/Bandage/">http://rrwick.github.io/Bandage/</a>. The default image created (colored by read depth) is shown below:</p>
+
+<p><img src="/fig/graph1.png" alt="Lactococcus assembly using --plasmid --careful" />.</p>
+
+<p>This graph shows several important issues:</p>
 <ol>
-  <li>For <a href="/fig/">figures click here</a></li>
+  <li>The Illumina sequencing was very high quality as there only one (1) “dead-end”.</li>
+  <li>This graph clearly shsows a separate high-copy-number plasmid.</li>
+  <li>The graph <em>implies</em> there is another high-copy region within the genome assembly.</li>
 </ol>
+
+<p>An additional outputs are the files <code class="language-plaintext highlighter-rouge">assembly_graph_with_scaffolds.gfa</code> and <code class="language-plaintext highlighter-rouge">assembly_graph.fastg</code> which are the SPAdes predicted plasmid sequence elements.</p>
+
+<p><img src="/fig/graph0_scaffolding.png" alt="Lactococcus predicted plasmids from SPAdes using --plasmid --careful" />.</p>
+
+<p>Now we can see that SPAdes predicts at least two plasmids with one set of predicted plasmid scaffolds having much higher read counts than the other (or the genomic). Based on these data three processes were performed</p>
+
+<ol>
+  <li>Isolation of the high-copy read plasmid sequences</li>
+  <li>Isolation of the lower-copy read plasmid seqeuences</li>
+  <li>Removal of the presumptive plasmid reads from the rest of the genomic reads for assembly.</li>
+</ol>
+
+<p>For <a href="/fig/">figures click here</a></p>

@@ -21,7 +21,7 @@ Data Archive Date: 2021-03-10
 
 Archive Location: The University of Oklahoma Petastore (soon to be OURRstore)
 
-Primary Data Filenames: L_lactis_S1_LALL_R1_001.fastq.gz,L_lactis_S1_LALL_R2_001.fastq.gz
+Primary Data Filenames: L_lactis_S1_LALL_R1_001.fastq.gz, L_lactis_S1_LALL_R2_001.fastq.gz
 
 Files processed through `bcl2fastq`?: YES
 
@@ -39,6 +39,49 @@ Number of Reads surviving Trimmomatic and `re-pair` Read1:135,271,743
 
 Number of Reads surviving Trimmomatic and `re-pair` Read2:135,271,743
 
+### ASSEMBLY
+
+Current readfile names: L_lactis_S1_LALL_R1.trim.Gtrim.fixed.fastq, L_lactis_S1_LALL_R2
+.trim.Gtrim.fixed.fastq
+
+Genome reads are thresholded to 1-million read chunks **[script3](/scripts.md#thresh01)**
+
+Thresholded `.fastq` files containing 1M-4M reads each are created by `cat` at defined sizes to be tested for best assembly. Smaller and larger sizes were tested. The use of ≤4M reads total gave good overall genome coverage for identifying plasmid elements, while higher numbers (8M) could be used with read mapping. 
+**[script4](/scripts.md#cat01)**
+
+After testing, 2M read `fastq` files were named: `LacR1aaab.fastq`, and `LacR2aaab.fastq`. Similarly, 4M read `fastq` files were named: `LacR1aaabacad.fastq`, and `LacR2aaabacad.fastq`.
+
+#### Pre-Assembly (Assembly with plasmids)
+
+All Reads were assembled using SPAdes 3.15.0 using the --careful and --plasmid options as in [script 5](/scripts.md#scr05). This step was taken to allow for the removal of plasmid sequences from the genomic assembly if plasmids are present. 
+
+Plasmid output graph pathways are the most important part of this output. In this case the file `assembly_graph_after_simplification.gfa` is output. This file was opened using `Bandage` v. 0.8.1 [http://rrwick.github.io/Bandage/](http://rrwick.github.io/Bandage/). The default image created (colored by read depth) is shown below:
+
+![Lactococcus assembly using --plasmid --careful](/fig/graph1.png).
+
+This graph shows several important issues:
+1. The Illumina sequencing was very high quality as there only one (1) "dead-end".
+2. This graph clearly shsows a separate high-copy-number plasmid.
+3. The graph *implies* there is another high-copy region within the genome assembly.
+
+An additional outputs are the files `assembly_graph_with_scaffolds.gfa` and `assembly_graph.fastg` which are the SPAdes predicted plasmid sequence elements. 
+
+![Lactococcus predicted plasmids from SPAdes using --plasmid --careful](/fig/graph0_scaffolding.png).
+
+Now we can see that SPAdes predicts at least two plasmids with one set of predicted plasmid scaffolds having much higher read counts than the other (or the genomic). Based on these data three processes were performed
+
+1. Isolation of the high-copy read plasmid sequences 
+2. Isolation of the lower-copy read plasmid seqeuences
+3. Removal of the presumptive plasmid reads from the rest of the genomic reads for assembly. 
+
+ 
+  
+   
+    
+	 
+	  
+	   
+	   
 
 
 
@@ -46,4 +89,9 @@ Number of Reads surviving Trimmomatic and `re-pair` Read2:135,271,743
 
 
 
-1. For [figures click here](/fig/)
+
+
+
+
+
+For [figures click here](/fig/)

@@ -13,6 +13,29 @@ BBTools re-pair script:</p>
 
 <p><code class="language-plaintext highlighter-rouge">./repair.sh -Xmx10g in1=L_lactis_S1_LALL_R1.trim.Gtrim.fastq in2=L_lactis_S1_LALL_R2.trim.Gtrim.fastq out1=L_lactis_S1_LALL_R1.trim.Gtrim.fixed.fastq out2=L_lactis_S1_LALL_R2.trim.Gtrim.fixed.fastq outsingle=single.fq</code></p>
 
+<p><a name="thresh01"></a>
+Thresholding the reads into manageable chunks for assembly</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tar -czf L_lactis_S1_LALL_R1.trim.Gtrim.fastq.gz L_lactis_S1_LALL_R1.trim.Gtrim.fixed.fastq
+tar -czf L_lactis_S2_LALL_R1.trim.Gtrim.fastq.gz L_lactis_S2_LALL_R1.trim.Gtrim.fixed.fastq
+zcat L_lactis_S1_LALL_R1.trim.Gtrim.fastq.gz | split -l 4000000 - LacR1
+zcat L_lactis_S1_LALL_R2.trim.Gtrim.fastq.gz | split -l 4000000 - LacR2
+</code></pre></div></div>
+<p><a href="/notes.md#02">Note 2:</a></p>
+
+<p>Creating readfiles of known size and renaming them simultaneously:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat LacR1aa LacR1ab LacR1ac LacR1ad &gt; LacR1aaabacad.fastq
+cat LacR2aa LacR2ab LacR2ac LacR2ad &gt; LacR2aaabacad.fastq
+</code></pre></div></div>
+
+<h4 id="plasmid-spades">Plasmid SPAdes</h4>
+
+<p><a name="scr05"></a>
+First assemblies are to locate plasmid sequences:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>spades/3.15.0
+python3/3.6.4
+spades.py -t 32 -m 96 -k 29,31,33,55 -1 LacR1aaabacad.fastq -2 LacR2aaabacad.fastq --careful --plasmid --cov-cutoff auto -o LACaaabR1R2acad_careful_plasmid
+</code></pre></div></div>
+
 <ol>
   <li>For <a href="/fig/">figures click here</a></li>
 </ol>
