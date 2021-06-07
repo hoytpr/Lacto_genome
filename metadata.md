@@ -75,6 +75,7 @@ Now we can see that SPAdes predicts at least two plasmids with one set of predic
 3. Removal of the presumptive plasmid reads from the rest of the genomic reads for assembly. 
 
 The metadata for the predicted plasmid sequences is shown below:
+|----------|----------|----------|--------|
 |Node count:	|1,743	|N50:	|37,182 bp|
 |Edge count:	 |2,358	|Shortest node:	|32 bp|
 |Edge overlaps:	|31 bp	|Lower quartile node:	|45 bp|
