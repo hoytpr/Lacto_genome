@@ -87,8 +87,8 @@ The metadata for the SPAdes assembly from 8M reads using the --careful --plasmid
   | Graph connectivity| 	| Depth	| |
   | :------------- | :----------: | -----------: | ----- |
   | Dead ends:	 |0	|Median depth:	| 57x|
-  | Percentage dead ends:	| 0.0	| Estimated sequence length:	| 2,845,043 bp|
-  | Connected components:	 | 1%	| 	|  |
+  | Percentage dead ends:	| 0.0%	| Estimated sequence length:	| 2,845,043 bp|
+  | Connected components:	 | 1	| 	|  |
   | Largest component:	 |  2,579,211 bp (100.00%}	| 	| |
   | Total length orphaned nodes:	| 0 bp | | |
   
