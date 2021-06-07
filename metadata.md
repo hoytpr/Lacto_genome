@@ -66,15 +66,15 @@ This graph shows several important issues:
 
 An additional outputs are the files `assembly_graph_with_scaffolds.gfa` and `assembly_graph.fastg` which are the SPAdes predicted plasmid sequence elements. 
 
-![Lactococcus predicted plasmids from SPAdes using --plasmid --careful](/fig/graph0_scaffolding.png).
+![Lactococcus predicted plasmids from SPAdes using --plasmid --careful](/fig/graph0_scaffolding.png)
 
-Now we can see that SPAdes predicts at least two plasmids with one set of predicted plasmid scaffolds having much higher read counts than the other (or the genomic). Based on these data three processes were performed
+Now we can see that SPAdes predicts at least two plasmids with one set of predicted plasmid scaffolds having much higher read counts than the other (or the genomic). Based on these data three processes were performed:
 
 1. Isolation of the high-copy read plasmid sequences (Plasmid1)
 2. Isolation of the lower-copy read plasmid sequences (Plasmid2)
 3. Removal of the presumptive plasmid reads from the rest of the genomic reads for assembly. 
 
-The metadata for the predicted plasmid sequences is shown below:
+The metadata for the SPAdes assembly from 8M reads using the --careful --plasmid options is shown below:
 
   | Node count:	| 1,743	| N50:	| 37,182 bp|
   | :------------- | :----------: | -----------: | ----- |
