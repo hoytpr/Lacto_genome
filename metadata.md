@@ -54,7 +54,7 @@ After testing, 2M read `fastq` files were named: `LacR1aaab.fastq`, and `LacR2aa
 
 #### Pre-Assembly (Assembly with plasmids)
 
-Initially 8M reads were assembled using SPAdes 3.15.0 using the --careful and --plasmid options as in **[Script 5](/scripts.md#scr05)**. This step allowed for the visualization and removal of any plasmid sequences from the genomic assembly. 
+Initially 8M reads were assembled using SPAdes 3.15.0 using the `--careful` and `--plasmid` options as in **[Script 5](/scripts.md#scr05)**. This step allowed for the visualization and removal of any plasmid sequences from the genomic assembly. 
 
 Plasmid output assembly graph pathways (`.gfa` files) are the most important part of this output. In this case the file `assembly_graph_after_simplification.gfa` is output. The `.gfa` file was opened using `Bandage` v. 0.8.1 [http://rrwick.github.io/Bandage/](http://rrwick.github.io/Bandage/). The default assembly graph image created (colored by read depth) is shown below:
 
