@@ -89,13 +89,41 @@ grep -A3 --file=bigR2aaabacadNames LacR2aaabacad.fastq > R1Plasmid2 | grep -E -v
 ```
 
 <a name="scr11"></a>
-Script 11
+Script 11: Create a file of all plasmid read names
 ```
 cat R1aaabacadNames bigR1aaabacadNames > plasmidnames
-grep -v --file plasmidnames LacR1aaabacad.fastq > gLacR1.fastq
-grep -v --file plasmidnames LacR2aaabacad.fastq > gLacR2.fastq
+sort -u plasmidnames -o sortedallplasmidnames
 ```
 
+Script 12: Create a list of all read names, clean the list up, then remove all plasmid read names
+creating a file of only genomic reads names
+```
+grep NB501827 LacR1aaabacad.fastq > R1Allreadnames
+grep NB501827 LacR2aaabacad.fastq > R2Allreadnames
+awk '{print $1}' R2Allreadnames | uniq > R2aaabacadNames
+awk '{print $1}' R2Allreadnames | uniq > R2aaabacadNames
+grep -v --file=sortedallplasmidnames R1aaabacadNames > gR1aaabacadNames
+grep -v --file=sortedallplasmidnames R2aaabacadNames > gR2aaabacadNames
+```
+
+Script 13: Extract the fastq file of the genomic reads and clean it
+```
+grep -A3 --file= gR1aaabacadNames LacR1aaabacad.fastq > gLacR1aaabacad.fastq
+grep -A3 --file= gR2aaabacadNames LacR2aaabacad.fastq > gLacR2aaabacad.fastq
+grep -v '\--' gLacR1aaabacad.fastq > gLacR1aaabacadfixed.fastq
+grep -v ‘\--‘ gLacR2aaabacad.fastq > gLacR2aaabacadfixed.fastq
+```
+
+```
+
+Script 12: In this case, it is easy to use the run number
+grep NB501827 LacR1aaabacad.fastq > R1Allreadnames
+grep NB501827 LacR2aaabacad.fastq > R2Allreadnames
+grep -v --file=sortedallplasmidnames R2aaabacadNames > gR2aaabacadNames
+awk '{print $1}' R1Allreadnames | uniq > R1aaabacadNames
+awk '{print $1}' R12Allreadnames | uniq > R2aaabacadNames
+grep -A3 --file= gR1aaabacadNames LacR1aaabacad.fastq > gLacR1aaabacad.fastq
+grep -A3 --file= gR2aaabacadNames LacR2aaabacad.fastq > gLacR2aaabacad.fastq
 
 
 
