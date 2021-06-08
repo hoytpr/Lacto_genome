@@ -125,7 +125,7 @@ $ wc -l gLacR2aaabacadfixed.fastq
 14011972 gLacR2aaabacadfixed.fastq  (3,502,993 reads)
 ```
 
-
+[HOME](/README.md)
 
 
 1. For [figures click here](/fig/)

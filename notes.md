@@ -26,7 +26,7 @@ LacR2ae
 ```
 These are renamed as `.fastq` files in the next steps when they are concatenated.
 
-
+[HOME](/README.md)
 
 
 
