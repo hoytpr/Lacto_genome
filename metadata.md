@@ -54,7 +54,7 @@ After testing, 2M read `fastq` files were named: `LacR1aaab.fastq`, and `LacR2aa
 
 #### Pre-Assembly (Assembly with plasmids)
 
-Initially 8M reads were assembled using SPAdes 3.15.0 using the --careful and --plasmid options as in [script 5](/scripts.md#scr05). This step allowed for the visualization and removal of any plasmid sequences from the genomic assembly. 
+Initially 8M reads were assembled using SPAdes 3.15.0 using the --careful and --plasmid options as in **[script 5](/scripts.md#scr05)**. This step allowed for the visualization and removal of any plasmid sequences from the genomic assembly. 
 
 Plasmid output assembly graph pathways (`.gfa` files) are the most important part of this output. In this case the file `assembly_graph_after_simplification.gfa` is output. The `.gfa` file was opened using `Bandage` v. 0.8.1 [http://rrwick.github.io/Bandage/](http://rrwick.github.io/Bandage/). The default assembly graph image created (colored by read depth) is shown below:
 
@@ -65,7 +65,7 @@ This graph shows several important issues:
 2. This graph clearly shows at least one separate high-copy-number plasmid.
 3. The graph *implies* there is another disproportionately high-copy region within the genome assembly.
 
-An additional outputs are the files `assembly_graph_with_scaffolds.gfa` and `assembly_graph.fastg` which contain only the SPAdes predicted plasmid sequence elements, and `assembly_graph.fastg` visualized with `Bandage` is shown below:
+Additional outputs are the files `assembly_graph_with_scaffolds.gfa` and `assembly_graph.fastg` which contain only the SPAdes predicted plasmid sequence elements. The `assembly_graph.fastg` file is visualized with `Bandage` as shown below:
 
 ![Lactococcus predicted plasmids from SPAdes using --plasmid --careful](/fig/graph0_scaffolding.png)
 
@@ -96,15 +96,15 @@ The metadata for the SPAdes assembly from 8M reads using the --careful --plasmid
   
   ### Read data separation
   
-  - The nodes of the presumptive plasmids can be selected, and the sequences can be output from Bandage as `.fasta` files (e.g. "Bandage_plasmid1.fasta" and "Bandage_plasmid2.fasta". 
-  - To identify reads corresponding to these sequences, the Bandage `.fasta` outputs were converted into a Blast+ database (v. 2.8.1) [script 6](/scripts.md#scr06).
-  - The complete set of Lactococcus reads `.fastq` files can be converted to `.fasta` files [script 7](/scripts.md#scr07).
-  - The Blast database can then be queried with the Lactococcus reads `.fasta` files outputting the read names that match the plasmid node sequences [script 8](/scripts.md#scr08).
-  - The read names can be cleaned up with an `awk` script [script 9](/scripts.md#scr09) to make a file with only read names  
-  - The cleaned read names can then be used directly on the original read `fastq` files to output the presumptive plasmid reads [script 10](/scripts.md#scr10) or to combine plasmid reads and exclude those reads creating genomic read files [script 11](/scripts.md#scr11).
-  - Create a file of all read names and remove all presumptive plasmid read names from the file [script 12](/scripts.md#scr12)
-  - Use the genomics read names to extract the fastq reads [script 13](scripts.md#scr13)
-  - Determine the number of genomic reads remaining to reassemble the genome [script 14](scripts.md#scr14). 
+  - The nodes of the presumptive plasmids can be selected, and the sequences can be output from Bandage as `.fasta` files (*e.g.* "Bandage_plasmid1.fasta" and "Bandage_plasmid2.fasta"). 
+  - To identify reads corresponding to these sequences, the Bandage `.fasta` outputs were converted into a Blast+ database (v. 2.8.1) **[script 6](/scripts.md#scr06)**.
+  - The complete set of Lactococcus reads `.fastq` files can be converted to `.fasta` files **[script 7](/scripts.md#scr07)**.
+  - The Blast database can then be queried with the Lactococcus reads `.fasta` files outputting the read names that match the plasmid node sequences **[script 8](/scripts.md#scr08)**.
+  - The read names can be cleaned up with an `awk` script **[script 9](/scripts.md#scr09)** to make a file with only read names  
+  - The cleaned read names can then be used directly on the original read `fastq` files to output the presumptive plasmid reads **[script 10](/scripts.md#scr10)** or to combine plasmid reads and exclude those reads creating genomic read files **[script 11](/scripts.md#scr11)**.
+  - Create a file of all read names and remove all presumptive plasmid read names from the file **[script 12](/scripts.md#scr12)**.
+  - Use the genomics read names to extract the fastq reads **[script 13](scripts.md#scr13)**.
+  - Determine the number of genomic reads remaining to reassemble the genome **[script 14](scripts.md#scr14)**. 
   
  **NOTE:**
  
