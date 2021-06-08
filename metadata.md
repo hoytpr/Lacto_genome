@@ -106,12 +106,14 @@ The metadata for the SPAdes assembly from 8M reads using the --careful --plasmid
   - Determine the number of genomic reads remaining to reassemble the genome [script 14](scripts.md#scr14). 
   
  **NOTE:**
+ 
   At end of isolating genomic reads:
-  $ wc -l gLacR1aaabacadfixed.fastq
-14011972 gLacR1aaabacadfixed.fastq (3,502,993 reads)
+```
+$ wc -l gLacR1aaabacadfixed.fastq
+14011972 gLacR1aaabacadfixed.fastq  #(3,502,993 reads)
 $ wc -l gLacR2aaabacadfixed.fastq
-14011972 gLacR2aaabacadfixed.fastq  (3,502,993 reads)
-
+14011972 gLacR2aaabacadfixed.fastq  #(3,502,993 reads)
+```
     
 	 
 	  
