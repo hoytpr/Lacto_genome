@@ -95,6 +95,7 @@ cat R1aaabacadNames bigR1aaabacadNames > plasmidnames
 sort -u plasmidnames -o sortedallplasmidnames
 ```
 
+<a name="scr12"></a>
 Script 12: Create a list of all read names, clean the list up, then remove all plasmid read names
 creating a file of only genomic reads names
 ```
@@ -106,6 +107,7 @@ grep -v --file=sortedallplasmidnames R1aaabacadNames > gR1aaabacadNames
 grep -v --file=sortedallplasmidnames R2aaabacadNames > gR2aaabacadNames
 ```
 
+<a name="scr13"></a>
 Script 13: Extract the fastq file of the genomic reads and clean it
 ```
 grep -A3 --file= gR1aaabacadNames LacR1aaabacad.fastq > gLacR1aaabacad.fastq
@@ -114,6 +116,7 @@ grep -v '\--' gLacR1aaabacad.fastq > gLacR1aaabacadfixed.fastq
 grep -v ‘\--‘ gLacR2aaabacad.fastq > gLacR2aaabacadfixed.fastq
 ```
 
+<a name="scr14"></a>
 Script 14: Don't end on number 13:
 ```
 $ wc -l gLacR1aaabacadfixed.fastq
