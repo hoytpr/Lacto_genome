@@ -45,10 +45,10 @@ Number of Reads surviving Trimmomatic and `re-pair` Read2:135,271,743
 Current readfile names: L_lactis_S1_LALL_R1.trim.Gtrim.fixed.fastq, L_lactis_S1_LALL_R2
 .trim.Gtrim.fixed.fastq
 
-Genome reads are thresholded to 1-million read chunks **[Script3](/scripts.md#thresh01)**
+Genome reads are thresholded to 1-million read chunks **[Script 3](/scripts.md#thresh01)**
 
 Thresholded `.fastq` files containing 1M-4M reads each are created by `split` at defined sizes to be tested for best assembly. Smaller and larger sizes were tested. The use of ≤4M reads total gave good overall genome coverage for identifying plasmid elements, while higher numbers (8M) could be used with read mapping. 
-**[Script4](/scripts.md#cat01)**
+**[Script 4](/scripts.md#cat01)**
 
 After testing, 2M read `fastq` files were named: `LacR1aaab.fastq`, and `LacR2aaab.fastq`. Similarly, 4M read `fastq` files were named: `LacR1aaabacad.fastq`, and `LacR2aaabacad.fastq`.
 
