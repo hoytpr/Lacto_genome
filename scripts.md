@@ -43,14 +43,14 @@ spades.py -t 32 -m 96 -k 29,31,33,55 -1 LacR1aaabacad.fastq -2 LacR2aaabacad.fas
 ```
 
 <a name="scr06"></a>
-Script 6
+Script 6: Use Bandage to select plasmids as fasta files
 ```
 blast+/2.8.1
 makeblastdb -in Bandage_plasmid1.fasta -out /lactoplasmid/lactoplasmid/lactoplas_db -parse_seqids -dbtype nucl
 makeblastdb -in Bandage_plasmid2.fasta -out /lactoplasmid/biglactoplasmid/biglactoplas_db -parse_seqids -dbtype nucl
 ```
 
-Script 7
+Script 7: Make `.fasta` files from the `.fastq` reads [Note 3:](/notes.md#03)
 <a name="scr07"></a>
 ```
 cat LacR1aaabacad.fastq | grep -A1 @ | grep -Ev '\--' > LacR1aaabacad.fasta
@@ -71,7 +71,7 @@ blastn -db /lactoplasmid/biglactoplasmid/biglactoplas_db -num_threads 32 -evalue
 ```
 
 <a name="scr09"></a>
-Script 9
+Script 9: Extracts only the read name (actually the "qseqid") to a file
 ```
 awk '{print $1}' R1aaabacadlactoplas.out | uniq > R1aaabacadNames
 awk '{print $1}' R2aaabacadlactoplas.out | uniq > R2aaabacadNames
@@ -108,7 +108,7 @@ grep -v --file=sortedallplasmidnames R2aaabacadNames > gR2aaabacadNames
 ```
 
 <a name="scr13"></a>
-Script 13: Extract the fastq file of the genomic reads and clean it
+Script 13: Extract the fastq file of the genomic reads and clean it [Note 4:](/notes.md#04)
 ```
 grep -A3 --file= gR1aaabacadNames LacR1aaabacad.fastq > gLacR1aaabacad.fastq
 grep -A3 --file= gR2aaabacadNames LacR2aaabacad.fastq > gLacR2aaabacad.fastq
