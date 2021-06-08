@@ -114,16 +114,14 @@ grep -v '\--' gLacR1aaabacad.fastq > gLacR1aaabacadfixed.fastq
 grep -v ‘\--‘ gLacR2aaabacad.fastq > gLacR2aaabacadfixed.fastq
 ```
 
+Script 14: Don't end on number 13:
+```
+$ wc -l gLacR1aaabacadfixed.fastq
+14011972 gLacR1aaabacadfixed.fastq (3,502,993 reads)
+$ wc -l gLacR2aaabacadfixed.fastq
+14011972 gLacR2aaabacadfixed.fastq  (3,502,993 reads)
 ```
 
-Script 12: In this case, it is easy to use the run number
-grep NB501827 LacR1aaabacad.fastq > R1Allreadnames
-grep NB501827 LacR2aaabacad.fastq > R2Allreadnames
-grep -v --file=sortedallplasmidnames R2aaabacadNames > gR2aaabacadNames
-awk '{print $1}' R1Allreadnames | uniq > R1aaabacadNames
-awk '{print $1}' R12Allreadnames | uniq > R2aaabacadNames
-grep -A3 --file= gR1aaabacadNames LacR1aaabacad.fastq > gLacR1aaabacad.fastq
-grep -A3 --file= gR2aaabacadNames LacR2aaabacad.fastq > gLacR2aaabacad.fastq
 
 
 
