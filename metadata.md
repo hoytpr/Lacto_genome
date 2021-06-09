@@ -131,7 +131,7 @@ $ wc -l gLacR2aaabacadfixed.fastq
  
  We used CP065736.1 as a reference "genome" to map our Plasmid 2 sequences as a `.SAM` files, and similarly to a `.BAM` file for submission to NCBI with assemblies under BioProject PRJNA731925. 
  
- The Plasmid 1 consensus sequence did not show an overall homology greater than 60% to any plasmids or genomes in the NCBI databases. We determined that Plasmid 1 was "novel" and would have to be submitted as `.fastq` reads to the SRA, and assembly sequence as contigs only to NCBI with BioProject PRJNA731925. 
+ The Plasmid 1 consensus sequence did not show an overall homology greater than 60% to any plasmids or genomes in the NCBI databases. We determined that Plasmid 1 was "novel" and would have to be submitted as `.fastq` reads to the SRA, and assembly sequence as contigs only to NCBI with BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925). 
  
  
  
