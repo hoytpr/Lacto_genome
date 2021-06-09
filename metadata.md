@@ -138,7 +138,7 @@ $ wc -l gLacR2aaabacadfixed.fastq
  and used [CP065737.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1) as the reference genome. Notice that the N50 greatly improved over what was reported by the SPAdes output. 
  The integration of the plasmid into the genome of [CP065737.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1) may be responsible for this
  
-| Genome |	Plasmid1ab | Plasmid2 |
+| | Genome |	Plasmid1ab | Plasmid2 |
 | :--- | :--- | :--- | :--- |
 | N50 | 134484 | 4564 | 11477|
 | GC% | 35.22 | 31.69 | 34.69 |
