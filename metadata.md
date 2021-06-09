@@ -133,7 +133,13 @@ $ wc -l gLacR2aaabacadfixed.fastq
  
  The Plasmid 1 consensus sequence did not show an overall homology greater than 60% to any plasmids or genomes in the NCBI databases. We determined that Plasmid 1 was "novel" and would have to be submitted as `.fastq` reads to the SRA, and assembly sequence as contigs only to NCBI with BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925). 
  
+ To determine the N50 of the separate molecules, I used quast software on each of the `.fasta` files 
+ and used [CP065737.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1) as the reference genome. Notice that the N50 greatly improved over what was reported by the SPAdes output. 
+ The integration of the plasmid into the genome of [CP065737.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1) may be responsible for this
  
+  |Genome |	Plasmid1ab | Plasmid2 |
+  | N50 | 134484 | 4564 | 11477|
+  | GC% | 35.22 | 31.69 | 34.69 |
  
  
  
