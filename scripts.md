@@ -117,13 +117,47 @@ grep -v ‘\--‘ gLacR2aaabacad.fastq > gLacR2aaabacadfixed.fastq
 ```
 
 <a name="scr14"></a>
-Script 14: Don't end on number 13:
+Script 14: Reassemble genome with plasmid readsd removed: [Note 5](/notes.md#05)
 ```
 $ wc -l gLacR1aaabacadfixed.fastq
 14011972 gLacR1aaabacadfixed.fastq (3,502,993 reads)
 $ wc -l gLacR2aaabacadfixed.fastq
 14011972 gLacR2aaabacadfixed.fastq  (3,502,993 reads)
+spades.py -t 32 -m 768 -k 29,31,33,55 -1 gLacR1aaabacadfixed.fastq -2 gLacR2aaabacadfixed.fastq --careful --plasmid --cov-cutoff auto -o gLACaaabacad_plasmid
 ```
+
+### Creating SAM and BAM file outputs
+
+<a name="scr15"></a>
+Script 15: Creating `.SAM` file output
+```
+Bowtie2/2.3.4.1
+bowtie2-build CP065737.1.fasta lactococcus
+bowtie2-inspect -a -s lactococcus
+bowtie2 --threads 32 --end-to-end --no-unal -k 31 -I 300 -p 32 -X 600 -x lactococcus -q -1 gLacR1aaabacadfixed.fastq -2 gLacR2aaabacadfixed.fastq -S gLAC_final.sam
+```
+
+<a name="scr16"></a>
+Script 16: Creating a `.BAM` file output
+```
+samtools/1.10
+samtools view -bS gLAC_final.sam > gLAC_final.bam
+samtools sort gLAC_final.bam -o gLAC_final.sorted.bam
+samtools index -b gLAC_final.sorted.bam
+```
+
+
+<a name="scr17"></a>
+Script 18: Creating a consensus sequence (optional)
+```
+bcftools/1.8
+samtools/1.8
+samtools mpileup -uf FDAARGOS_865-sequence.fasta lacto-final.sorted.bam | bcftools call -c | vcfutils.pl vcf2fq > consensus.fq
+```
+
+
+
+
 
 [HOME](/README.md)
 
