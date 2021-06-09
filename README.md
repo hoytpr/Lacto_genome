@@ -15,3 +15,5 @@ When possible the bioinformatics of this project will be placed in the following
 2. [custom scripts and commands](/scripts.md)
 
 3. [notes](/notes.md)
+
+4. [Citations and acknowledgements](/citations.md)
