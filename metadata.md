@@ -103,7 +103,7 @@ The metadata for the SPAdes assembly from 8M reads using the --careful --plasmid
   - The complete set of Lactococcus reads `.fastq` files was converted to `.fasta` files **[Script 7](/scripts.md#scr07)**.
   - The Blast database was queried with the Lactococcus reads `.fasta` files outputting the read names that match the plasmid node sequences **[Script 8](/scripts.md#scr08)**.
   - The read names were cleaned up with an `awk` script **[Script 9](/scripts.md#scr09)** to make a file with ***only*** read names  
-  - The cleaned read names can then be used directly on the original read `fastq` files to output the presumptive plasmid reads **[Script 10](/scripts.md#scr10)** or to combine plasmid read names **[Script 11](/scripts.md#scr11)** and create a ***genomic*** read names file by create a file of **all** read names and removing all presumptive plasmid read names from the file **[Script 12](/scripts.md#scr12)**.
+  - The cleaned read names can then be used directly on the original read `fastq` files to output the presumptive plasmid reads **[Script 10](/scripts.md#scr10)** or to combine plasmid read names **[Script 11](/scripts.md#scr11)** and create a ***genomic*** read names file by creating a file of **all** read names and removing all presumptive plasmid read names from the file **[Script 12](/scripts.md#scr12)**.
   - Use the genomics read names to extract the genomics fastq reads **[Script 13](scripts.md#scr13)**.
   - Determine the number of genomic reads remaining.
 
