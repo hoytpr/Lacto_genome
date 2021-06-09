@@ -95,7 +95,7 @@ The metadata for the SPAdes assembly from 8M reads using the --careful --plasmid
   | Largest component:	 |  2,579,211 bp (100.00%}	| 	| |
   | Total length orphaned nodes:	| 0 bp | | |
   
-  #*
+  # *
   
   #### [NOTE](/notes.md#n50)
   
