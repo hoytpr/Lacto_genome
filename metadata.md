@@ -140,9 +140,47 @@ $ wc -l gLacR2aaabacadfixed.fastq
   |Genome |	Plasmid1ab | Plasmid2 |
   | N50 | 134484 | 4564 | 11477|
   | GC% | 35.22 | 31.69 | 34.69 |
+
+Here's the QUAST outputs for each assembly:
  
- 
- 
+| Genome statistics | L_lactis_PrHT3_with_plasmids | L_lactis_PrHT3_Plasmid1ab | L_lactis_PrHT3_Plasmid2| L_lactis_PrHT3_genome_only |
+|-|-|-|-|-|
+| NG50 | 134484 | - | - | 134484 |
+| NG90 | 20903 | - | - | 20903 |
+| NA50 | - | - | - | - |
+| NA90 | - | - | - | - |
+| NGA50 | - | - | - | - |
+| NGA90 | - | - | - | - |
+| LG50 | 5 | - | - | 5 |
+| LG90 | 23 | - | - | 23 |
+| LA50 | - | - | - | - |
+| LA90 | - | - | - | - |
+| LGA50 | - | - | - | - |
+| LGA90 | - | - | - | - |
+| Mismatches |  |  |  |  |
+| # N's per 100 kbp | 0 | 0 | 0 | 0 |
+| # N's | 0 | 0 | 0 | 0 |
+| Statistics without reference |  |  |  |  |
+| # contigs | 77 | 4 | 7 | 66 |
+| # contigs (>= 0 bp) | 119 | 8 | 13 | 98 |
+| # contigs (>= 1000 bp) | 65 | 4 | 7 | 54 |
+| # contigs (>= 5000 bp) | 37 | 0 | 5 | 32 |
+| # contigs (>= 10000 bp) | 33 | 0 | 4 | 29 |
+| # contigs (>= 25000 bp) | 20 | 0 | 0 | 20 |
+| # contigs (>= 50000 bp) | 14 | 0 | 0 | 14 |
+| Largest contig | 435796 | 4753 | 12568 | 435796 |
+| Total length | 2506114 | 11842 | 55552 | 2438720 |
+| Total length (>= 0 bp) | 2518618 | 12772 | 57382 | 2448464 |
+| Total length (>= 1000 bp) | 2497578 | 11842 | 55552 | 2430184 |
+| Total length (>= 5000 bp) | 2432816 | 0 | 52464 | 2380352 |
+| Total length (>= 10000 bp) | 2400036 | 0 | 46492 | 2353544 |
+| Total length (>= 25000 bp) | 2207483 | 0 | 0 | 2207483 |
+| Total length (>= 50000 bp) | 1970301 | 0 | 0 | 1970301 |
+| N50 | 134484 | 4564 | 11477 | 134484 |
+| N90 | 20903 | 1367 | 5972 | 32769 |
+| L50 | 5 | 2 | 3 | 5 |
+| L90 | 23 | 3 | 5 | 20 |
+| GC (%) | 35.22 | 31.69 | 34.69 | 35.25 |
  
 
 
