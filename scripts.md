@@ -152,7 +152,7 @@ Script 18: Creating a consensus sequence (optional)
 ```
 bcftools/1.8
 samtools/1.8
-samtools mpileup -uf FDAARGOS_865-sequence.fasta lacto-final.sorted.bam | bcftools call -c | vcfutils.pl vcf2fq > consensus.fq
+samtools mpileup -uf CP065737.1.fasta gLAC_final.sorted.bam | bcftools call -c | vcfutils.pl vcf2fq > gLAC_consensus.fq
 ```
 
 
