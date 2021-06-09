@@ -138,27 +138,19 @@ $ wc -l gLacR2aaabacadfixed.fastq
  The integration of the plasmid into the genome of [CP065737.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1) may be responsible for this
  
   |Genome |	Plasmid1ab | Plasmid2 |
+  | --- | --- | --- | --- |
   | N50 | 134484 | 4564 | 11477|
   | GC% | 35.22 | 31.69 | 34.69 |
 
 Here's the QUAST outputs for each assembly:
  
-| Genome statistics | L_lactis_PrHT3_with_plasmids | L_lactis_PrHT3_Plasmid1ab | L_lactis_PrHT3_Plasmid2| L_lactis_PrHT3_genome_only |
+| Genome stats | PrHT3_with_plasmids | PrHT3_Plasmid1ab | PrHT3_Plasmid2| PrHT3_genome_only |
 |-|-|-|-|-|
 | NG50 | 134484 | - | - | 134484 |
 | NG90 | 20903 | - | - | 20903 |
-| NA50 | - | - | - | - |
-| NA90 | - | - | - | - |
-| NGA50 | - | - | - | - |
-| NGA90 | - | - | - | - |
 | LG50 | 5 | - | - | 5 |
 | LG90 | 23 | - | - | 23 |
-| LA50 | - | - | - | - |
-| LA90 | - | - | - | - |
-| LGA50 | - | - | - | - |
-| LGA90 | - | - | - | - |
 | Mismatches |  |  |  |  |
-| # N's per 100 kbp | 0 | 0 | 0 | 0 |
 | # N's | 0 | 0 | 0 | 0 |
 | Statistics without reference |  |  |  |  |
 | # contigs | 77 | 4 | 7 | 66 |
