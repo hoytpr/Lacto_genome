@@ -79,7 +79,7 @@ Now we can see that SPAdes predicts at least two plasmids with one set of predic
 
 The metadata for the SPAdes assembly from 8M reads using the --careful --plasmid options is shown below:
 
-  | Node count:	| 1,743	| N50:	| 37,182 bp|
+  | Node count:	| 1,743	| N50:	| 37,182 bp* |
   | :------------- | :----------: | -----------: | ----- |
   | Edge count:	 | 2,358	|Shortest node:	| 32 bp|
   | Edge overlaps:	| 31 bp	| Lower quartile node:	| 45 bp|
@@ -94,7 +94,8 @@ The metadata for the SPAdes assembly from 8M reads using the --careful --plasmid
   | Connected components:	 | 1	| 	|  |
   | Largest component:	 |  2,579,211 bp (100.00%}	| 	| |
   | Total length orphaned nodes:	| 0 bp | | |
-  
+  #*
+  #### [NOTE](/notes.md#n50)
   
   ### Read data separation
   

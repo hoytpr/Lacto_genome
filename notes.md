@@ -42,7 +42,8 @@ sed -n '1~4s/^@/>/p;2~4p' LacR2aaab.fastq > LacR2aaab.fasta
 
 
 
-
+<a name="n50"></a>
+N50 NOTE: This N50 is based on the Bandage graph assembly rather than an assembly of contigs.
 
 
 
