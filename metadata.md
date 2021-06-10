@@ -112,7 +112,7 @@ $ wc -l gLacR2aaabacadfixed.fastq
  
  We used CP065736.1 as a reference "genome" to map our Plasmid 2 sequences as a `.SAM` files, and similarly to a `.BAM` file for submission to NCBI with assemblies under BioProject PRJNA731925. 
  
- The Plasmid 1 consensus sequence did not show an overall homology greater than 60% to any plasmids or genomes in the NCBI databases. We determined that Plasmid 1 was "novel" and would have to be submitted as `.fastq` reads to the SRA, and assembly sequence as contigs only to NCBI with BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925). 
+ The Plasmid 1 consensus sequence did not show an overall homology greater than 60% to any plasmids or genomes in the NCBI databases. Because Plasmid 1 had no identifiable reference genome, it was submitted as `.fastq` reads to the SRA, and the assembly sequence as contigs rather than scaffolds. The NCBI with BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925). [Note about current samples listed on NCBI.](/notes.md#ncbi)
  
  To determine the N50 of the separate molecules, the `quast` software [see citations](/citations.md) was used to compare assembly results on `.fasta` files of the genome reads with plasmids, the genome reads without plasmids, and on each set of plasmid reads separately. 
  These comparisons used [CP065737.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1) as the reference genome.  
@@ -123,7 +123,7 @@ $ wc -l gLacR2aaabacadfixed.fastq
 | N50 | 134484 | 4564 | 11477|
 | GC% | 35.22 | 31.69 | 34.69 |
 
-Here's the QUAST outputs for each assembly:
+The QUAST outputs for each assembly are shown below:
  
 | Genome stats | PrHT3_with_plasmids | PrHT3_Plasmid1ab | PrHT3_Plasmid2| PrHT3_genome_only |
 |-|-|-|-|-|
