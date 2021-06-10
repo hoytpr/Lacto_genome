@@ -59,18 +59,18 @@ Initially 8M reads were assembled using SPAdes 3.15.0 using the `--careful` and 
 
 Plasmid output assembly graph pathways (`.gfa` files) are the most important part of this output. In this case the file `assembly_graph_after_simplification.gfa` is output. The `.gfa` file was opened using `Bandage` v. 0.8.1 [http://rrwick.github.io/Bandage/](http://rrwick.github.io/Bandage/). The default assembly graph image created (colored by read depth) is shown below:
 
-![Lactococcus assembly using --plasmid --careful](/fig/graph1.png).
+![Lactococcus assembly using --plasmid --careful](/fig/graph1.png)
 
 This graph shows several important issues:
 1. The Illumina sequencing was very high quality as there are no "dead-ends".
 2. This graph clearly shows at least one separate high-copy-number plasmid.
-3. The graph *implies* there is another disproportionately high-copy region within the genome assembly.
+3. The graph shows there is another disproportionately high-copy region within the genome assembly.
 
-Additional outputs are the files `assembly_graph_with_scaffolds.gfa` and `assembly_graph.fastg` which contain only the SPAdes predicted plasmid sequence elements. The `assembly_graph.fastg` file is visualized with `Bandage` as shown below:
+Additional SPAdes outputs are the files `assembly_graph_with_scaffolds.gfa` and `assembly_graph.fastg` which contain only the SPAdes predicted plasmid sequence elements. The `assembly_graph.fastg` file is visualized with `Bandage` and shown below:
 
 ![Lactococcus predicted plasmids from SPAdes using --plasmid --careful](/fig/graph0_scaffolding.png)
 
-Now we can see that SPAdes predicts at least two plasmids with one set of predicted plasmid scaffolds having much higher read counts than the other. Based on these data, three processes were performed to allow for independent assemblies:
+This graph shows that SPAdes predicts at least two plasmids with one set of predicted plasmid scaffolds having much higher read counts than the other. Based on these data, three processes were performed to allow for independent assemblies:
 
 1. Isolation of the high-copy read plasmid sequences (Plasmid1) 
 2. Isolation of the lower-copy read plasmid sequences (Plasmid2)
@@ -79,7 +79,7 @@ Now we can see that SPAdes predicts at least two plasmids with one set of predic
 
   ### Read data separation
   
-  - The nodes of the presumptive plasmids can be selected, and the sequences can be output from Bandage as `.fasta` files (*e.g.* "Bandage_plasmid1.fasta" and "Bandage_plasmid2.fasta"). 
+  - The nodes of the presumptive plasmids can be selected, and the sequences can be output from Bandage as `.fasta` files (*e.g.* "Bandage_plasmid1.fasta" and "Bandage_plasmid2.fasta"). For a description of the differences between `Bandage` nodes and edges, vs. assembly contigs, please see the [Bandage Wiki Page](https://github.com/rrwick/Bandage/wiki). 
   - To identify reads corresponding to these plasmid sequences, the Bandage `.fasta` outputs were converted into a Blast+ database (v. 2.8.1) **[Script 6](/scripts.md#scr06)**.
   - The complete set of Lactococcus reads `.fastq` files was converted to `.fasta` files **[Script 7](/scripts.md#scr07)**.
   - The Blast database was queried with the Lactococcus reads `.fasta` files outputting the read names that match the plasmid node sequences **[Script 8](/scripts.md#scr08)**.
