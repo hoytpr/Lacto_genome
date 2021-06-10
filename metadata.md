@@ -144,7 +144,9 @@ The QUAST outputs for each assembly are shown below:
 | GC (%) | 35.22 | 31.69 | 34.69 | 35.25 |
  
 
+### Plasmid 1ab: Is it one or two plasmids?
 
+Plasmid 1ab was named because it is unclear that this is a single plasmid. Some evidence suggests it may be two plasmids with large regions of shared sequence identity. This was initially suspected in the `Bandage` visualization shown above, and was supported by isolation of the sequences. The sequences had very high coverage relative to the genome (
 
 
 
