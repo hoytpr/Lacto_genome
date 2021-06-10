@@ -155,8 +155,20 @@ samtools/1.10
 samtools mpileup -uf CP065737.1.fasta gLAC_final.sorted.bam | bcftools call -c | vcfutils.pl vcf2fq > gLAC_consensus.fq
 ```
 
-
-
+<a name="scr18"></a>
+Quast script to compare assemblies to reference genome
+```
+./quast.py lactodata/Lactococcus-lactis-PrHT3-with_plasmids.fasta \
+           lactodata/Lactococcus-lactis-PrHT3.fasta \
+           lactodata/Lactococcus-lactis-PrHT3-Plasmid1-novel.fasta \
+           lactodata/Lactococcus-lactis-PrHT3-Plasmid2-scaff.fasta
+        -r lactodata/FDAARGOS_865-sequence.fasta \
+        -o lactodata_out
+```
+ 
+  
+   
+    
 
 
 [HOME](/README.md)
