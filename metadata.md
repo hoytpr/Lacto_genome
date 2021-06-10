@@ -103,7 +103,7 @@ $ wc -l gLacR2aaabacadfixed.fastq
  Genome SAM and BAM files were generated using Bowtie2 v. 2.3.4.1 
  
  The Bowtie2 process begins with and building and "inspection" of the reference genome, genome followed by alignment 
- of the reads to the reference genome, generating a `.SAM` file. Our reference genome was NCBI accession CP065737.1 throughout. **[Script 15](/scripts.md#15)**
+ of the reads to the reference genome, generating a `.SAM` file. Our reference genome was NCBI accession [CP065737.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1) throughout. **[Script 15](/scripts.md#15)**
  
  The `.SAM` file was converted to a BAM file, sorted, and indexed by Samtools v. 1.10 **[Spript 16](/scripts.md#16)** and the `.BAM` file was submitted with a scaffolded contig assembly to NCBI as part of BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925).
  
@@ -113,7 +113,7 @@ $ wc -l gLacR2aaabacadfixed.fastq
  
  We used CP065736.1 as a reference "genome" to map our Plasmid 2 sequences as a `.SAM` files, and similarly to a `.BAM` file for submission to NCBI with assemblies under BioProject PRJNA731925. 
  
- The Plasmid 1 consensus sequence did not show an overall homology greater than 60% to any plasmids or genomes in the NCBI databases. Because Plasmid 1 had no identifiable reference genome, it was submitted as `.fastq` reads to the SRA, and the assembly sequence as contigs rather than scaffolds. The NCBI with BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925). [Note about current samples listed on NCBI.](/notes.md#ncbi)
+ The Plasmid 1 consensus sequence did not show an overall homology greater than 60% to any plasmids or genomes in the NCBI databases. Because Plasmid 1 had no identifiable reference genome, it was submitted as `.fastq` reads to the SRA, and the assembly sequence as contigs rather than scaffolds. The NCBI BioProject accession is [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925). [Note about current samples listed on NCBI.](/notes.md#ncbi)
  
  To determine the N50 of the separate molecules, the `quast` software [see citations](/citations.md) was used to compare assembly results on `.fasta` files of the genome reads with plasmids, the genome reads without plasmids, and on each set of plasmid reads separately. 
  These comparisons used [CP065737.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1) as the reference genome.  
