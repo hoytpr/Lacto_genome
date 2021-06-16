@@ -40,10 +40,7 @@ sed -n '1~4s/^@/>/p;2~4p' LacR2aaab.fastq > LacR2aaab.fasta
 `assembly_graph_with_scaffolds.gfa` and `assembly_graph.fastg` which were both empty files.
 
 
-<a name="ncbi"></a>
-`6.` Currently, the PrHT3 genome and pPrHT3 plasmid2 are combined within "sample 1" of the NCBI
-BioProject, but were submitted as separate `.bam` files. Until this is resolved, the separated 
-`.bam` files are available by request. [Go back to assembly metadata](/metadata.md#met01)
+[Go back to assembly metadata](/metadata.md#met01)
 
 
 
