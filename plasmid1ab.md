@@ -7,7 +7,11 @@ Plasmid-1ab is named (as might be inferred) for plasmid-1a and plasmid-1b.
 
 The SPAdes --plasmid option generated `.gfa` files where plasmid-1ab had much higher copy numbers when viewed by read depth in Bandage. The mean read depth of these nodes is 381x, while the genome read depth is 54x (both values obtained using 4M PE reads). This indicates a plasmid copy number of over 7 per cell. 
 
-When viewed in Bandage, the presumptive plasmid nodes appear complex ![complex](/fig/Plasmid1ab-exploded-before-trimming-selected.png), but by removing any read depth below 25x the graph assembly is greatly simplified ![greatly simplified](/fig/Plasmid1ab-exploded-after-trimming.png) appearing as a contiguous path with seven (7) bubbles to resolve, leaving two plasmids with significant shared sequence identity ![significant shared sequence identity](/fig/Plasmid1ab-after-depth-25-trimming-best-layout.png). Only one node (#600074, 73bp, 270x) appears as an unresolved repeated sequence within a continuous path. This repeat can be resolved with in silico confidence by replicating node 276613 (59bp, 505x) and placing a copy of 276613 (each now at 252.5x depth) on either side of node 600074. In bandage this is done by removing edges (blue colored) as shown.
+When viewed in Bandage, the presumptive plasmid nodes appear complex ![complex](/fig/Plasmid1ab-exploded-before-trimming-selected.png) 
+
+But by removing any nodes with read depth below 25x, the graph assembly is greatly simplified.
+
+ ![greatly simplified](/fig/Plasmid1ab-exploded-after-trimming.png) and when redrawn, appears as a contiguous path with seven (7) bubbles to resolve, leaving two plasmids with significant shared sequence identity ![significant shared sequence identity](/fig/Plasmid1ab-after-depth-25-trimming-best-layout-depth250-700.png). Only one node (#600074, 73bp, 270x) appears as an unresolved repeated sequence within a continuous path. This repeat can be resolved with in silico confidence by replicating node 276613 (59bp, 505x) and placing a copy of 276613 (each now at 252.5x depth) on either side of node 600074. In bandage this is done by removing edges (blue colored) as shown.
 ![Before edge removal](/fig/resolving-276613.png)
 ![After edge removal](/fig/resolving-600074-B.png) 
 
