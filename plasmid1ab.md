@@ -25,7 +25,7 @@ The next level of resolving the graph involves splitting six (6) individual node
 
 With no other options for graph simplification or node separations
 the contiguous nodes can be merged and a final graph suggesting two plasmids ("a" & "b") 
-with shared homology is the final product of [our analyses](/fig/Plasmid1ab-simplified_graphs.png). 
+with shared homology is the final product of ![our analyses](/fig/Plasmid1ab-simplified_graphs.png). 
 
 ```
  grep -A3 --file=LacR1R2aaabacad-unique-plasmid1-names.txt LacR1aaabacad.fastq | grep -E -v '\--' > R1aaabacadPlasmid1.fastq
