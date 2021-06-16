@@ -39,7 +39,7 @@ the contiguous nodes can be merged into a final graph suggesting two plasmids ("
 with shared homology as the final product of our analyses. ![our analyses](/fig/Plasmid1ab-simplified_graphs.png) 
 
 Below are some of the command-line scripts used to extract the nodes shown from the bandage image, and then 
-recover the names of the reads that make up plasmid 1ab. The process is the same as on the [metadata](/metadata.md) 
+recover the names and assemble the reads that make up plasmid-1ab. The process is the same as on the [metadata](/metadata.md) 
 and [scripts](/scripts.md) pages. But these reads did not appear as contiguous sequences in the NCBI nt database (they did show up in pieces). As such we believe this plasmid is "novel", or not previously described.
 
 
@@ -65,5 +65,3 @@ spades.py -t 32 -m 768 -k 29,31,33,55 -1 R1aaabacadPlasmid1.fastq -2 R2aaabacadP
 
 
 
-
-387.7x
