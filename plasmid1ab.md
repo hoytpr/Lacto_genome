@@ -11,15 +11,16 @@ When viewed in Bandage, the presumptive plasmid nodes appear complex ![complex](
 
 But by removing any nodes with read depth below 25x, the graph assembly is greatly simplified.
 
- ![greatly simplified](/fig/Plasmid1ab-exploded-after-trimming.png) and when redrawn, the graph appears as a contiguous path with seven (7) bubbles to resolve, suggesting two plasmids with significant shared sequence identity. ![significant shared sequence identity](/fig/Plasmid1ab-after-depth-25-trimming-best-layout-depth250-700.png) Only one node (#600074, 73bp, 270x) appears as an unresolved repeated sequence 
+ ![greatly simplified](/fig/Plasmid1ab-exploded-after-trimming.png) and when redrawn, the graph appears as a contiguous path with seven (7) bubbles to resolve, suggesting two plasmids with significant shared sequence identity. ![significant shared sequence identity](/fig/990-selection-graph.png) Only one node pair (#600074: 270x and #276613: 505x) marked with an asterisk in the above image remain as an unresolved repeated sequence 
  
  ![unresolved repeated sequence](/fig/600074-and-276613-graph-labels.png) 
  
- within a continuous path. This repeat can be resolved with in silico confidence by replicating node 276613 (59bp, 505x) and placing a copy of 276613 (each now at 252.5x depth) on either side of node 600074. In bandage after duplicating a node, this is done by removing edges (blue colored) as shown.
+ within a continuous path. This repeat can be resolved with in silico confidence by replicating node 276613 (59bp, 505x) and placing a copy of 276613 (each now at 252x depth) on either side of node 600074. In bandage after duplicating a node, this is done by removing edges (blue colored) as shown.
 ![Before edge removal](/fig/resolving-600074-v-2sm.png)
 ![After edge removal](/fig/resolving-600074-v2-Bsm.png) 
 
-The next level of resolving the graph involves splitting six (6) individual nodes between bubbles ![between bubbles](/fig/Plasmid1ab-after-depth-25-trimming-best-layout-depth250-700.png). This includes nodes 37 (171bp, 838x), 606278 (61bp, 990x), 41 (92bp, 732x), 1113 (316bp, 657x), and 378121 (59bp, 648x). Node duplication will resolve the contiguity of the nodes, and proper linkage could conceivably be done by matching sequence read depth on either side of the duplicated node. Unfortunately, the read depths on opposing sides of all these shared nodes (and a run of three consecutive shared nodes #89,#1265,and #447099) are too similar (if not *remarkably* similar) as shown in table 1 below:
+The next level of resolving the graph involves splitting six (6) individual nodes between bubbles. ![between bubbles](/fig/Plasmid1ab-after-depth-25-trimming-best-layout-depth250-700.png) 
+This includes nodes 37 (171bp, 838x), 606278 (61bp, 990x), 41 (92bp, 732x), 1113 (316bp, 657x), and 378121 (59bp, 648x). Node duplication will resolve the contiguity of the nodes, and proper linkage could conceivably be done by matching sequence read depth on either side of the duplicated node. Unfortunately, the read depths on opposing sides of all these shared nodes (and a run of three consecutive shared nodes #89,#1265,and #447099) are too similar (if not *remarkably* similar) as shown in table 1 below:
 
 | Shared node | CWLeft node1 | CWleft node2 | CWRight node1 | CWRight Node2 | 
 | --- | --- | --- | --- | --- |
