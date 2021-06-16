@@ -38,6 +38,11 @@ This is a little messy without labeling every node and showing imaages of them, 
 the contiguous nodes can be merged into a final graph suggesting two plasmids ("a" & "b") 
 with shared homology as the final product of our analyses. ![our analyses](/fig/Plasmid1ab-simplified_graphs.png) 
 
+Below are some of the command-line scripts used to extract the nodes shown from the bandage image, and then 
+recover the names of the reads that make up plasmid 1ab. The process is the same as on the [metadata](/metadata.md) 
+and [scripts](/scripts.md) pages. But these reads did not appear as contiguous sequences in the NCBI nt database (they did show up in pieces). As such we believe this plasmid is "novel", or not previously described.
+
+
 ```
  grep -A3 --file=LacR1R2aaabacad-unique-plasmid1-names.txt LacR1aaabacad.fastq | grep -E -v '\--' > R1aaabacadPlasmid1.fastq
  grep -A3 --file=LacR1R2aaabacad-unique-plasmid1-names.txt LacR2aaabacad.fastq | grep -E -v '\--' > R1aaabacadPlasmid1.fastq
