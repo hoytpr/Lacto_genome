@@ -11,7 +11,9 @@ NOTE: in all the images below read depth is relative and colored with "red" bein
 
 
 
-When viewed in Bandage, the presumptive plasmid nodes appear complex. Here the nodes have been stretched apart so that they are all visible. ![complex](/fig/Plasmid1ab-exploded-before-trimming-selected.png) 
+When viewed in Bandage, the presumptive plasmid nodes appear complex. Here the nodes have been stretched apart so that they are all visible. 
+
+![complex](/fig/Plasmid1ab-exploded-before-trimming-selected.png) 
 
 But by removing any nodes with read depth below **25x**, the graph assembly is greatly simplified.
 
