@@ -11,7 +11,7 @@ When viewed in Bandage, the presumptive plasmid nodes appear complex ![complex](
 
 But by removing any nodes with read depth below 25x, the graph assembly is greatly simplified.
 
- ![greatly simplified](/fig/Plasmid1ab-exploded-after-trimming.png) and when redrawn, the graph appears as a contiguous path with seven (7) bubbles to resolve, suggesting two plasmids with significant shared sequence identity. ![significant shared sequence identity](/fig/990-selection-graph.png) Only one node pair (#600074: 270x and #276613: 505x) marked with an asterisk in the above image remain as an unresolved repeated sequence 
+ ![greatly simplified](/fig/Plasmid1ab-exploded-after-trimming.png) and when redrawn, the graph appears as a contiguous path with seven (7) bubbles to resolve, suggesting two plasmids with significant shared sequence identity. ![significant shared sequence identity](/fig/990-selection-graph.png) Only one node pair (#600074: 270x and #276613: 505x) marked with an asterisk in the above image remain as an unresolved repeated sequence. Whenwe zoom in on these nodes we can see that the copy number suggests that node #276613 is the repeated element.
  
  ![unresolved repeated sequence](/fig/600074-and-276613-graph-labels.png) 
  
