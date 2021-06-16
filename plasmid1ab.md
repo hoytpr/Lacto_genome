@@ -11,7 +11,11 @@ When viewed in Bandage, the presumptive plasmid nodes appear complex ![complex](
 
 But by removing any nodes with read depth below 25x, the graph assembly is greatly simplified.
 
- ![greatly simplified](/fig/Plasmid1ab-exploded-after-trimming.png) and when redrawn, the graph appears as a contiguous path with seven (7) bubbles to resolve, suggesting two plasmids with significant shared sequence identity ![significant shared sequence identity](/fig/Plasmid1ab-after-depth-25-trimming-best-layout-depth250-700.png). Only one node (#600074, 73bp, 270x) appears as an unresolved repeated sequence ![unresolved repeated sequence](/fig/600074-and-276613-graph-labels.png) within a continuous path. This repeat can be resolved with in silico confidence by replicating node 276613 (59bp, 505x) and placing a copy of 276613 (each now at 252.5x depth) on either side of node 600074. In bandage after duplicating a node, this is done by removing edges (blue colored) as shown.
+ ![greatly simplified](/fig/Plasmid1ab-exploded-after-trimming.png) and when redrawn, the graph appears as a contiguous path with seven (7) bubbles to resolve, suggesting two plasmids with significant shared sequence identity. ![significant shared sequence identity](/fig/Plasmid1ab-after-depth-25-trimming-best-layout-depth250-700.png) Only one node (#600074, 73bp, 270x) appears as an unresolved repeated sequence 
+ 
+ ![unresolved repeated sequence](/fig/600074-and-276613-graph-labels.png) 
+ 
+ within a continuous path. This repeat can be resolved with in silico confidence by replicating node 276613 (59bp, 505x) and placing a copy of 276613 (each now at 252.5x depth) on either side of node 600074. In bandage after duplicating a node, this is done by removing edges (blue colored) as shown.
 ![Before edge removal](/fig/resolving-600074-v-2sm.png)
 ![After edge removal](/fig/resolving-600074-v2-Bsm.png) 
 
