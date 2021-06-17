@@ -23,7 +23,7 @@ showing up in the graph assembly.
 
 ![threshold](/fig/plasmid-1ab-node-depth.png)
 
-Looking at the raw data, there was a coverage increase from 24.4x (node #222887) to 224.5x (node #221355) which suggested the reads within the lower coverage areas were artifactual. By **removing** any nodes with read depth below **25x**, the graph assembly is greatly simplified.
+Looking at the raw data, the coverage increase was from 24.4x (node #222887) to 224.5x (node #221355). We assumed the reads within the lower coverage areas were artifactual. By **removing** any nodes with read depth below **25x**, the graph assembly is greatly simplified.
 
  ![greatly simplified](/fig/Plasmid1ab-exploded-after-trimming.png) 
  
