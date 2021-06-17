@@ -1,21 +1,29 @@
 ---
 ---
 
-## Plasmid 1ab
+## Plasmid-1ab
 
 Plasmid-1ab is named (as might be inferred) for plasmid-1a and plasmid-1b. We don't know the sizes of the two plasmids, but the overall size (with overlaps) is 19,297 bp. So a rough estimate is that each plasmid is about half that size, or **~9,648 bp each**. Also note that when submitting `.fastq` files to NCBI, we cannot include any "contig" under 200bp. So the amount of sequence submitted amounted to 17,155 bp. At this point, the data scientists have to make room for the life scientists (not that one can't be ***both***) to isolate the plasmid(s) from a culture of Lactococcus, then clone and sequence the plasmid using Sanger sequencing (which is NOT a trivial amount of work!). 
 
-The SPAdes `--plasmid` option generated `.gfa` files where plasmid-1ab had much higher copy numbers when viewed by read depth in Bandage. The mean read depth of these nodes is 381x, while the genome read depth is 54x (both values obtained using 4M PE reads). This indicates a plasmid copy number of over 7 per cell.
+The SPAdes `--plasmid` option generated `.gfa` files where plasmid-1ab had much higher copy numbers than other elements when viewed by read depth in Bandage. The mean read depth of plasmid-1ab nodes is 381x, while the genome nodes read depth is 54x (both values obtained using 4M PE reads). This indicates a plasmid copy number of over 7 per cell.
 
 NOTE: in all the images below read depth is relative and colored with "red" being higher read depth, and darker color indicating lower read depths.
 
 
 
-When viewed in Bandage, the presumptive plasmid nodes appear complex. Here the nodes have been stretched apart so that they are all visible. 
+When viewed in Bandage, the original presumptive plasmid nodes appear complex. Below the original node edges have been stretched apart so that the nodes are all visible. 
 
-![complex](/fig/Plasmid1ab-exploded-before-trimming-selected.png) 
+![complex](/fig/Plasmid1ab-exploded-before-trimming-selected.png)
 
-But by removing any nodes with read depth below **25x**, the graph assembly is greatly simplified.
+We charted the depth of all selected nodes and this showed that there was a distinct 
+threshold at a depth of 25x where nodes couold be excluded that might be complicating the analyses. These 
+nodes represented only 0.8% of the total coverage within the plasmid-1ab assembly. 
+There was also a less distinct threshold at approximately 97x that suggested where duplicated sequences might be 
+showing up in the graph assembly. 
+
+![threshold](/fig/plasmid-1ab-node-depth.png)
+
+Looking at the raw data, there was a coverage increase from 24.4x (node #222887) to 224.5x (node #221355) which suggested the reads within the lower coverage areas were artifactual. By **removing** any nodes with read depth below **25x**, the graph assembly is greatly simplified.
 
  ![greatly simplified](/fig/Plasmid1ab-exploded-after-trimming.png) 
  

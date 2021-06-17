@@ -112,7 +112,7 @@ $ wc -l gLacR2aaabacadfixed.fastq
  
  We used CP065736.1 as a reference "genome" to map our Plasmid 2 sequences as a `.SAM` file, and similarly to a `.BAM` file for submission to NCBI with assemblies under BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925). 
  
- The Plasmid 1 consensus sequence did not show an overall homology greater than 60% to any plasmids or genomes in the NCBI databases. Because Plasmid 1 had no identifiable reference genome, it was submitted as `.fastq` reads to the SRA, and the assembly sequence as contigs rather than scaffolds. The NCBI BioProject accession is [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925). **Please note the PrHT3 genome and pPrHT3 plasmid2 are combined within "sample 1" of the NCBI
+ The Plasmid 1 consensus sequence did not show an overall homology greater than 60% to any plasmids or genomes in the NCBI databases. Because Plasmid 1 had no identifiable reference genome, it was submitted as `.fastq` reads to the SRA, and the assembly sequence as contigs rather than scaffolds. The NCBI BioProject accession is [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925). **Please note the PrHT3 genome and pPrHT3 plasmid-2 are combined within "sample 1" of the NCBI
 BioProject**
  
  <a name="met01"></a>
@@ -120,14 +120,14 @@ BioProject**
  These comparisons used [CP065737.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1) as the reference genome.  
 
  
-| | Genome |	Plasmid1ab | Plasmid2 |
+| | Genome |	Plasmid-1ab | Plasmid2 |
 | :--- | :--- | :--- | :--- |
 | N50 | 134484 | 4564 | 11477|
 | GC% | 35.22 | 31.69 | 34.69 |
 
-The QUAST outputs for each assembly are shown below:
+The QUAST outputs (contig size cutoff default = 500 bp) for each assembly are shown below:
  
-| Genome stats | PrHT3_with_plasmids | PrHT3_Plasmid1ab | PrHT3_Plasmid2| PrHT3_genome_only |
+| Genome stats | PrHT3_with_plasmids | PrHT3_Plasmid-1ab | PrHT3_Plasmid2| PrHT3_genome_only |
 |-|-|-|-|-|
 | Mismatches |  |  |  |  |
 | # N's | 0 | 0 | 0 | 0 |
@@ -144,16 +144,16 @@ The QUAST outputs for each assembly are shown below:
 | GC (%) | 35.22 | 31.69 | 34.69 | 35.25 |
  
 
-### Plasmid 1ab: Is it one or two plasmids?
+### Plasmid-1ab: Is it one or two plasmids?
 
-Plasmid 1ab was named because it is unclear that this is a single plasmid. Some evidence suggests it may be two plasmids with large regions of shared sequence identity. This was initially suspected in the `Bandage` visualization shown above, and was supported by isolation of the sequences. The sequences had very high coverage relative to the genome and [a separate page](/plasmid1ab.md) is presented to describe why it was left as "Plasmid1ab"
-
-
+Plasmid-1ab was named because it is unclear that this is a single plasmid. Some evidence suggests it may be two plasmids with regions of shared sequence identity. This was initially suspected in the `Bandage` visualization shown above, and was supported by isolation plasmid-1ab sequences. The sequences had very high coverage relative to the genome and [a separate page](/plasmid1ab.md) is presented to describe why it was left as "Plasmid-1ab"
 
 
 
 
-[HOME](/README.md)
+
+
+[TO README Page](/README.md)
 	 
 	  
 	   
