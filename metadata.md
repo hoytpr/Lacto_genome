@@ -24,7 +24,7 @@ Data Archive Date: 2021-03-10
 
 Archive Location: The University of Oklahoma Petastore (soon to be OURRstore)
 
-Primary Data Filenames: L_lactis_S1_LALL_R1_001.fastq.gz, L_lactis_S1_LALL_R2_001.fastq.gz
+Primary Data Filenames: `L_lactis_S1_LALL_R1_001.fastq.gz` and `L_lactis_S1_LALL_R2_001.fastq.gz`
 
 Files processed through `bcl2fastq`?: YES
 
