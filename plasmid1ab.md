@@ -40,13 +40,13 @@ Looking at the raw data, the coverage increase was from 24.4x (node #222887) to 
 ![Before edge removal](/fig/resolving-600074-v-2sm.png)
 ![After edge removal](/fig/resolving-600074-v2-Bsm.png) 
 
-The next level of resolving the graph involves splitting six (6) individual nodes between bubbles (#37 (171bp, 838x), #606278 (61bp, 990x), #41 (92bp, 732x), #1113 (316bp, 657x), and #378121 (59bp, 648x)) as well as a run of three consecutive shared nodes (#89,#1265,and #447099). 
+The next level of resolving the graph involves splitting six (6) individual nodes between bubbles (#37, #606278, #41, #1113, and #378121) as well as a run of three consecutive shared nodes (#89-#1265-#447099). 
 
 ![between bubbles](/fig/Plasmid1ab-after-depth-25-trimming-best-layout-depth250-700.png) 
 
 The individual nodes could be duplicated to resolve the contiguity of the plasmid(s), and proper linkage could conceivably be done by matching sequence read depth on either side of the duplicated node. For example if a shared node (A), had two nodes on one side with coverages of 100X (B) and 600x (B'), then also had two nodes on the other side with 590x (C) and 110x (C'), it would be reasonable to split the shared node, and delete edges where coverage is not similar. The node with 100x coverage would connect to the shared node, then to the node with 110x coverage (B-A-C'). Conversely, the node with 600x coverage would connect to the shared node, and then to the node with 590x coverage (B'-A-C). This is (simplistically) how a [Directed acyclic graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) algorithm works during an assembly ("construction") process. Unfortunately, the read depths on opposing sides of all these shared nodes (referred to in clockwise mode "CW") are too similar as shown in table 1 below:
 
-| Shared node | CWLeft node1 | CWleft node2 | CWRight node1 | CWRight Node2 | 
+| Shared node (A) | CW-node(B) | CW-node(B') | CW-node(C) | CWR-node(C') | 
 | --- | --- | --- | --- | --- |
 | 37 (839x) | 15 (309x) | 622375 (290x) | 1247 (366x) | 1271 (423x) |
 | 378121 (648x) | 1145 (366x) | 1221 (367x) | 616158 (403x) | 591624 (378x) |
@@ -54,7 +54,7 @@ The individual nodes could be duplicated to resolve the contiguity of the plasmi
 | 609586 (771x) | 614554 (405x) | 619531 (393x) | 1117 (360x) | 1281 (339x) |
 | 41 (732x) | 1279 (329x) | 83 (322x) | 615970 (480x) | 620521 (482x) |
 | 606278 (990x) | 1298 (434x) | 1312 (417x) | 618166 (400x) | 57 (378x) |
-| 89, 1265, 447099 (798x) | 277 (492x) | 275 (501x) | 85 (290x) | 75 (274x) |
+| 89-1265-447099 (798x) | 277 (492x) | 275 (501x) | 85 (290x) | 75 (274x) |
 
 This is a little messy without labeling every node and showing imaages of them, but you can see below that with no other options for graph simplification or node separations
 the contiguous nodes can be merged into a final graph suggesting two plasmids ("a" & "b") 
