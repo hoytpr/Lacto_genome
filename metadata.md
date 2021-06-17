@@ -11,7 +11,7 @@ DNA quality by Tapestation analysis:
 
 ![DNA](/fig/genomic-DNA-tapestation.png)
 
-DNA concentration: 17.4 ng/ul
+DNA concentration by picogreen fluorometry: 17.4 ng/ul
 
 Library kit: KAPA/Roche HyperPlus (Cat.# KK8512)
 
