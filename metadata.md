@@ -7,8 +7,17 @@
 
 Genomic DNA was received on 2021-02-26 at the Oklahoma State University Genomics Center.
 
+DNA quality by Tapestation analysis: Excellent
+
+![DNA](/fig/genomic-DNA-tapestation.png)
+
+DNA concentration: 17.4 ng/ul
 
 Library kit: KAPA/Roche HyperPlus (Cat.# KK8512)
+
+Library preparation result: Excellent
+
+![library](/fig/Library-QC.png)
 
 Sequencing Kit: Illumina (2 X 75bp) MID-output kit (150 cycles)
 
