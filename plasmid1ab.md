@@ -58,7 +58,7 @@ The individual nodes could be duplicated to resolve the contiguity of the plasmi
 
 This is a little messy without labeling every node and showing imaages of them, but you can see below that with no other options for graph simplification or node separations
 the contiguous nodes can be merged into a final graph suggesting two plasmids ("a" & "b") 
-with shared homology as the final product of our analyses. ![our analyses](/fig/Plasmid1ab-simplified_graphs.png) 
+with shared homology (nodes labeled) as the final product of our analyses. ![our analyses](/fig/Plasmid1ab-simplified_graphs.png) 
 
 Below are some of the command-line scripts used to extract the nodes shown from the bandage image, and then 
 recover the names and assemble the reads that make up plasmid-1ab. The process is the same as on the [metadata](/metadata.md) 
