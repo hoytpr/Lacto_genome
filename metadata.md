@@ -80,8 +80,8 @@ Additional SPAdes outputs are the files `assembly_graph_with_scaffolds.gfa` and 
 
 This graph shows that SPAdes predicts at least two plasmids with one set of predicted plasmid scaffolds having much higher read counts than the other. Based on these data, three processes were performed to allow for independent assemblies:
 
-1. Isolation of the high-copy read plasmid sequences (Plasmid1) 
-2. Isolation of the lower-copy read plasmid sequences (Plasmid2)
+1. Isolation of the high-copy read plasmid sequences (Plasmid1) and reassembly. 
+2. Isolation of the lower-copy read plasmid sequences (Plasmid2) and reassembly.
 3. Removal of the presumptive plasmid reads from the rest of the genomic reads for genome assembly. 
 
 
