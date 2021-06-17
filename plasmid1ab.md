@@ -18,7 +18,7 @@ When viewed in Bandage, the original presumptive plasmid nodes appear complex. B
 We charted the depth of all selected nodes and this showed that there was a distinct 
 threshold at a depth of 25x where nodes couold be excluded that might be complicating the analyses. These 
 nodes represented only 0.8% of the total coverage within the plasmid-1ab assembly. 
-There was also a less distinct threshold at approximately 97x that suggested where duplicated sequences might be 
+There was also a less distinct threshold at approximately 500x that suggested where duplicated sequences might be 
 showing up in the graph assembly. 
 
 ![threshold](/fig/plasmid-1ab-node-depth.png)
