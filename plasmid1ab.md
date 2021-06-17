@@ -3,7 +3,7 @@
 
 ## Plasmid-1ab
 
-Plasmid-1ab is named (as might be inferred) for plasmid-1a and plasmid-1b. We don't know the sizes of the two plasmids, but the overall size (with overlaps) is 19,297 bp. So a rough estimate is that each plasmid is about half that size, or **~9,648 bp each**. Also note that when submitting `.fastq` files to NCBI, we cannot include any "contig" under 200bp. So the amount of sequence submitted amounted to 17,155 bp. At this point, the data scientists have to make room for the life scientists (not that one can't be ***both***) to isolate the plasmid(s) from a culture of Lactococcus, then clone and sequence the plasmid using Sanger sequencing (which is NOT a trivial amount of work!). 
+Plasmid-1ab is named (as might be inferred) for plasmid-1a and plasmid-1b. We don't know the sizes of the two plasmids, but the overall size (with overlaps) is 19,297 bp. So a rough estimate is that each plasmid is about half that size, or **~9,648 bp each**. Also note that when submitting `.fastq` files to NCBI, we cannot include any "contig" under 200bp. So the amount of contig length sequence submitted amounted to 17,155 bp. At this point, the data scientists have to make room for the life scientists (not that one can't be ***both***) to isolate the plasmid(s) from a culture of Lactococcus, then clone and sequence the plasmid using Sanger sequencing (which is NOT a trivial amount of work!). 
 
 The SPAdes `--plasmid` option generated `.gfa` files where plasmid-1ab had much higher copy numbers than other elements when viewed by read depth in Bandage. The mean read depth of plasmid-1ab nodes is 381x, while the genome nodes read depth is 54x (both values obtained using 4M PE reads). This indicates a plasmid copy number of over 7 per cell.
 
