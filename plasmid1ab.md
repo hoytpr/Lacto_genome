@@ -23,7 +23,7 @@ showing up in the graph assembly.
 
 ![threshold](/fig/plasmid-1ab-node-depth.png)
 
-Looking at the raw data, the coverage increase was from 24.4x (node #222887) to 224.5x (node #221355). We assumed the reads within the lower coverage areas were artifactual. By **removing** any nodes with read depth below **25x**, the graph assembly is greatly simplified.
+Looking at the raw data, the inflection point in coverage increase was from 24.4x (node #222887) to 224.5x (node #221355). We assumed the reads within the lower coverage areas were artifactual. By **removing** any nodes with read depth below **25x**, the graph assembly is greatly simplified.
 
  ![greatly simplified](/fig/Plasmid1ab-exploded-after-trimming.png) 
  
@@ -62,7 +62,7 @@ with shared homology (nodes labeled) as the final product of our analyses. ![our
 
 Below are some of the command-line scripts used to extract the nodes shown from the bandage image, and then 
 recover the names and assemble the reads that make up plasmid-1ab. The process is the same as on the [metadata](/metadata.md) 
-and [scripts](/scripts.md) pages. But these reads did not appear as contiguous sequences in the NCBI nt database (they did show up in pieces). As such we believe this plasmid is "novel", or not previously described.
+and [scripts](/scripts.md) pages. But these reads did not appear as contiguous sequences when using Blast+ on the NCBI "nt" database (some fragments did show up). As such we believe this plasmid (or plasmids) is "novel", or not previously described.
 
 
 ```
