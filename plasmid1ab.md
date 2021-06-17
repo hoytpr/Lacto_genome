@@ -35,16 +35,16 @@ Looking at the raw data, there was a coverage increase from 24.4x (node #222887)
  
  ![unresolved repeated sequence](/fig/600074-and-276613-graph-labels.png) 
  
-  This repeat can be resolved with *in silico* confidence by replicating node 276613 (59bp, 505x) and placing a copy of 276613 (each now at 252x depth) on either side of node 600074. In bandage after duplicating a node, this is done by removing edges (blue colored) as shown.
+  This repeat can be resolved *in silico* by replicating node 276613 (59bp, 505x) and placing a copy of 276613 (each now at 252x depth) on either side of node 600074. In bandage after duplicating a node, this is done by removing edges (blue colored) as shown.
   
 ![Before edge removal](/fig/resolving-600074-v-2sm.png)
 ![After edge removal](/fig/resolving-600074-v2-Bsm.png) 
 
-The next level of resolving the graph involves splitting six (6) individual nodes between bubbles (and a run of three consecutive shared nodes #89,#1265,and #447099). 
+The next level of resolving the graph involves splitting six (6) individual nodes between bubbles (#37 (171bp, 838x), #606278 (61bp, 990x), #41 (92bp, 732x), #1113 (316bp, 657x), and #378121 (59bp, 648x)) as well as a run of three consecutive shared nodes (#89,#1265,and #447099). 
 
 ![between bubbles](/fig/Plasmid1ab-after-depth-25-trimming-best-layout-depth250-700.png) 
 
-The individual nodes are: 37 (171bp, 838x), 606278 (61bp, 990x), 41 (92bp, 732x), 1113 (316bp, 657x), and 378121 (59bp, 648x). Node duplication will resolve the contiguity of the nodes, and proper linkage could conceivably be done by matching sequence read depth on either side of the duplicated node. Unfortunately, the read depths on opposing sides of all these shared nodes (referred to in clockwise mode "CW") are too similar as shown in table 1 below:
+The individual nodes could be duplicated to resolve the contiguity of the plasmid(s), and proper linkage could conceivably be done by matching sequence read depth on either side of the duplicated node. For example if a shared node (A), had two nodes on one side with coverages of 100X (B) and 600x (B'), then also had two nodes on the other side with 590x (C) and 110x (C'), it would be reasonable to split the shared node, and delete edges where coverage is not similar. The node with 100x coverage would connect to the shared node, then to the node with 110x coverage (B-A-C'). Conversely, the node with 600x coverage would connect to the shared node, and then to the node with 590x coverage (B'-A-C). This is (simplistically) how a [Directed acyclic graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) algorithm works during an assembly ("construction") process. Unfortunately, the read depths on opposing sides of all these shared nodes (referred to in clockwise mode "CW") are too similar as shown in table 1 below:
 
 | Shared node | CWLeft node1 | CWleft node2 | CWRight node1 | CWRight Node2 | 
 | --- | --- | --- | --- | --- |
