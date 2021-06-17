@@ -16,14 +16,14 @@ When viewed in Bandage, the original presumptive plasmid nodes appear complex. B
 ![complex](/fig/Plasmid1ab-exploded-before-trimming-selected.png)
 
 We charted the depth of all 106 selected nodes and this showed that there was a distinct 
-threshold at a depth of 25x where nodes couold be excluded that might be complicating the analyses. These 
+threshold at a depth of 25x where nodes could be excluded that might be complicating the analyses. These 
 nodes represented only 0.8% of the total coverage within the plasmid-1ab assembly. 
 There was also a less distinct threshold at approximately 500x that suggested where duplicated sequences might be 
 showing up in the graph assembly. 
 
 ![threshold](/fig/plasmid-1ab-node-depth.png)
 
-Looking at the raw data, the inflection point in coverage increase was from 24.4x (node #222887) to 224.5x (node #221355). We assumed the reads within the lower coverage areas were artifactual. By **removing** any nodes with read depth below **25x**, the graph assembly is greatly simplified.
+Looking at the raw data, the inflection point in coverage increase went from 24.4x (node #222887) to 224.5x (node #221355). These reads below 25x were subsequently removed as possible artifacts. After **removing** nodes with read depth below **25x**, the graph assembly is greatly simplified.
 
  ![greatly simplified](/fig/Plasmid1ab-exploded-after-trimming.png) 
  
@@ -31,7 +31,7 @@ Looking at the raw data, the inflection point in coverage increase was from 24.4
  
  ![significant shared sequence identity](/fig/990-selection-graph.png) 
  
- Only one node pair (#600074: 270x and #276613: 505x) marked with an asterisk in the above image, remain as an unresolved repeated sequence. When we zoom in on these nodes we can see that the copy number suggests that node #276613 is the repeated element.
+ Only one node pair (#600074 and #276613) marked with an asterisk in the above image, remained as an unresolved repeated sequence. When we zoom in on these nodes we can see that the copy number suggests that node #276613 (505x) is the repeated element, not #600074 (270x).
  
  ![unresolved repeated sequence](/fig/600074-and-276613-graph-labels.png) 
  
