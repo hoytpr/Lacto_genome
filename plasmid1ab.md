@@ -46,7 +46,7 @@ The next level of resolving the graph involves splitting six (6) individual node
 
 The individual nodes could be duplicated to resolve the contiguity of the plasmid(s), and proper linkage could conceivably be done by matching sequence read depth on either side of the duplicated node. For example if a shared node (A), had two nodes on one side with coverages of 100X (B) and 600x (B'), then also had two nodes on the other side with 590x (C) and 110x (C'), it would be reasonable to split the shared node, and delete edges such that the node with 100x coverage would connect to the shared node, then to the node with 110x coverage (B-A-C'). Conversely, the node with 600x coverage would connect to the shared node, and then to the node with 590x coverage (B'-A-C). This is (simplistically) how a [Directed acyclic graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) algorithm works during an assembly ("construction") process. Unfortunately, using the analogy above for decriptors, the read depths on opposing sides of all these shared nodes (referred to in clockwise mode "CW") are too similar. This is shown in table 1 below:
 
-| Shared-node-A | CW-node-B | CW-node-B' | CW-node-C | CWR-node-C' | 
+| Shared-node-A | CW-node-B | CW-node-B' | CW-node-C | CW-node-C' | 
 | --- | --- | --- | --- | --- |
 | 37 (839x) | 15 (309x) | 622375 (290x) | 1247 (366x) | 1271 (423x) |
 | 378121 (648x) | 1145 (366x) | 1221 (367x) | 616158 (403x) | 591624 (378x) |
