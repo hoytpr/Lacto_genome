@@ -61,7 +61,7 @@ the contiguous nodes can be merged into a final graph suggesting two plasmids.
 with shared homology (nodes labeled) as the final product of our analyses. ![our analyses](/fig/Plasmid1ab-simplified_graphs.png). 
 
 However, it is also possible that these nodes could be split such that 
-a single plasmid is the final result. Because these structural probabilities are unresolvable, the term "Plasmid-1ab" seemed appropriate.  
+a single larger plasmid is the final result. Because these structural probabilities are unresolvable, the term "Plasmid-1ab" seemed appropriate.  
 
 These Bandage node names were used to extract Plasmid-1ab reads from the total reads. Below we show some of the 
 command-line scripts used to extract the nodes shown from the bandage image, and then 
