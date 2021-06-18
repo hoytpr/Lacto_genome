@@ -40,7 +40,7 @@ sed -n '1~4s/^@/>/p;2~4p' LacR2aaab.fastq > LacR2aaab.fasta
 `assembly_graph_with_scaffolds.gfa` and `assembly_graph.fastg` which were both empty files.
 
 <a name="06"></a>
-6. These script could have been simplified to (for example):
+6. These scripts could have been simplified to (for example):
 ```
 blastn -db /lactoplasmid/lactoplasmid/lactoplas_db -num_threads 32 -evalue 0.001 -query LacR1aaabacad.fasta -out /lactoplasmid/lactoplasmid/R1aaablactoplas.out -outfmt "6 qseqid"
 ```
