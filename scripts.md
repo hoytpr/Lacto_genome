@@ -58,7 +58,7 @@ cat LacR2aaabacad.fastq | grep -A1 @ | grep -Ev '\--' > LacR2aaabacad.fasta
 ```
 
 <a name="scr08"></a>
-Script 8 [NOTE on these scripts](/notes.md#06
+Script 8 [NOTE on these scripts](/notes.md#06)
 ```
 blast+/2.8.1
 blastn -db /lactoplasmid/lactoplasmid/lactoplas_db -num_threads 32 -evalue 0.001 -query LacR1aaabacad.fasta -out /lactoplasmid/lactoplasmid/R1aaablactoplas.out -outfmt "6 qseqid qlen sseqid pident length"
