@@ -44,9 +44,9 @@ The next level of resolving the graph involves splitting six (6) individual node
 
 ![between bubbles](/fig/Plasmid1ab-after-depth-25-trimming-best-layout-depth250-700.png) 
 
-The individual nodes could be duplicated to resolve the contiguity of the plasmid(s), and proper linkage could conceivably be done by matching sequence read depth on either side of the duplicated node. For example if a shared node (A), had two nodes on one side with coverages of 100X (B) and 600x (B'), then also had two nodes on the other side with 590x (C) and 110x (C'), it would be reasonable to split the shared node, and delete edges such that the node with 100x coverage would connect to the shared node, then to the node with 110x coverage (B-A-C'). Conversely, the node with 600x coverage would connect to the shared node, and then to the node with 590x coverage (B'-A-C). This is (simplistically) how a [Directed acyclic graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) algorithm works during an assembly ("construction") process. Unfortunately, the read depths on opposing sides of all these shared nodes (referred to in clockwise mode "CW") are too similar. This is shown in table 1 below:
+The individual nodes could be duplicated to resolve the contiguity of the plasmid(s), and proper linkage could conceivably be done by matching sequence read depth on either side of the duplicated node. For example if a shared node (A), had two nodes on one side with coverages of 100X (B) and 600x (B'), then also had two nodes on the other side with 590x (C) and 110x (C'), it would be reasonable to split the shared node, and delete edges such that the node with 100x coverage would connect to the shared node, then to the node with 110x coverage (B-A-C'). Conversely, the node with 600x coverage would connect to the shared node, and then to the node with 590x coverage (B'-A-C). This is (simplistically) how a [Directed acyclic graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) algorithm works during an assembly ("construction") process. Unfortunately, using the analogy above for decriptors, the read depths on opposing sides of all these shared nodes (referred to in clockwise mode "CW") are too similar. This is shown in table 1 below:
 
-| Shared node (A) | CW-node(B) | CW-node(B') | CW-node(C) | CWR-node(C') | 
+| Shared-node-A | CW-node-B | CW-node-B' | CW-node-C | CWR-node-C' | 
 | --- | --- | --- | --- | --- |
 | 37 (839x) | 15 (309x) | 622375 (290x) | 1247 (366x) | 1271 (423x) |
 | 378121 (648x) | 1145 (366x) | 1221 (367x) | 616158 (403x) | 591624 (378x) |
@@ -57,10 +57,11 @@ The individual nodes could be duplicated to resolve the contiguity of the plasmi
 | 89-1265-447099 (798x) | 277 (492x) | 275 (501x) | 85 (290x) | 75 (274x) |
 
 (This is a little messy without labeling every node and showing images of them). Below we show that with no other options for graph simplification or node separations
-the contiguous nodes can be merged into a final graph suggesting two plasmids ("a" & "b") 
-with shared homology (nodes labeled) as the final product of our analyses. ![our analyses](/fig/Plasmid1ab-simplified_graphs.png) 
+the contiguous nodes can be merged into a final graph suggesting two plasmids.  
+with shared homology (nodes labeled) as the final product of our analyses. ![our analyses](/fig/Plasmid1ab-simplified_graphs.png). However, it is also possible that these nodes could be split such that 
+a single plasmid is the final result. Because these structural probabilities are unresolvable, the term "Plasmid-1ab" seemed appropriate.  
 
-These nodes were used to extract Plasmid-1ab reads from the total reads. Below we show some of the 
+These Bandage node names were used to extract Plasmid-1ab reads from the total reads. Below we show some of the 
 command-line scripts used to extract the nodes shown from the bandage image, and then 
 recover the names and assemble the reads that make up Plasmid-1ab. The process is the same as on the [metadata](/metadata.md) 
 and [scripts](/scripts.md) pages. But the assembled plasmid did not appear as contiguous sequences when using Blast+ on the NCBI "nt" database (some fragments did show up). As such we believe this plasmid (or plasmids) is "novel", or not previously described.
@@ -84,7 +85,7 @@ module load python3/3.6.4
 spades.py -t 32 -m 768 -k 29,31,33,55 -1 R1aaabacadPlasmid1.fastq -2 R2aaabacadPlasmid1.fastq --isolate --cov-cutoff auto -o LACaaabacad_Plasmid1_isolate
 ```
 
-
+[TO README Page](/README.md)
 
 
 
