@@ -39,6 +39,12 @@ sed -n '1~4s/^@/>/p;2~4p' LacR2aaab.fastq > LacR2aaab.fasta
 `5.` After removing plasmid reads, the Spades assembly contained no plasmid in the 
 `assembly_graph_with_scaffolds.gfa` and `assembly_graph.fastg` which were both empty files.
 
+<a name="06"></a>
+6. These script could have been simplified to (for example):
+```
+blastn -db /lactoplasmid/lactoplasmid/lactoplas_db -num_threads 32 -evalue 0.001 -query LacR1aaabacad.fasta -out /lactoplasmid/lactoplasmid/R1aaablactoplas.out -outfmt "6 qseqid"
+```
+This would have produced read name files that did not need to be "cleaned" with further `awk` scripts. 
 
 [Go back to assembly metadata](/metadata.md#met01)
 
