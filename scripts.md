@@ -3,7 +3,7 @@
 # Scripts used (specific for this project)
 
 <a name="trim01"></a>
-Trimmomatic Command: [Note 1:](/notes.md#01)
+Trimmomatic Command: [See Note 1 on Trimmomatic:](/notes.md#01)
 
 `java -jar /opt/trimmomatic/0.38/prebuilt/trimmomatic-0.38.jar PE -threads 4 L_lactis_S1_LALL_R1.trim.fastq.gz L_lactis_S1_LALL_R2.trim.fastq.gz \
             L_lactis_S1_LALL_R1.trim.Gtrim.fastq.gz L_lactis_S1_LALL_R1.trim.un.Gtrim.fastq.gz \
@@ -23,7 +23,7 @@ tar -czf L_lactis_S2_LALL_R1.trim.Gtrim.fastq.gz L_lactis_S2_LALL_R1.trim.Gtrim.
 zcat L_lactis_S1_LALL_R1.trim.Gtrim.fastq.gz | split -l 4000000 - LacR1
 zcat L_lactis_S1_LALL_R2.trim.Gtrim.fastq.gz | split -l 4000000 - LacR2
 ```
-[Note 2:](/notes.md#02)
+[See Note 2 on the above outputs:](/notes.md#02)
 
 <a name="cat01"> </a>
 Script 3: Creating readfiles of known size and renaming them simultaneously:
@@ -43,14 +43,14 @@ spades.py -t 32 -m 96 -k 29,31,33,55 -1 LacR1aaabacad.fastq -2 LacR2aaabacad.fas
 ```
 
 <a name="scr06"></a>
-Script 6: Use Bandage to select plasmids as fasta files
+Script 6: Use Bandage to select plasmids as fasta files, and use these to create a Blast+ database
 ```
 blast+/2.8.1
 makeblastdb -in Bandage_plasmid1.fasta -out /lactoplasmid/lactoplasmid/lactoplas_db -parse_seqids -dbtype nucl
 makeblastdb -in Bandage_plasmid2.fasta -out /lactoplasmid/biglactoplasmid/biglactoplas_db -parse_seqids -dbtype nucl
 ```
 
-Script 7: Make `.fasta` files from the `.fastq` reads [Note 3:](/notes.md#03)
+Script 7: Make `.fasta` files from the `.fastq` reads [See Note 3:](/notes.md#03)
 <a name="scr07"></a>
 ```
 cat LacR1aaabacad.fastq | grep -A1 @ | grep -Ev '\--' > LacR1aaabacad.fasta
@@ -58,7 +58,7 @@ cat LacR2aaabacad.fastq | grep -A1 @ | grep -Ev '\--' > LacR2aaabacad.fasta
 ```
 
 <a name="scr08"></a>
-Script 8 [NOTE #6 on these scripts](/notes.md#06)
+Script 8 [See NOTE #6 on these scripts](/notes.md#06)
 ```
 blast+/2.8.1
 blastn -db /lactoplasmid/lactoplasmid/lactoplas_db -num_threads 32 -evalue 0.001 -query LacR1aaabacad.fasta -out /lactoplasmid/lactoplasmid/R1aaablactoplas.out -outfmt "6 qseqid qlen sseqid pident length"
@@ -68,7 +68,7 @@ blastn -db /lactoplasmid/biglactoplasmid/biglactoplas_db -num_threads 32 -evalue
 ```
 
 <a name="scr09"></a>
-Script 9: Extracts only the read name (actually the "qseqid") to a file
+Script 9: Extracts only the plasmids read names (actually the "qseqid") to a file
 ```
 awk '{print $1}' R1aaabacadlactoplas.out | uniq > R1aaabacadNames
 awk '{print $1}' R2aaabacadlactoplas.out | uniq > R2aaabacadNames
@@ -77,7 +77,7 @@ awk '{print $1}' bigR2aaabacadlactoplas.out | uniq > bigR2aaabacadNames
 ```
 
 <a name="scr10"></a>
-Script 10
+Script 10: Generates the Plasmid2 read1 and read2 `.fastq` files.
 ```
 grep -A3 --file=R1aaabacadNames LacR1aaabacad.fastq > R1Plasmid1 | grep -E -v '\--' R1Plasmid1 > R1Plasmid1.fastq
 grep -A3 --file=R2aaabacadNames LacR2aaabacad.fastq > R2Plasmid1 | grep -E -v '\--' R2Plasmid1 > R2Plasmid1.fastq
@@ -93,8 +93,8 @@ sort -u plasmidnames -o sortedallplasmidnames
 ```
 
 <a name="scr12"></a>
-Script 12: Create a list of all read names, clean the list up, then remove all plasmid read names
-creating a file of only genomic reads names
+Script 12: Create a list of all read names, clean the list up, then remove all plasmid read names. 
+This created a file of only genomic reads names
 ```
 grep NB501827 LacR1aaabacad.fastq > R1Allreadnames
 grep NB501827 LacR2aaabacad.fastq > R2Allreadnames
@@ -105,7 +105,7 @@ grep -v --file=sortedallplasmidnames R2aaabacadNames > gR2aaabacadNames
 ```
 
 <a name="scr13"></a>
-Script 13: Extract the fastq file of the genomic reads and clean it [Note 4:](/notes.md#04)
+Script 13: Extract the fastq file of the genomic reads and clean it [See Note 4:](/notes.md#04)
 ```
 grep -A3 --file= gR1aaabacadNames LacR1aaabacad.fastq > gLacR1aaabacad.fastq
 grep -A3 --file= gR2aaabacadNames LacR2aaabacad.fastq > gLacR2aaabacad.fastq
@@ -114,7 +114,7 @@ grep -v ‘\--‘ gLacR2aaabacad.fastq > gLacR2aaabacadfixed.fastq
 ```
 
 <a name="scr14"></a>
-Script 14: Reassemble genome with plasmid readsd removed: [Note 5](/notes.md#05)
+Script 14: Reassemble genome with plasmid reads removed: [See Note 5](/notes.md#05)
 ```
 $ wc -l gLacR1aaabacadfixed.fastq
 14011972 gLacR1aaabacadfixed.fastq (3,502,993 reads)
