@@ -3,10 +3,10 @@
 # Notes
 
 <a name="01"></a>
-`1.` [NexteraPE-PE-G.fa](/files/NexteraPE-PE-G.fa) is a downloadable custom adapter removal file designed to also remove poly(G) stretches of 35 consecutive G nucleotides (or more) in the reads data which can occur with Illumina "two-color" technology sequencers (usually in read-2). 
+`Note 1.` [NexteraPE-PE-G.fa](/files/NexteraPE-PE-G.fa) is a downloadable custom adapter removal file designed to also remove poly(G) stretches of 35 consecutive G nucleotides (or more) in the reads data which can occur with Illumina "two-color" technology sequencers (usually in read-2). 
 
 <a name="02"></a>
-`2.` The outputs are a series of `fastq.` files 4M lines long (1M reads each). The first set are:
+`Note 2.` The outputs are a series of `fastq.` files 4M lines long (1M reads each). The first set are:
 ```
 LacR1aa
 LacR1ab
@@ -27,20 +27,20 @@ LacR2ae
 These are renamed as `.fastq` files in the next steps when they are concatenated.
 
 <a name="03"></a>
-`3.` This could also be done with a  well-known `sed` script such as:
+`Note 3.` This could also be done with a  well-known `sed` script such as:
 ```
 sed -n '1~4s/^@/>/p;2~4p' LacR2aaab.fastq > LacR2aaab.fasta
 ```
 
 <a name="04"></a>
-`4.` The same type of piping used in script 10 could have been used here.
+`Note 4.` The same type of piping used in script 10 could have been used here.
 
 <a name="05"></a>
-`5.` After removing plasmid reads, the Spades assembly contained no plasmid in the 
+`Note 5.` After removing plasmid reads, the Spades assembly contained no plasmid in the 
 `assembly_graph_with_scaffolds.gfa` and `assembly_graph.fastg` which were both empty files.
 
 <a name="06"></a>
-6. These scripts could have been simplified to (for example):
+`Note 6.` These scripts could have been simplified to (for example):
 ```
 blastn -db /lactoplasmid/lactoplasmid/lactoplas_db -num_threads 32 -evalue 0.001 -query LacR1aaabacad.fasta -out /lactoplasmid/lactoplasmid/R1aaablactoplas.out -outfmt "6 qseqid"
 ```
