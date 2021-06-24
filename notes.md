@@ -3,7 +3,7 @@
 # Notes
 
 <a name="01"></a>
-`Note 1.` [NexteraPE-PE-G.fa](/files/NexteraPE-PE-G.fa) is a downloadable custom adapter removal file designed to also remove poly(G) stretches of 35 consecutive G nucleotides (or more) in the reads data which can occur with Illumina "two-color" technology sequencers (usually in read-2). 
+`Note 1.` [NexteraPE-PE-G.fa](/files/NexteraPE-PE-G.fa) is a <span style="color:red">downloadable custom adapter removal file</span>. designed to also remove poly(G) stretches of 35 consecutive G nucleotides (or more) in the reads data which can occur with Illumina "two-color" technology sequencers (usually in read-2). 
 
 <a name="02"></a>
 `Note 2.` The outputs are a series of `fastq.` files 4M lines long (1M reads each). The files are by default given alphabetical suffixes. The first set are:
