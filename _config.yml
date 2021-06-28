@@ -8,7 +8,7 @@ encoding: UTF-8
 ### Build settings ###
 url: https://hoytpr.github.io/
 baseurl: /Lacto_genome
-
+### updating markdown ###
 kramdown:
   input: GFM
   hard_wrap: false
