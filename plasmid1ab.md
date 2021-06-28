@@ -68,7 +68,7 @@ a single larger plasmid is the final result. Because these structural probabilit
 These Bandage node names were used to extract Plasmid-1ab reads from the total reads. Below we show some of the 
 command-line scripts used to extract the nodes shown from the bandage image, and then 
 recover the names and assemble the reads that make up Plasmid-1ab. The process is essentially the same as on the [metadata page](/metadata.md) 
-and [scripts #15 and #16 on the scripts](/scripts.md#scr15) page. Because the re-assembled plasmid did not appear as contiguous sequences when using Blast+ on the NCBI "nt" database (some fragments did show up). As such we believe this plasmid (or plasmids) is "novel", or not previously described.
+and [scripts #15 and #16 on the scripts](/scripts.md#scr15) page. Because the re-assembled plasmid did not appear as contiguous sequences when using Blast+ on the NCBI "nt" database (some fragments did show up), we believe this plasmid (or plasmids) is "novel", *i.e.* not previously described.
 
 
 ```
