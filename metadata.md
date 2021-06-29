@@ -110,7 +110,7 @@ $ wc -l gLacR2aaabacadfixed.fastq
  
  Genome SAM and BAM files were generated using Bowtie2 v. 2.3.4.1 [citations](/citations.md)
  
- The Bowtie2 process begins with and building and "inspection" of the reference genome, genome followed by alignment 
+ The Bowtie2 process begins with a building and "inspection" of the reference genome, genome followed by alignment 
  of the reads to the reference genome, generating a `.SAM` file. Our reference genome was NCBI accession [CP065737.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1) throughout. **[Script 15](/scripts.md#15)**
  
  The `.SAM` file was converted to a `.BAM` file, sorted, and indexed by Samtools v. 1.10 **[Spript 16](/scripts.md#16)** [citations](/citations.md) and the `.BAM` file was submitted with a scaffolded contig assembly to NCBI as part of BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925).
