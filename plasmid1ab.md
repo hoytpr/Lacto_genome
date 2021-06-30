@@ -56,7 +56,7 @@ To resolve the contiguity of the plasmid(s), proper linkage could be acheived by
 | 606278 (990x) | 1298 (434x) | 1312 (417x) | 618166 (400x) | 57 (378x) |
 | 89-1265-447099 (798x) | 277 (492x) | 275 (501x) | 85 (290x) | 75 (274x) |
 
-(This is a little messy but so would labeling every node and showing images of them). Below we show that with no other options for graph simplification or node splitting
+(This is a little messy but so is labeling every node and showing images). Below we show that with no other options for graph simplification or node splitting
 the contiguous nodes can be merged resulting in a final graph suggesting two plasmids.  
 with shared homology (shared nodes are labeled) as the final product of our analyses. 
 
