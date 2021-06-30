@@ -5,7 +5,7 @@
 
 Plasmid-1ab is named (as might be inferred) for plasmid-1a and plasmid-1b. We were unable to resolve whether this is one plasmid or two plasmids (described below). If this is one plasmid, the overall size (with overlaps) estimated by Bandage is 19,297 bp. Conversely, if there are two plasmids, each plasmid is about half that size, or **~9,648 bp each**. Also note that when submitting `.fastq` files to NCBI, we cannot include any "contig" under 200bp. After assembly, the total length of the submitted contigs was **17,155 bp**. To confirm the sequence(s) and length(s) of Plasmid-1ab one will have to isolate the plasmid(s) from a culture of Lactococcus, then clone and sequence the plasmid using Sanger sequencing. 
 
-The SPAdes `--plasmid` option generated `.gfa` files where plasmid-1ab had much higher copy numbers than other elements when viewed by read depth in Bandage. The mean read depth of plasmid-1ab nodes is 381x, while the genome nodes read depth is 54x (both values obtained using 4M PE reads). This indicates a plasmid copy number of over 7 per cell.
+Shown below, the SPAdes `--plasmid` option generated `.gfa` files where plasmid-1ab had much higher copy numbers than other elements when viewed by read depth in Bandage. The mean read depth of plasmid-1ab nodes is 381x, while the genome nodes read depth is 54x (both values obtained using 4M PE reads). This indicates a plasmid copy number of over 7 per cell.
 
 NOTE: in all the images below read depth is ***relative*** and colored with "red" for higher read depth, and a darker color indicating lower read depths.
 
