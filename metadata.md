@@ -140,10 +140,10 @@ More QUAST outputs (contig size cutoff default = 500 bp) for each assembly are s
 | Mismatches |  |  |  |  |
 | # N's | 0 | 0 | 0 | 0 |
 | # contigs | 77 | 4 | 7 | 66 |
-| # contigs (>= 0 bp) | 119 | 8 | 13 | 98 |
+| # contigs (>= 0 bp) | 119 | **8** | **13** | **98** |
 | # contigs (>= 1000 bp) | 65 | 4 | 7 | 54 |
 | Largest contig | 435796 | 4753 | 12568 | 435796 |
-| Total length (>= 0 bp) | 2518618 | 12772 | 57382 | **2448464** |
+| Total length (>= 0 bp) | 2518618 | **12772** | **57382** | **2448464** |
 | Total length (>= 1000 bp) | 2497578 | 11842 | 55552 | 2430184 |
 | N50 | 134484 | 4564 | 11477 | 134484 |
 | N90 | 20903 | 1367 | 5972 | 32769 |
