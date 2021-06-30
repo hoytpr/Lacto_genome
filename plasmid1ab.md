@@ -35,7 +35,7 @@ Looking at the raw data, the inflection point in coverage increase went from **2
  
  ![unresolved repeated sequence](/fig/600074-and-276613-graph-labels.png) 
  
-  This repeat can be resolved *in silico* using Bandage by replicating node 276613 (59bp, 505x) and placing a copy of 276613 (each now at 252x depth) on either side of node 600074. In Bandage after duplicating a node, this is done by removing edges (blue colored) as shown. More information on these processes can be found at the [Bandage GitHub wiki.](https://github.com/rrwick/Bandage/wiki)
+  This repeat can be resolved *in silico* using Bandage by replicating node 276613 (59bp, 505x) and placing a copy of 276613 (each now at 252x depth) on either side of node 600074. In Bandage after replicating a node, this is done by removing edges (blue colored) as shown effectively "splitting" the node into  a contiguous sequence. More information on these processes can be found at the [Bandage GitHub wiki.](https://github.com/rrwick/Bandage/wiki)
   
 ![Before edge removal](/fig/resolving-600074-v-2sm.png)
 ![After edge removal](/fig/resolving-600074-v2-Bsm.png) 
