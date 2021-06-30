@@ -154,10 +154,10 @@ More QUAST outputs (contig size cutoff default = 500 bp) for each assembly are s
  
 ### Final numbers of reads and coverage
 
-|  | L. lactis PrHT3 | Plasmid1ab | Plasmid2 |
+|  | L. lactis PrHT3 | Plasmid-1ab | Plasmid-2 |
 | --- | --- | --- | --- |
-| READS | 7,005,986 | 571,732 | 417,160 |
-| COVERAGE | 215x | 3,357x | 545x |
+| Reads used | 7,005,986 | 571,732 | 417,160 |
+| Coverage | 215x | 3,357x | 545x |
 
 
 ### Plasmid-1ab: Is it one or two plasmids?
