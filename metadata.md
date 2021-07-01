@@ -59,7 +59,7 @@ All G-trimmed and re-paired reads were divided into to 1-million read "chunks" *
 These `.fastq` files containing 1M-4M reads each are created by `split` and then concatenated together at 1M read intervals to be tested for the best assembly. Subsequently, the use of ≤4M reads was found to provide good overall genome coverage and for identifying plasmid elements, while higher numbers (8M) could be used with read mapping. 
 **[Script 4](/scripts.md#cat01)**
 
-For testing and assemblies 2M reads `fastq` files were named according to the number of 1M reads "chunks" were used for example; 2M reads files were named: `LacR1aaab.fastq`, and `LacR2aaab.fastq`. Similarly, 4M read `fastq` files were named: `LacR1aaabacad.fastq`, and `LacR2aaabacad.fastq`.
+For testing and assemblies 2M reads `fastq` files were named according to the number of 1M reads "chunks" used.  For example; 2M reads files were named: `LacR1aaab.fastq`, and `LacR2aaab.fastq`. Similarly, 4M read `fastq` files were named: `LacR1aaabacad.fastq`, and `LacR2aaabacad.fastq`.
 
 #### Pre-Assembly (Assembly with plasmids)
 
@@ -94,8 +94,8 @@ This graph shows that SPAdes predicts at least two plasmids with one set of pred
   - The read names were cleaned up with an `awk` script **[Script 9](/scripts.md#scr09)** to make a file with ***only*** read names.  
   - The cleaned read names can then be used directly on the original read `.fastq` files to output the presumptive plasmid reads in `.fastq` format. **[Script 10](/scripts.md#scr10)** 
   - We then combined the plasmid read names **[Script 11](/scripts.md#scr11)** and created a ***genomic*** read names file by first generating a file of **all** read names and then removing all presumptive plasmid read names. **[Script 12](/scripts.md#scr12)**.
-  - Use the genomics read names to extract the genomics `.fastq` reads. **[Script 13](scripts.md#scr13)**
-  - Determine the number of genomic reads remaining (shown below).
+  - The genomics read names were used to extract the genomics `.fastq` reads. **[Script 13](scripts.md#scr13)**
+  - We determined the number of genomic reads remaining (shown below).
 
 ```
 $ wc -l gLacR1aaabacadfixed.fastq
@@ -104,14 +104,14 @@ $ wc -l gLacR2aaabacadfixed.fastq
 14011972 gLacR2aaabacadfixed.fastq  #(3,502,993 reads)
 ```
 
- - Reassemble the genome. **[Script 14](scripts.md#scr14)** 
+ - The L. lactis PrHT3 genome was reassembled. **[Script 14](scripts.md#scr14)** 
  
  ### Creating SAM and BAM files
  
  Genome SAM and BAM files were generated using Bowtie2 v. 2.3.4.1 ([Bowtie citation](/citations.md#cit07),  [SAMtools and BCFtools citation](/citations.md#cit08)).
  
- The Bowtie2 process begins with a building and "inspection" of the reference genome, genome followed by alignment 
- of the reads to the reference genome, generating a `.SAM` file. Our reference genome was NCBI accession [CP065737.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1) throughout. **[Script 15](/scripts.md#15)**
+ By using Blast+ on contigs from previous alignments, we determined that our reference genome was NCBI accession [CP065737.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1). The Bowtie2 process begins with a building and "inspection" of the reference genome, followed by alignment 
+ of the reads to the reference genome, generating a `.SAM` file. **[Script 15](/scripts.md#15)**
  
  The `.SAM` file was converted to a `.BAM` file, sorted, and indexed by Samtools v. 1.10 **[Spript 16](/scripts.md#16)** ([Citations](/citations.md#cit08)) and the `.BAM` file was submitted with a scaffolded contig assembly to NCBI as part of BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925).
  
@@ -121,10 +121,10 @@ $ wc -l gLacR2aaabacadfixed.fastq
  
  Using Bowtie2, we used CP065736.1 as a reference "genome" to map our Plasmid 2 sequences as a `.SAM` file, which was converted to a `.BAM` file for submission to NCBI with assemblies under BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925). 
  
- The Plasmid 1 consensus sequence did not show an overall homology greater than 60% to any plasmids or genomes in the NCBI databases. Because Plasmid 1 had no identifiable reference genome, it was submitted as `.fastq` reads to the SRA, and the assembly sequence as contigs rather than scaffolds. The NCBI BioProject accession is [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925). **Please note the PrHT3 genome and pPrHT3 plasmid-2 reads are combined within the SRA SRR14619658 however Plasmid-1ab reads are SRR14619659 on NCBI BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925)**
+ The Plasmid 1 (later named Plasmid-1ab) consensus sequence did not show an overall homology greater than 60% to any plasmids or genomes in the NCBI databases. Because Plasmid 1 had no identifiable reference genome, it was submitted as `.fastq` reads to the SRA, and the assembly sequence as contigs rather than scaffolds. The NCBI BioProject accession is [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925). **Please note the PrHT3 genome and pPrHT3 plasmid-2 reads are combined within the SRA SRR14619658 however Plasmid-1ab reads are SRR14619659 on NCBI BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925)**
  
  <a name="met01"></a>
- To determine the N50 of the separate molecules, the `quast` software ([see citations](/citations.md#cit01)) was used to compare assembly results on `.fasta` files of the genome reads with plasmids, the genome reads without plasmids, and on each set of plasmid reads separately. [Script 18](/scripts.md#scr18) 
+ To determine the N50 of the separate molecules, the `QUAST` software ([see citations](/citations.md#cit01)) was used to compare assembly results on `.fasta` files of the genome reads with plasmids, the genome reads without plasmids, and on each set of plasmid reads separately (shown below). [Script 18](/scripts.md#scr18) 
  These comparisons used [CP065737.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1) as the reference genome.  
 
  
