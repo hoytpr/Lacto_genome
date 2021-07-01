@@ -1,6 +1,11 @@
 ---
 ---
 
+## Citations
+
+It is very important to recognize the work of those that make these analyses possible
+and provide their work for free. Our analyses were built upon the following software:
+
 ### QUAST
 
 Alexey Gurevich, Vladislav Saveliev, Nikolay Vyahhi and Glenn Tesler,
