@@ -5,25 +5,25 @@
 
 Plasmid-1ab is named (as might be inferred) for plasmid-1a and plasmid-1b. We were unable to resolve whether this is one plasmid or two plasmids (described below). If this is one plasmid, the overall size (with overlaps) estimated by Bandage is 19,297 bp. Conversely, if there are two plasmids, each plasmid is about half that size, or **~9,648 bp each**. Also note that when submitting `.fastq` files to NCBI, we cannot include any "contig" under 200bp. After assembly, the total length of the submitted contigs was **17,155 bp**. To confirm the sequence(s) and length(s) of Plasmid-1ab one will have to isolate the plasmid(s) from a culture of Lactococcus, then clone and sequence the plasmid using Sanger sequencing. 
 
-Shown below, the initial SPAdes `--plasmid` option generated `.gfa` files where plasmid-1ab had much higher copy numbers than other elements when viewed by read depth in Bandage. The mean read depth of plasmid-1ab nodes is 381x, while the genome nodes read depth is 54x (both values obtained using 4M PE reads). This indicates a plasmid copy number of over 7 per cell.
+Shown [previously](/metadata.md#band01), the initial SPAdes `--plasmid` option generated `.gfa` files where plasmid-1ab had much higher copy numbers than other elements when viewed by read depth in Bandage. For example, when using 4-million paired end read files, the mean read depth of plasmid-1ab nodes is 381x, while the genome nodes read depth is 54x. This indicates a plasmid copy number of over 7 per cell.
 
 NOTE: in all the images below read depth is ***relative*** and colored with "red" for higher read depth, and a darker color indicating lower read depths.
 
 
 
-When viewed in Bandage, the original presumptive plasmid nodes appear complex. In the following image the original node edges have been stretched apart so that the nodes and edges are all visible. 
+When viewed in Bandage, the original presumptive Plasmid-1ab nodes appear complex. In the following image the original node edges have been stretched apart so that the nodes and edges are all visible. 
 
 ![complex](/fig/Plasmid1ab-exploded-before-trimming-selected.png)
 
 We charted the depth of all 106 nodes and and found a distinct 
-threshold at a depth of 25x where nodes might be complicating the analyses. These 
+threshold at a read depth of 25x where nodes might be complicating the analyses. These 
 nodes represented only 0.8% of the total coverage within the plasmid-1ab assembly. 
 There was also a threshold at approximately 500x that suggested where shared/duplicated sequences might be 
 showing up in the graph assembly. 
 
 ![threshold](/fig/plasmid-1ab-node-depth.png)
 
-Looking at the raw data, the inflection point in coverage increase went from **24.4x (node #222887) to 224.5x (node #221355)**. These reads below **25x** were subsequently removed as putative artifacts. After **removing** nodes with read depth below **25x**, the graph assembly is greatly simplified.
+Looking at the raw data, the inflection point in coverage increase went from **24.4x (node #222887) to 224.5x (node #221355)**. Subsequently reads below **25x** were removed as putative artifacts. After **removing** nodes with read depth below **25x**, the graph assembly is greatly simplified.
 
  ![greatly simplified](/fig/Plasmid1ab-exploded-after-trimming.png) 
  
@@ -44,7 +44,9 @@ The next level of resolving the graph involves splitting six (6) individual node
 
 ![between bubbles](/fig/Plasmid1ab-after-depth-25-trimming-best-layout-depth250-700.png) 
 
-To resolve the contiguity of the plasmid(s), proper linkage could be acheived by matching sequence read depth on each side of the split shared nodes. For example if a shared node (A), had two nodes on one side with coverages of 100X (B) and 600x (B'), then also had two nodes on the other side with 590x (C) and 110x (C'), it would be reasonable to split the shared node, and delete edges such that the node with 100x coverage would connect to the now split shared node (A), then to the node with 110x coverage (B-A-C'). Conversely, the node with 600x coverage would connect to the split shared node (A'), and then to the node with 590x coverage (B'-A'-C). This is (simplistically) how a [Directed acyclic graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) algorithm works during an assembly ("construction") process. Unfortunately, using the analogy above for decriptors, the read depths on opposing sides of all these shared nodes (referred to in clockwise mode "CW") are too similar and cannot be split confidently. This is shown in the table below:
+To resolve the contiguity of the plasmid(s), proper linkage could be acheived by matching sequence read depth on each side of the split shared nodes. For example if a shared node (A), had two nodes on one side with coverages of 100X (B) and 600x (B'), then also had two nodes on the other side with 590x (C) and 110x (C'), it would be reasonable to split the shared node, and delete edges such that the node with 100x coverage would connect to the now split shared node (A), then to the node with 110x coverage (B-A-C'). Conversely, the node with 600x coverage would connect to the split shared node (A'), and then to the node with 590x coverage (B'-A'-C). This is (simplistically) how a [directed acyclic graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) algorithm works during an assembly ("construction") process. 
+
+Unfortunately, using descriptors from the analogy above, the read depths on opposing sides of all shared nodes (referred to in clockwise mode "CW") are too similar and cannot be split confidently. This is shown in the table below:
 
 | Shared-node-A | CW-node-B | CW-node-B' | CW-node-C | CW-node-C' | 
 | --- | --- | --- | --- | --- |
