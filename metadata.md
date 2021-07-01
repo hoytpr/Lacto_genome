@@ -37,9 +37,9 @@ Primary Data Filenames: `L_lactis_S1_LALL_R1_001.fastq.gz` and `L_lactis_S1_LALL
 
 Files processed through `bcl2fastq`?: YES
 
-Number of Reads Passed Filter Read1:144,378,652
+Number of Reads Passed Filter Read1: 144,378,652
 
-Number of Reads Passed Filter Read2:144,378,652
+Number of Reads Passed Filter Read2: 144,378,652
 
 Post-sequencing QC: Trimmomatic v. 0.38 
 
