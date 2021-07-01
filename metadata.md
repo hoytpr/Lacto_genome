@@ -47,9 +47,9 @@ Trimmomatic Command: ***[Script 1](/scripts.md#trim01)**
 
 Orphaned reads from Trimmomatic were discarded and trimmed reads were repaired using BBTools `re-pair` software v. 38.90 **[Script 2](/scripts.md#BB01)** [citations](/citations.md)
 
-Number of Reads surviving Trimmomatic and `re-pair` Read1:135,271,743
+Number of Reads surviving Trimmomatic and `re-pair` Read1: 135,271,743
 
-Number of Reads surviving Trimmomatic and `re-pair` Read2:135,271,743
+Number of Reads surviving Trimmomatic and `re-pair` Read2: 135,271,743
 
 ### ASSEMBLY
 
