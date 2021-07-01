@@ -89,7 +89,8 @@ module load python3/3.6.4
 spades.py -t 32 -m 768 -k 29,31,33,55 -1 R1aaabacadPlasmid1.fastq -2 R2aaabacadPlasmid1.fastq --isolate --cov-cutoff auto -o LACaaabacad_Plasmid1_isolate
 ```
 
-[TO README Page](/README.md)
+| [TO README Page](/README.md) | [To metadata page](/metadata.md) |
+| --- | --- |
 
 
 
