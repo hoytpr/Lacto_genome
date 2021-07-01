@@ -51,7 +51,7 @@ Langmead, B., & Salzberg, S. L. (2012). Fast gapped-read alignment with Bowtie 2
 
 https://github.com/BenLangmead/bowtie
 
-### samtools 
+### SAMtools 
 
 Twelve years of SAMtools and BCFtools
 Petr Danecek, James K Bonfield, Jennifer Liddle, John Marshall, Valeriu Ohan, Martin O Pollard, Andrew Whitwham, Thomas Keane, Shane A McCarthy, Robert M Davies, Heng Li
