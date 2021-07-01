@@ -59,5 +59,11 @@ GigaScience, Volume 10, Issue 2, February 2021, giab008, https://doi.org/10.1093
 
 https://github.com/samtools/samtools
 
+### BBTools
+
+Bushnell B, Rood J, Singer E (2017) BBMerge – Accurate paired shotgun read merging via overlap. PLoS ONE 12(10): e0185056. https://doi.org/10.1371/journal.pone.0185056
+
+https://sourceforge.net/projects/bbmap/
+
 | [To README Page](/README.md) | [To metadata page](/metadata.md) | [To scripts page](/scripts.md) |
 | --- | --- | --- |
