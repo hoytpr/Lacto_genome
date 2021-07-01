@@ -35,3 +35,6 @@ Wick, R. R., Schultz, M. B., Zobel, J., & Holt, K. E. (2015). Bandage: interacti
 ### Bowtie
 
 Langmead, B., & Salzberg, S. L. (2012). Fast gapped-read alignment with Bowtie 2. Nature methods, 9(4), 357.
+
+| [To README Page](/README.md) | [To metadata page](/metadata.md) | [To scripts page](/scripts.md) |
+| --- | --- | --- |

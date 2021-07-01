@@ -168,7 +168,8 @@ Quast script to compare assemblies to reference genome
     
 
 
-[HOME](/README.md)
+| [To README Page](/README.md) | [To metadata page](/metadata.md) |
+| --- | --- |
 
 
 1. For [figures click here](/fig/)
