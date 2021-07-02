@@ -26,9 +26,11 @@ zcat L_lactis_S1_LALL_R1.trim.Gtrim.fastq.gz | split -l 4000000 - LacR1
 zcat L_lactis_S1_LALL_R2.trim.Gtrim.fastq.gz | split -l 4000000 - LacR2
 
 -->
+
+```
 split -l 4000000 L_lactis_S1_LALL_R1.trim.Gtrim.fixed.fastq LacR1
 split -l 4000000 L_lactis_S1_LALL_R2.trim.Gtrim.fixed.fastq LacR2
-
+```
 [See Note 2 on the above outputs:](/notes.md#02)
 
 <a name="cat01"> </a>
