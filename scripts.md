@@ -19,7 +19,7 @@ BBTools re-pair script:
 Thresholding the reads into manageable chunks for assembly
 ```
 tar -czf L_lactis_S1_LALL_R1.trim.Gtrim.fastq.gz L_lactis_S1_LALL_R1.trim.Gtrim.fixed.fastq
-tar -czf L_lactis_S2_LALL_R1.trim.Gtrim.fastq.gz L_lactis_S2_LALL_R1.trim.Gtrim.fixed.fastq
+tar -czf L_lactis_S1_LALL_R2.trim.Gtrim.fastq.gz L_lactis_S1_LALL_R2.trim.Gtrim.fixed.fastq
 zcat L_lactis_S1_LALL_R1.trim.Gtrim.fastq.gz | split -l 4000000 - LacR1
 zcat L_lactis_S1_LALL_R2.trim.Gtrim.fastq.gz | split -l 4000000 - LacR2
 ```
