@@ -98,7 +98,7 @@ This created a file of only genomic reads names
 ```
 grep NB501827 LacR1aaabacad.fastq > R1Allreadnames
 grep NB501827 LacR2aaabacad.fastq > R2Allreadnames
-awk '{print $1}' R2Allreadnames | uniq > R2aaabacadNames
+awk '{print $1}' R1Allreadnames | uniq > R1aaabacadNames
 awk '{print $1}' R2Allreadnames | uniq > R2aaabacadNames
 grep -v --file=sortedallplasmidnames R1aaabacadNames > gR1aaabacadNames
 grep -v --file=sortedallplasmidnames R2aaabacadNames > gR2aaabacadNames
