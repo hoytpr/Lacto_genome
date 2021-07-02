@@ -34,7 +34,7 @@ split -l 4000000 L_lactis_S1_LALL_R2.trim.Gtrim.fixed.fastq LacR2
 [See Note 2 on the above outputs:](/notes.md#02)
 
 <a name="cat01"> </a>
-Script 3: Creating readfiles of known size and renaming them simultaneously:
+Script 3: Creating readfiles of known size and renaming them as `.fastq` simultaneously:
 ```
 cat LacR1aa LacR1ab LacR1ac LacR1ad > LacR1aaabacad.fastq
 cat LacR2aa LacR2ab LacR2ac LacR2ad > LacR2aaabacad.fastq
