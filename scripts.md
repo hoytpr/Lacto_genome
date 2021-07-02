@@ -16,13 +16,19 @@ BBTools re-pair script:
 `./repair.sh -Xmx10g in1=L_lactis_S1_LALL_R1.trim.Gtrim.fastq in2=L_lactis_S1_LALL_R2.trim.Gtrim.fastq out1=L_lactis_S1_LALL_R1.trim.Gtrim.fixed.fastq out2=L_lactis_S1_LALL_R2.trim.Gtrim.fixed.fastq outsingle=single.fq`
 
 <a name="thresh01"></a>
-Thresholding the reads into manageable chunks for assembly
-```
+Splitting the reads into 1-million read chunks for assembly
+
+<!--
+
 tar -czf L_lactis_S1_LALL_R1.trim.Gtrim.fastq.gz L_lactis_S1_LALL_R1.trim.Gtrim.fixed.fastq
 tar -czf L_lactis_S1_LALL_R2.trim.Gtrim.fastq.gz L_lactis_S1_LALL_R2.trim.Gtrim.fixed.fastq
 zcat L_lactis_S1_LALL_R1.trim.Gtrim.fastq.gz | split -l 4000000 - LacR1
 zcat L_lactis_S1_LALL_R2.trim.Gtrim.fastq.gz | split -l 4000000 - LacR2
-```
+
+-->
+split -l 4000000 L_lactis_S1_LALL_R1.trim.Gtrim.fixed.fastq LacR1
+split -l 4000000 L_lactis_S1_LALL_R2.trim.Gtrim.fixed.fastq LacR2
+
 [See Note 2 on the above outputs:](/notes.md#02)
 
 <a name="cat01"> </a>
