@@ -120,7 +120,7 @@ $ wc -l gLacR2aaabacadfixed.fastq
  
  The Plasmid 2 consensus sequence was found by Blast (NCBI) to be over 98% identical to [CP065736.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065736.1), an unnamed 58,335 bp plasmid asociated with our reference strain [CP065737.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1).
  
- Using Bowtie2, we used CP065736.1 as a reference "genome" to map our Plasmid 2 sequences as a `.SAM` file, which was converted to a `.BAM` file for submission to NCBI with assemblies under BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925). 
+ We used CP065736.1 as a reference "genome" to map our Plasmid 2 sequences as a `.SAM` file using Bowtie2. The `.SAM` file was converted to a `.BAM` file (similar to [Script 16](/scripts.md#16)) for submission to NCBI with its assembly under BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925). 
  
  The Plasmid 1 (later named Plasmid-1ab) consensus sequence did not show an overall homology greater than 60% to any plasmids or genomes in the NCBI databases. Because Plasmid 1 had no identifiable reference genome, it was submitted as `.fastq` reads to the SRA, and the assembly sequence as contigs rather than scaffolds. The NCBI BioProject accession is [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925). **Please note the PrHT3 genome and pPrHT3 plasmid-2 reads are combined within the SRA SRR14619658 however Plasmid-1ab reads are SRR14619659 on NCBI BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925)**
  
@@ -132,7 +132,7 @@ $ wc -l gLacR2aaabacadfixed.fastq
 | | Genome |	Plasmid-1ab | Plasmid2 |
 | :--- | :--- | :--- | :--- |
 | N50 | 134484 | 4564 | 11477|
-| GC% | 35.22 | 31.69 | 34.69 |
+| GC% | 35.25 | 31.69 | 34.69 |
 
 More QUAST outputs (contig size cutoff default = 500 bp) for each assembly are shown below:
  
