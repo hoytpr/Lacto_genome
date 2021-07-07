@@ -166,7 +166,7 @@ More QUAST outputs (contig size cutoff default = 500 bp) for each assembly are s
 
 Plasmid-1ab was named because it is unclear that this is a single plasmid. Some evidence suggests it may be two plasmids with regions of shared sequence identity. This was initially indicated by the `Bandage` visualization shown above, and was unchanged by isolation and reassembly of plasmid-1ab sequences. The sequences had very high coverage relative to the genome and multiple levels of coverage (AKA: "read depth") were used in attempting resolve whether this was one plasmid or two plasmids. We have [a separate page](/plasmid1ab.md) to describe why it was left as "Plasmid-1ab"
 
-
-[To README Page](/README.md)
+| [To README Page](/README.md) | [To scripts page](/scripts.md) | [To citations page](/citations.md |
+| --- | --- | --- |
 	 
 For [figures click here](/fig/)
