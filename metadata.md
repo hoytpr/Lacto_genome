@@ -122,7 +122,7 @@ $ wc -l gLacR2aaabacadfixed.fastq
  
  We used CP065736.1 as a reference "genome" to map our Plasmid 2 sequences as a `.SAM` file using Bowtie2. The `.SAM` file was converted to a `.BAM` file (similar to [Script 16](/scripts.md#16)) for submission to NCBI with its assembly under BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925). 
  
- The Plasmid 1 (later named Plasmid-1ab) consensus sequence did not show an overall homology greater than 60% to any plasmids or genomes in the NCBI databases. Because Plasmid 1 had no identifiable reference genome, it was submitted as `.fastq` reads to the SRA, and the assembly sequence as contigs rather than scaffolds. The NCBI BioProject accession is [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925). **Please note the PrHT3 genome and pPrHT3 plasmid-2 reads are combined within the SRA SRR14619658 however Plasmid-1ab reads are SRR14619659 on NCBI BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925)**
+ The Plasmid 1 (later named Plasmid-1ab) consensus sequence did not show an overall homology greater than 60% to any plasmids or genomes in the NCBI databases. Because Plasmid 1 had no identifiable reference genome, it was submitted as `.fastq` reads to the SRA, and the assembly sequence as contigs rather than scaffolds. The NCBI BioProject accession is [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925). **Please note the PrHT3 genome and pPrHT3 plasmid-2 reads are combined within the NCBI BioSample SAMN19301478 and the SRA; SRS9038781 however Plasmid-1ab reads are BioSample SAMN19301478 and SRA; SRS9038783 on NCBI BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925)**
  
  <a name="met01"></a>
  To determine the N50 of the separate molecules, the `QUAST` software ([see citations](/citations.md#cit01)) was used to compare assembly results on `.fasta` files of the genome reads with plasmids, the genome reads without plasmids, and on each set of plasmid reads separately (shown below). [Script 18](/scripts.md#scr18) 
@@ -159,6 +159,7 @@ More QUAST outputs (contig size cutoff default = 500 bp) for each assembly are s
 | --- | --- | --- | --- |
 | Reads used | 7,005,986 | 571,732 | 417,160 |
 | Coverage | 215x | 3,357x | 545x |
+| SRA Accesion | SRS9038781 | SRS9038783 | SRS9038781 |
 
 
 ### Plasmid-1ab: Is it one or two plasmids?
