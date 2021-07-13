@@ -9,9 +9,7 @@ Shown [previously](/metadata.md#band01), the initial SPAdes `--plasmid` option g
 
 NOTE: In all the images below read depth is ***relative*** and colored with "red" for higher read depth, and a darker color indicating lower read depths.
 
-
-
-When viewed in Bandage, the original presumptive Plasmid-1ab nodes appear complex. In the following image the original node edges have been stretched apart so that the nodes and edges are all visible. 
+When viewed in Bandage, the original presumptive Plasmid-1ab nodes appear complex. Much of this is due to small and low-copy-number nodes. In the following image the original node edges have been stretched apart so that the nodes and edges are all visible. 
 
 ![complex](/fig/Plasmid1ab-exploded-before-trimming-selected.png)
 
@@ -62,10 +60,10 @@ Unfortunately, using descriptors from the analogy above, the read depths on oppo
 the contiguous nodes can be merged resulting in a final graph suggesting two plasmids.  
 with shared homology (shared nodes are labeled) as the final product of our analyses. 
 
-![our analyses](/fig/Plasmid1ab-simplified_graphs.png). 
+![our analyses](/fig/Plasmid1ab-simplified_graphs.png) 
 
 However, it is also possible that these nodes could be split such that 
-a single larger plasmid is the final result. Because these structural probabilities are unresolvable, the term "Plasmid-1ab" was deemed most appropriate.  
+a single larger plasmid is the final result. Because these structural probabilities are unresolvable, the term "Plasmid-1ab" was deemed most appropriate. 
 
 These Bandage node names were used to extract Plasmid-1ab reads from the total reads. Below we show some of the 
 command-line scripts used to extract the nodes shown from the bandage image, and then 
