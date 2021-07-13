@@ -91,11 +91,11 @@ This graph shows that SPAdes predicts at least two plasmids with one set of pred
   - The nodes of the presumptive plasmids can be selected, and the sequences can be output from Bandage as `.fasta` files (*e.g.* "Bandage_plasmid1.fasta" and "Bandage_plasmid2.fasta"). For a description of the differences between `Bandage` nodes and edges, vs. assembly contigs, please see the [Bandage Wiki Page](https://github.com/rrwick/Bandage/wiki). 
   - To identify reads corresponding to these plasmid sequences, the Bandage `.fasta` outputs were converted into a Blast+ database (v. 2.8.1). **[Script 6](/scripts.md#scr06)** ([Citations](/citations.md#cit05))
   - The complete set of Lactococcus reads `.fastq` files was converted to `.fasta` files **[Script 7](/scripts.md#scr07)**.
-  - The Blast database was queried with the Lactococcus reads `.fasta` files outputting the read names that match the plasmid node sequences. **[Script 8](/scripts.md#scr08)**
-  - The read names were cleaned up with an `awk` script **[Script 9](/scripts.md#scr09)** to make a file with ***only*** read names.  
+  - The Blast database was queried with the Lactococcus reads `.fasta` files outputting the read names that match the plasmid node sequences as in **[Script 8](/scripts.md#scr08)**.
+  - The read names were cleaned up with an `awk` script **[Script 9](/scripts.md#scr09)** to make a file with ***only read names***.  
   - The cleaned read names can then be used directly on the original read `.fastq` files to output the presumptive plasmid reads in `.fastq` format. **[Script 10](/scripts.md#scr10)** 
-  - We then combined the plasmid read names **[Script 11](/scripts.md#scr11)** and created a ***genomic*** read names file by first generating a file of **all** read names and then removing all presumptive plasmid read names. **[Script 12](/scripts.md#scr12)**.
-  - The genomics read names were used to extract the genomic `.fastq` reads. **[Script 13](scripts.md#scr13)**
+  - We then combined the plasmid read names **[Script 11](/scripts.md#scr11)** and created a ***genomic*** read names file by first generating a file of **all** read names followed by removing all presumptive plasmid read names as in **[Script 12](/scripts.md#scr12)**.
+  - The genomics read names were used to extract the genome `.fastq` reads. **[Script 13](scripts.md#scr13)**
   - We determined the number of genomic reads remaining (shown below).
 
 ```
@@ -105,7 +105,7 @@ $ wc -l gLacR2aaabacadfixed.fastq
 14011972 gLacR2aaabacadfixed.fastq  #(3,502,993 reads)
 ```
 
- - The L. lactis PrHT3 genome was reassembled. **[Script 14](scripts.md#scr14)** 
+ - The L. lactis PrHT3 genome was reassembled using **[Script 14](scripts.md#scr14)**.
  
  ### Creating SAM and BAM files
  
