@@ -71,11 +71,11 @@ Plasmid output assembly graph pathways (`.gfa` files) are the most important par
 ![Lactococcus assembly using --plasmid --careful](/fig/graph1.png)
 
 This graph shows several important issues:
-1. The Illumina sequencing was very high quality as there are no "dead-ends".
+1. The Illumina sequencing was very high quality as there are no "[dead-ends](https://github.com/rrwick/Bandage/wiki/Graph-layout-and-appearance)".
 2. This graph clearly shows at least one separate high-copy-number plasmid.
 3. The graph shows there are other disproportionately high-copy regions within the genome assembly.
 
-Additional SPAdes outputs are the files `assembly_graph_with_scaffolds.gfa` and `assembly_graph.fastg` which contain only the SPAdes predicted plasmid sequence elements. The `assembly_graph.fastg` file is visualized with `Bandage` and shown below:
+Additional SPAdes `--plasmid` outputs are the files `assembly_graph_with_scaffolds.gfa` and `assembly_graph.fastg` which contain only the SPAdes predicted plasmid sequence elements. The `assembly_graph.fastg` file is visualized with `Bandage` and shown below:
 
 ![Lactococcus predicted plasmids from SPAdes using --plasmid --careful](/fig/graph0_scaffolding.png)
 

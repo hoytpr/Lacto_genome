@@ -87,10 +87,10 @@ awk '{print $1}' bigR2aaabacadlactoplas.out | uniq > bigR2aaabacadNames
 <a name="scr10"></a>
 Script 10: Generates the Plasmid2 read1 and read2 `.fastq` files.
 ```
-grep -A3 --file=R1aaabacadNames LacR1aaabacad.fastq > R1Plasmid1 | grep -E -v '\--' R1Plasmid1 > R1Plasmid1.fastq
-grep -A3 --file=R2aaabacadNames LacR2aaabacad.fastq > R2Plasmid1 | grep -E -v '\--' R2Plasmid1 > R2Plasmid1.fastq
-grep -A3 --file=bigR1aaabacadNames LacR1aaabacad.fastq > R1Plasmid2 | grep -E -v '\--' R1Plasmid2 > R1Plasmid2.fastq
-grep -A3 --file=bigR2aaabacadNames LacR2aaabacad.fastq > R2Plasmid2 | grep -E -v '\--' R2Plasmid2 > R2Plasmid2.fastq
+grep -A3 --file=R1aaabacadNames LacR1aaabacad.fastq | grep -E -v '\--' > R1Plasmid1.fastq
+grep -A3 --file=R2aaabacadNames LacR2aaabacad.fastq | grep -E -v '\--' > R2Plasmid1.fastq
+grep -A3 --file=bigR1aaabacadNames LacR1aaabacad.fastq | grep -E -v '\--' > R1Plasmid2.fastq
+grep -A3 --file=bigR2aaabacadNames LacR2aaabacad.fastq | grep -E -v '\--' > R2Plasmid2.fastq
 ```
 
 <a name="scr11"></a>
