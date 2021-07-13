@@ -6,7 +6,7 @@
 `Note 1.` [NexteraPE-PE-G.fa](/files/NexteraPE-PE-G.fa) is a **downloadable custom adapter removal file** designed to also remove poly(G) stretches of 35 consecutive G nucleotides (or more) in the reads data. Poly(G) stretches can occur with Illumina "two-color" technology sequencers (usually in read-2). 
 
 <a name="02"></a>
-`Note 2.` The outputs are a series of `fastq.` files 4M lines long (1M reads each). The files are by default given alphabetical suffixes. The first set are:
+`Note 2.` The outputs are a series of `.fastq` files 4M lines long (1M reads each). The files are by default given alphabetical suffixes. The first set are:
 ```
 LacR1aa
 LacR1ab
@@ -24,7 +24,9 @@ LacR2ad
 LacR2ae
 (etc.)
 ```
-These are renamed as `.fastq` files in the next steps when they are concatenated.
+A planned update will calculate the best coverage and generate a single pair of readfiles.
+Until then, these sequential files are renamed as `.fastq` files in the next steps when they are concatenated.
+ 
 
 <a name="03"></a>
 `Note 3.` This could also be done with a  well-known `sed` script such as:
