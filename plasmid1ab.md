@@ -72,8 +72,24 @@ and [scripts #15 and #16 on the scripts](/scripts.md#scr15) page. Because the re
 
 
 ```
- grep -A3 --file=LacR1R2aaabacad-unique-plasmid1-names.txt LacR1aaabacad.fastq | grep -E -v '\--' > R1aaabacadPlasmid1.fastq 
- grep -A3 --file=LacR1R2aaabacad-unique-plasmid1-names.txt LacR2aaabacad.fastq | grep -E -v '\--' > R1aaabacadPlasmid1.fastq 
+fr1r2=LacR1R2
+fs1=LacR1_plas1
+fs2=LacR2_plas1
+db1=/plasmid1
+grep -E $'^S\t' ${fr1r2}00_careful_plasmid/assembly_graph_with_scaffolds.gfa > ${fr1r2}gfa.out
+for line in ${fr1r2}gfa.out 
+    do 
+    awk '{print ">" $2}''{print $3}' ${line} >> ${fr1r2}gfa.out.fasta 
+done 
+makeblastdb -in ${fr1r2}gfa.out.fasta -out ${db1} -parse_seqids -dbtype nucl 
+sed -n '1~4s/^@/>/p;2~4p' ${fs1}_00.fastq > ${fs1}_00.fasta
+sed -n '1~4s/^@/>/p;2~4p' ${fs2}_00.fastq > ${fs2}_00.fasta
+blastn -db ${db1} -num_threads 32 -evalue 0.001 -query ${fs1}_00.fasta -out ${fs1}.out -outfmt "6 qseqid"
+blastn -db ${db1} -num_threads 32 -evalue 0.001 -query ${fs2}_00.fasta -out ${fs2}.out -outfmt "6 qseqid"
+awk '{print $1}' ${fs1}.out | uniq > ${fs1}names
+awk '{print $1}' ${fs2}.out | uniq > ${fs2}names
+grep -A3 --file=${fs1}names LacR1aaabacad.fastq | grep -E -v '\--' > R1aaabacadPlasmid1.fastq 
+grep -A3 --file=${fs2}names LacR2aaabacad.fastq | grep -E -v '\--' > R2aaabacadPlasmid1.fastq 
 ```
 
 ```
