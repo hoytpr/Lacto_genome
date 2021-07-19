@@ -75,7 +75,7 @@ and [scripts #15 and #16 on the scripts](/scripts.md#scr15) page. Because the re
 fr1r2=LacR1R2
 fs1=LacR1_plas1
 fs2=LacR2_plas1
-db1=/plasmid1
+db1=plasmid1/
 grep -E $'^S\t' ${fr1r2}00_careful_plasmid/assembly_graph_with_scaffolds.gfa > ${fr1r2}gfa.out
 for line in ${fr1r2}gfa.out 
     do 
