@@ -88,21 +88,22 @@ blastn -db ${db1} -num_threads 32 -evalue 0.001 -query ${fs1}_00.fasta -out ${fs
 blastn -db ${db1} -num_threads 32 -evalue 0.001 -query ${fs2}_00.fasta -out ${fs2}.out -outfmt "6 qseqid"
 awk '{print $1}' ${fs1}.out | uniq > ${fs1}names
 awk '{print $1}' ${fs2}.out | uniq > ${fs2}names
-grep -A3 --file=${fs1}names LacR1aaabacad.fastq | grep -E -v '\--' > R1aaabacadPlasmid1.fastq 
-grep -A3 --file=${fs2}names LacR2aaabacad.fastq | grep -E -v '\--' > R2aaabacadPlasmid1.fastq 
+grep -A3 --file=${fs1}names LacR1aaabacad.fastq | grep -E -v '\--' > {fs1}.fastq 
+grep -A3 --file=${fs2}names LacR2aaabacad.fastq | grep -E -v '\--' > {fs2}.fastq 
+repair.sh in1=${fs1}.fastq in2=${fs2}.fastq out1=${fs1}fixPlas1.fastq out2=${fs2}fixPlas1.fastq outs=${fs1}orphPlas1.fastq
 ```
 
 ```
-$ wc -l R1aaabacadPlasmid1.fastq
-1143464 R1aaabacadPlasmid1.fastq  (285,866 reads)
-$ wc -l R2aaabacadPlasmid1.fastq
-1143464 R2aaabacadPlasmid1.fastq  (285,866 reads)
+$ wc -l ${fs1}fixPlas1.fastq
+1143464 LacR1_plas1fixPlas1.fastq  (285,866 reads)
+$ wc -l ${fs2}fixPlas2.fastq
+1143464 LacR2_plas1fixPlas2.fastq  (285,866 reads)
 ```
 
 ```
 module load spades/3.15.0
 module load python3/3.6.4
-spades.py -t 32 -m 768 -k 29,31,33,55 -1 R1aaabacadPlasmid1.fastq -2 R2aaabacadPlasmid1.fastq --isolate --cov-cutoff auto -o LACaaabacad_Plasmid1_isolate
+spades.py -t 32 -m 768 -k 29,31,33,55 -1 LacR1_plas1fixPlas1.fastq -2 LacR2_plas1fixPlas2.fastq --isolate --cov-cutoff auto -o ${fr1r2}_Plasmid1_isolate
 ```
 
 | [To README Page](/README.md) | [To metadata page](/metadata.md) |
