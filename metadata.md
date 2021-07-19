@@ -127,6 +127,7 @@ $ wc -l gLacR2aaabacadfixed.fastq
  <a name="met01"></a>
  To determine the N50 of the assemblies, the `QUAST` software ([see citations](/citations.md#cit01)) was used to compare assembly results on `.fasta` files of the genome reads with plasmids, the genome reads without plasmids, and on each set of plasmid reads separately (shown below). [Script 18](/scripts.md#scr18) 
  These comparisons used [CP065737.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1) as the reference genome. The N50 reflects the length of the contig at the midpoint when all contigs are aligned end-to-end in acending or decending order based on length.
+ 
  ![N50 image](/fig/N50.png)
 
  
