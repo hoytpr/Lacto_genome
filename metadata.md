@@ -3,7 +3,7 @@
 [HOME](/README.md)
 
 
-# Lactococcus Metadata
+# Lactococcus lactis PrHT3 Metadata
 
 Genomic DNA was received on 2021-02-26 at the Oklahoma State University Genomics Center.
 
@@ -35,7 +35,7 @@ Archive Location: The University of Oklahoma Petastore (soon to be OURRstore)
 
 Primary Data Filenames: `L_lactis_S1_LALL_R1_001.fastq.gz` and `L_lactis_S1_LALL_R2_001.fastq.gz`
 
-Files processed through `bcl2fastq`?: YES
+Files processed through `bcl2fastq`? YES
 
 Number of Reads Passed Filter Read1: 144,378,652
 
@@ -56,14 +56,14 @@ Number of Reads surviving Trimmomatic and `re-pair` Read2: 135,271,743
 Assembly readfile names: `L_lactis_S1_LALL_R1.trim.Gtrim.fixed.fastq`, `L_lactis_S1_LALL_R2.trim.Gtrim.fixed.fastq`
 
 All G-trimmed and re-paired reads were divided into to 1-million read "chunks" **[see Script 3 and notes about output names](/scripts.md#thresh01)**.
-These `.fastq` files containing 1M-4M reads each are created by `split` and then concatenated together at 1M read intervals to be tested for the best assembly. Subsequently, the use of ≤4M reads was found to provide good overall genome coverage and for identifying plasmid elements, while higher numbers (8M) could be used with read mapping. 
+These `.fastq` files containing 1M-4M reads each are created by `split` and then concatenated together at 1M read intervals to be tested for the optimal assembly. Subsequently, the use of ≤4M reads was found to provide good overall genome coverage and to identify plasmid elements.  Higher read numbers (*e.g.* 8M) could be used with read mapping. 
 **[Script 4](/scripts.md#cat01)**
 
 For testing and assemblies 2M reads `fastq` files were named according to the number of 1M reads "chunks" used.  For example; 2M reads files were named: `LacR1aaab.fastq`, and `LacR2aaab.fastq`. Similarly, 4M read `fastq` files were named: `LacR1aaabacad.fastq`, and `LacR2aaabacad.fastq`.
 
 #### Pre-Assembly (Assembly with plasmids)
 
-Initially 8M reads were assembled using SPAdes 3.15.0 ([Citations](/citations.md#cit04)) using the `--careful` and `--plasmid` options as in **[Script 5](/scripts.md#scr05)**. This step allowed for the visualization and removal of any plasmid sequences from the genomic assembly. 
+Initially 8M reads were assembled using SPAdes 3.15.0 ([Citations](/citations.md#cit04)) using the `--careful` and `--plasmid` options as in **[Script 5](/scripts.md#scr05)**. This step is important for the visualization and separation of plasmid sequences from the genomic assembly. 
 
 <a name="band01"></a>
 Plasmid output assembly graph pathways (`.gfa` files) are the most important part of this output. In this case the file `assembly_graph_after_simplification.gfa` is output. The `.gfa` file was opened using `Bandage` v. 0.8.1 [http://rrwick.github.io/Bandage/](http://rrwick.github.io/Bandage/) ([Citations](/citations.md#cit06)). The default assembly graph image created (colored by read depth) is shown below:
@@ -122,11 +122,12 @@ $ wc -l gLacR2aaabacadfixed.fastq
  
  We used CP065736.1 as a reference "genome" to map our Plasmid 2 sequences as a `.SAM` file using Bowtie2. The `.SAM` file was converted to a `.BAM` file (similar to [Script 16](/scripts.md#16)) for submission to NCBI with its assembly under BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925). 
  
- The Plasmid 1 (later named Plasmid-1ab) consensus sequence did not show an overall homology greater than 60% to any plasmids or genomes in the NCBI databases. Because Plasmid 1 had no identifiable reference genome, it was submitted as `.fastq` reads to the SRA, and the assembly sequence as contigs rather than scaffolds. The NCBI BioProject accession is [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925). **Please note the PrHT3 genome and pPrHT3 plasmid-2 reads are combined within the NCBI BioSample SAMN19301478 and the SRA; SRS9038781 however Plasmid-1ab reads are BioSample SAMN19301478 and SRA; SRS9038783 on NCBI BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925)**
+ The Plasmid 1 (later named Plasmid-1ab) consensus sequence did not show an overall homology greater than 60% to any plasmids or genomes in the NCBI databases. Because Plasmid 1 had no identifiable reference genome, it was submitted as `.fastq` reads to the SRA, and the assembly sequence as contigs rather than scaffolds. The NCBI BioProject accession is [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925). **Please note the PrHT3 genome and pPrHT3 plasmid-2 reads are combined within the NCBI BioSample [SAMN19301478](https://www.ncbi.nlm.nih.gov/biosample/19301478) and the SRA; [SRS9038781](https://www.ncbi.nlm.nih.gov/sra?LinkName=biosample_sra&from_uid=19301478) however Plasmid-1ab reads are BioSample [SAMN19301478](https://www.ncbi.nlm.nih.gov/biosample/19301479) and SRA; [SRS9038783](https://www.ncbi.nlm.nih.gov/sra?LinkName=biosample_sra&from_uid=19301479) on NCBI BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925)**
  
  <a name="met01"></a>
- To determine the N50 of the separate molecules, the `QUAST` software ([see citations](/citations.md#cit01)) was used to compare assembly results on `.fasta` files of the genome reads with plasmids, the genome reads without plasmids, and on each set of plasmid reads separately (shown below). [Script 18](/scripts.md#scr18) 
- These comparisons used [CP065737.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1) as the reference genome.  
+ To determine the N50 of the assemblies, the `QUAST` software ([see citations](/citations.md#cit01)) was used to compare assembly results on `.fasta` files of the genome reads with plasmids, the genome reads without plasmids, and on each set of plasmid reads separately (shown below). [Script 18](/scripts.md#scr18) 
+ These comparisons used [CP065737.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1) as the reference genome. The N50 reflects the length of the contig at the midpoint when all contigs are aligned end-to-end in acending or decending order based on length.
+ ![N50 image](/fig/N50.png)
 
  
 | | Genome |	Plasmid-1ab | Plasmid2 |

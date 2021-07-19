@@ -16,7 +16,7 @@ BBTools re-pair script:
 `./repair.sh -Xmx10g in1=L_lactis_S1_LALL_R1.trim.Gtrim.fastq in2=L_lactis_S1_LALL_R2.trim.Gtrim.fastq out1=L_lactis_S1_LALL_R1.trim.Gtrim.fixed.fastq out2=L_lactis_S1_LALL_R2.trim.Gtrim.fixed.fastq outsingle=single.fq`
 
 <a name="thresh01"></a>
-Splitting the reads into 1-million read chunks for assembly
+Script 2: Splitting the reads into 1-million read chunks for assembly
 
 <!--
 
