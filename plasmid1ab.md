@@ -103,7 +103,7 @@ $ wc -l ${fs2}fixPlas2.fastq
 ```
 module load spades/3.15.0
 module load python3/3.6.4
-spades.py -t 32 -m 768 -k 29,31,33,55 -1 LacR1_plas1fixPlas1.fastq -2 LacR2_plas1fixPlas2.fastq --isolate --cov-cutoff auto -o ${fr1r2}_Plasmid1_isolate
+spades.py -t 32 -m 768 -k 29,31,33,55 -1 ${fs1}fixPlas1.fastq -2 ${fs2}fixPlas2.fastq --isolate --cov-cutoff auto -o ${fr1r2}_Plasmid1_isolate
 ```
 
 | [To README Page](/README.md) | [To metadata page](/metadata.md) |
