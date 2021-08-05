@@ -40,10 +40,13 @@ cat LacR1aa LacR1ab LacR1ac LacR1ad > LacR1aaabacad.fastq
 cat LacR2aa LacR2ab LacR2ac LacR2ad > LacR2aaabacad.fastq
 ```
 
+Script 4 was removed as redundant 
+
 #### Plasmid SPAdes
 
 <a name="scr05"></a>
 Script 5: First assemblies are to locate plasmid sequences:
+
 ```
 spades/3.15.0
 python3/3.6.4
@@ -51,7 +54,7 @@ spades.py -t 32 -m 96 -k 29,31,33,55 -1 LacR1aaabacad.fastq -2 LacR2aaabacad.fas
 ```
 
 <a name="scr06"></a>
-Script 6: Use Bandage to select plasmids as fasta files, and use these to create a Blast+ database
+Script 6: Use Bandage to select plasmid nodes and export them as fasta files, and use these to create a Blast+ database.
 ```
 blast+/2.8.1
 makeblastdb -in Bandage_plasmid1.fasta -out /lactoplasmid/lactoplasmid/lactoplas_db -parse_seqids -dbtype nucl
