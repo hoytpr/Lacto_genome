@@ -57,13 +57,13 @@ Unfortunately, using descriptors from the analogy above, the read depths on oppo
 | 89-1265-447099 (798x) | 277 (492x) | 275 (501x) | 85 (290x) | 75 (274x) |
 
 (This is a little messy but so is labeling every node and showing images). Below we show that with no other options for graph simplification or node splitting
-the contiguous nodes can be merged resulting in a final graph suggesting two plasmids.  
+the contiguous nodes can be merged resulting in a final graph suggesting two plasmids  
 with shared homology (shared nodes are labeled) as the final product of our analyses. 
 
 ![our analyses](/fig/Plasmid1ab-simplified_graphs.png) 
 
 However, it is also possible that these nodes could be split such that 
-a single larger plasmid is the final result. Because these structural probabilities are unresolvable, the term "Plasmid-1ab" was deemed most appropriate. 
+a single larger plasmid is the final result. Because these structural probabilities are unresolvable, the term "Plasmid-1ab" was used. 
 
 These Bandage node names were used to extract Plasmid-1ab reads from the total reads. Below we show some of the 
 command-line scripts used to extract the nodes shown from the bandage image, and then 
