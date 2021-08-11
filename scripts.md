@@ -64,8 +64,8 @@ makeblastdb -in Bandage_plasmid2.fasta -out /lactoplasmid/biglactoplasmid/biglac
 Script 7: Make `.fasta` files from the `.fastq` reads [See Note 3:](/notes.md#03)
 <a name="scr07"></a>
 ```
-cat LacR1aaabacad.fastq | grep -A1 @ | grep -Ev '\--' > LacR1aaabacad.fasta
-cat LacR2aaabacad.fastq | grep -A1 @ | grep -Ev '\--' > LacR2aaabacad.fasta
+cat LacR1aaabacad.fastq | grep -A1 @ --no-group-separator > LacR1aaabacad.fasta
+cat LacR2aaabacad.fastq | grep -A1 @ --no-group-separator > LacR2aaabacad.fasta
 ```
 
 <a name="scr08"></a>
@@ -90,10 +90,10 @@ awk '{print $1}' bigR2aaabacadlactoplas.out | uniq > bigR2aaabacadNames
 <a name="scr10"></a>
 Script 10: Generates the Plasmid2 read1 and read2 `.fastq` files.
 ```
-grep -A3 --file=R1aaabacadNames LacR1aaabacad.fastq | grep -E -v '\--' > R1Plasmid1.fastq
-grep -A3 --file=R2aaabacadNames LacR2aaabacad.fastq | grep -E -v '\--' > R2Plasmid1.fastq
-grep -A3 --file=bigR1aaabacadNames LacR1aaabacad.fastq | grep -E -v '\--' > R1Plasmid2.fastq
-grep -A3 --file=bigR2aaabacadNames LacR2aaabacad.fastq | grep -E -v '\--' > R2Plasmid2.fastq
+grep -F -A3 --file=R1aaabacadNames LacR1aaabacad.fastq --no-group-separator > R1Plasmid1.fastq
+grep -F -A3 --file=R2aaabacadNames LacR2aaabacad.fastq --no-group-separator > R2Plasmid1.fastq
+grep -F -A3 --file=bigR1aaabacadNames LacR1aaabacad.fastq --no-group-separator > R1Plasmid2.fastq
+grep -F -A3 --file=bigR2aaabacadNames LacR2aaabacad.fastq --no-group-separator > R2Plasmid2.fastq
 ```
 
 <a name="scr11"></a>
@@ -111,17 +111,15 @@ grep NB501827 LacR1aaabacad.fastq > R1Allreadnames
 grep NB501827 LacR2aaabacad.fastq > R2Allreadnames
 awk '{print $1}' R1Allreadnames | uniq > R1aaabacadNames
 awk '{print $1}' R2Allreadnames | uniq > R2aaabacadNames
-grep -v --file=sortedallplasmidnames R1aaabacadNames > gR1aaabacadNames
-grep -v --file=sortedallplasmidnames R2aaabacadNames > gR2aaabacadNames
+grep -F -v --file=sortedallplasmidnames R1aaabacadNames > gR1aaabacadNames
+grep -F -v --file=sortedallplasmidnames R2aaabacadNames > gR2aaabacadNames
 ```
 
 <a name="scr13"></a>
 Script 13: Extract the fastq file of the genomic reads and clean it [See Note 4:](/notes.md#04)
 ```
-grep -A3 --file= gR1aaabacadNames LacR1aaabacad.fastq > gLacR1aaabacad.fastq
-grep -A3 --file= gR2aaabacadNames LacR2aaabacad.fastq > gLacR2aaabacad.fastq
-grep -v '\--' gLacR1aaabacad.fastq > gLacR1aaabacadfixed.fastq
-grep -v ‘\--‘ gLacR2aaabacad.fastq > gLacR2aaabacadfixed.fastq
+grep -F -A3 --file=gR1aaabacadNames LacR1aaabacad.fastq --no-group-separator > gLacR1aaabacadfixed.fastq
+grep -F -A3 --file=gR2aaabacadNames LacR2aaabacad.fastq --no-group-separator > gLacR2aaabacadfixed.fastq
 ```
 
 <a name="scr14"></a>
