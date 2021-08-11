@@ -88,8 +88,8 @@ blastn -db ${db1} -num_threads 32 -evalue 0.001 -query ${fs1}_00.fasta -out ${fs
 blastn -db ${db1} -num_threads 32 -evalue 0.001 -query ${fs2}_00.fasta -out ${fs2}.out -outfmt "6 qseqid"
 awk '{print $1}' ${fs1}.out | uniq > ${fs1}names
 awk '{print $1}' ${fs2}.out | uniq > ${fs2}names
-grep -A3 --file=${fs1}names LacR1aaabacad.fastq | grep -E -v '\--' > {fs1}.fastq 
-grep -A3 --file=${fs2}names LacR2aaabacad.fastq | grep -E -v '\--' > {fs2}.fastq 
+grep -F -A3 --file=${fs1}names LacR1aaabacad.fastq --no-group-separator > {fs1}.fastq 
+grep -F -A3 --file=${fs2}names LacR2aaabacad.fastq --no-group-separator > {fs2}.fastq 
 repair.sh in1=${fs1}.fastq in2=${fs2}.fastq out1=${fs1}fixPlas1.fastq out2=${fs2}fixPlas1.fastq outs=${fs1}orphPlas1.fastq
 ```
 
