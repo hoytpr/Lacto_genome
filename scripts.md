@@ -40,9 +40,19 @@ cat LacR1aa LacR1ab LacR1ac LacR1ad > LacR1aaabacad.fastq
 cat LacR2aa LacR2ab LacR2ac LacR2ad > LacR2aaabacad.fastq
 ```
 
-Script 4 was removed as redundant 
-
 #### Plasmid SPAdes
+
+<a name="scr04"> </a>
+Script 4 is a command-line based method of extracting fasta-formatted plasmid reads from a 
+SPAdes-generated `.gfa` file when using the `--plasmid` option.
+
+```
+grep -E $'^S\t' LacR1R2_00_careful_plasmid/assembly_graph_with_scaffolds.gfa > LacR1R2_gfa.out
+for line in LacR1R2_gfa.out 
+    do 
+    awk '{print ">" $2}''{print $3}' ${line} >> LacR1R2_gfa.out.fasta 
+done 
+```
 
 <a name="scr05"></a>
 Script 5: First assemblies are to locate plasmid sequences. This *de novo* assembly

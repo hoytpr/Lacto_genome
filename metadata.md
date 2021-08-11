@@ -57,7 +57,6 @@ Assembly readfile names: `L_lactis_S1_LALL_R1.trim.Gtrim.fixed.fastq`, `L_lactis
 
 All G-trimmed and re-paired reads were divided into to 1-million read "chunks" **[see Script 3 and notes about output names](/scripts.md#thresh01)**.
 These `.fastq` files containing 1M reads (4M lines) each are created by `split` and then concatenated together at 1M read intervals to be tested for the optimal assembly. Subsequently, the use of ≤4M reads was found to provide good overall genome coverage and to identify plasmid elements.  Higher read numbers (*e.g.* ≥8M) could be used with read mapping. 
-**[See Script 4](/scripts.md#cat01)**
 
 For testing and assemblies 2M reads `fastq` files were named according to the number of 1M reads "chunks" used.  For example; 2M reads files were named: `LacR1aaab.fastq`, and `LacR2aaab.fastq`. Similarly, 4M read `fastq` files were named: `LacR1aaabacad.fastq`, and `LacR2aaabacad.fastq`.
 
@@ -88,7 +87,7 @@ This graph shows that SPAdes predicts at least two plasmids with one set of pred
 
   ### Read data separation
   
-  - The nodes of the presumptive plasmids can be selected, and the sequences can be output from Bandage as `.fasta` files (*e.g.* "Bandage_plasmid1.fasta" and "Bandage_plasmid2.fasta"). For a description of the differences between `Bandage` nodes and edges, vs. assembly contigs, please see the [Bandage Wiki Page](https://github.com/rrwick/Bandage/wiki). 
+  - The nodes of the presumptive plasmids can be selected, and the sequences can be output from Bandage as `.fasta` files (*e.g.* "Bandage_plasmid1.fasta" and "Bandage_plasmid2.fasta"). For a description of the differences between `Bandage` nodes and edges, vs. assembly contigs, please see the [Bandage Wiki Page](https://github.com/rrwick/Bandage/wiki). Alternatively, for use in pipelines, the SPAdes output `.gfa` file `assembly_graph_with_scaffolds.gfa` can be converted to a fasta file by first extracting the node read sequences, then converting those to a `.fasta` file as shown in **[Script 4](/scripts.md#scr04)**.
   - To identify reads corresponding to these plasmid sequences, the Bandage `.fasta` outputs were converted into a Blast+ database (v. 2.8.1). **[Script 6](/scripts.md#scr06)** ([Citations](/citations.md#cit05))
   - The complete set of Lactococcus reads `.fastq` files was converted to `.fasta` files **[Script 7](/scripts.md#scr07)**.
   - The Blast database was queried with the Lactococcus reads `.fasta` files outputting the read names that match the plasmid node sequences as in **[Script 8](/scripts.md#scr08)**.
