@@ -25,7 +25,7 @@ LacR2ae
 (etc.)
 ```
 
-A planned update will calculate requested coverage and generate a single pair of readfiles.
+A planned pipeline update will calculate requested coverage and generate a single pair of readfiles.
 Until then, these sequential 1M read files are renamed as `.fastq` files in the next steps when they are concatenated.
  
 
@@ -37,17 +37,19 @@ sed -n '1~4s/^@/>/p;2~4p' LacR2aaab.fastq > LacR2aaab.fasta
 
 <a name="04"></a>
 `Note 4.` The same type of piping of `grep` output to another `grep` used in script 10 could have been used here.
+It is important to use the `-F` flag with `grep` when possible to limit the character set
+searched for matches. This allows `grep` to run much faster on an High Performance Computer.
 
 <a name="05"></a>
 `Note 5.` After removing plasmid reads, the Spades assembly contained no plasmid sequences in the 
 `assembly_graph_with_scaffolds.gfa` and `assembly_graph.fastg` files which were both empty.
 
 <a name="06"></a>
-`Note 6.` These scripts could have been simplified to (for example):
-```
-blastn -db /lactoplasmid/lactoplasmid/lactoplas_db -num_threads 32 -evalue 0.001 -query LacR1aaabacad.fasta -out /lactoplasmid/lactoplasmid/R1aaablactoplas.out -outfmt "6 qseqid"
-```
-This would have produced read name files that did not need to be "cleaned" with further `awk` scripts. 
+`Note 6.` These scripts have been simplified to produce exactly the read names needed for 
+further processing. This has obviated the use of some `awk` scripts used in the original analyses
+but does not in any way alter the output files.
+
+ 
 
 [Go back to assembly metadata](/metadata.md#met01)
 

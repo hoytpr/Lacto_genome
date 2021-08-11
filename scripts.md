@@ -45,7 +45,9 @@ Script 4 was removed as redundant
 #### Plasmid SPAdes
 
 <a name="scr05"></a>
-Script 5: First assemblies are to locate plasmid sequences:
+Script 5: First assemblies are to locate plasmid sequences. This *de novo* assembly
+also provides relatively long contigs that can be used to identify 
+any reference genome present on NCBI:
 
 ```
 spades/3.15.0
@@ -72,10 +74,10 @@ cat LacR2aaabacad.fastq | grep -A1 @ --no-group-separator > LacR2aaabacad.fasta
 Script 8 [See NOTE #6 on these scripts](/notes.md#06)
 ```
 blast+/2.8.1
-blastn -db /lactoplasmid/lactoplasmid/lactoplas_db -num_threads 32 -evalue 0.001 -query LacR1aaabacad.fasta -out /lactoplasmid/lactoplasmid/R1aaablactoplas.out -outfmt "6 qseqid qlen sseqid pident length"
-blastn -db /lactoplasmid/lactoplasmid/lactoplas_db -num_threads 32 -evalue 0.001 -query LacR2aaabacad.fasta -out /lactoplasmid/lactoplasmid/R2aaablactoplas.out -outfmt "6 qseqid qlen sseqid pident length"
-blastn -db /lactoplasmid/biglactoplasmid/biglactoplas_db -num_threads 32 -evalue 0.001 -query LacR1aaabacad.fasta -out /lactoplasmid/biglactoplasmid/bigR1aaablactoplas.out -outfmt "6 qseqid qlen sseqid pident length"
-blastn -db /lactoplasmid/biglactoplasmid/biglactoplas_db -num_threads 32 -evalue 0.001 -query LacR2aaabacad.fasta -out /lactoplasmid/biglactoplasmid/bigR2aaablactoplas.out -outfmt "6 qseqid qlen sseqid pident length"
+blastn -db /lactoplasmid/lactoplasmid/lactoplas_db -num_threads 32 -evalue 0.001 -query LacR1aaabacad.fasta -out /lactoplasmid/lactoplasmid/R1aaablactoplas.out -outfmt "6 qseqid"
+blastn -db /lactoplasmid/lactoplasmid/lactoplas_db -num_threads 32 -evalue 0.001 -query LacR2aaabacad.fasta -out /lactoplasmid/lactoplasmid/R2aaablactoplas.out -outfmt "6 qseqid"
+blastn -db /lactoplasmid/biglactoplasmid/biglactoplas_db -num_threads 32 -evalue 0.001 -query LacR1aaabacad.fasta -out /lactoplasmid/biglactoplasmid/bigR1aaablactoplas.out -outfmt "6 qseqid"
+blastn -db /lactoplasmid/biglactoplasmid/biglactoplas_db -num_threads 32 -evalue 0.001 -query LacR2aaabacad.fasta -out /lactoplasmid/biglactoplasmid/bigR2aaablactoplas.out -outfmt "6 qseqid"
 ```
 
 <a name="scr09"></a>
