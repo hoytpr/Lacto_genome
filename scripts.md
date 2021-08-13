@@ -76,8 +76,8 @@ makeblastdb -in Bandage_plasmid2.fasta -out /lactoplasmid/biglactoplasmid/biglac
 Script 7: Make `.fasta` files from the `.fastq` reads [See Note 3:](/notes.md#03)
 <a name="scr07"></a>
 ```
-cat LacR1aaabacad.fastq | grep -A1 @ --no-group-separator > LacR1aaabacad.fasta
-cat LacR2aaabacad.fastq | grep -A1 @ --no-group-separator > LacR2aaabacad.fasta
+cat LacR1aaabacad.fastq | grep -A1 NB501827 --no-group-separator > LacR1aaabacad.fasta
+cat LacR2aaabacad.fastq | grep -A1 NB501827 --no-group-separator > LacR2aaabacad.fasta
 ```
 
 <a name="scr08"></a>
