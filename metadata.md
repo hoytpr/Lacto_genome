@@ -139,21 +139,21 @@ $ wc -l gLacR2aaabacadfixed.fastq
 
 More QUAST outputs (default contig size cutoff = 500 bp) for each assembly are shown below:
  
-| Genome stats | PrHT3_with_plasmids | PrHT3_Plasmid-1ab | PrHT3_Plasmid2| PrHT3_genome_only |
-|-|-|-|-|-|
-| Mismatches |  |  |  |  |
-| # N's | 0 | 0 | 0 | 0 |
-| # contigs | 77 | 4 | 7 | 66 |
-| # contigs (>= 0 bp) | 119 | **8** | **13** | **98** |
-| # contigs (>= 1000 bp) | 65 | 4 | 7 | 54 |
-| Largest contig | 435796 | 4753 | 12568 | 435796 |
-| Total length (>= 0 bp) | 2518618 | **12772** | **57382** | **2448464** |
-| Total length (>= 1000 bp) | 2497578 | 11842 | 55552 | 2430184 |
-| N50 | 164357\* | 4564 | 11477 | 134484 |
-| N90 | 20903 | 1367 | 5972 | 32769 |
-| L50 | 5 | 2 | 3 | 5 |
-| L90 | 23 | 3 | 5 | 20 |
-| GC (%) | 35.22 | 31.69 | 34.69 | 35.25 |
+| Genome stats | PrHT3_with_plasmids | PrHT3_Plasmid-1ab | PrHT3_Plasmid2| PrHT3_genome_only | 2021-10-25 Update |
+|-|-|-|-|-|-|
+| Mismatches |  |  |  |  |  |
+| # N's | 0 | 0 | 0 | 0 | 0 |
+| # contigs | 77 | 4 | 7 | 66 | 48 |
+| # contigs (>= 0 bp) | 119 | **8** | **13** | **98** | **242** |
+| # contigs (>= 1000 bp) | 65 | 4 | 7 | 54 | 48 |
+| Largest contig | 435796 | 4753 | 12568 | 435796 | 359596 |
+| Total length (>= 0 bp) | 2518618 | **12772** | **57382** | **2448464** | **2477468** |
+| Total length (>= 1000 bp) | 2497578 | 11842 | 55552 | 2430184 | 2437929 |
+| N50 | 164357\* | 4564 | 11477 | 134484 | 164357 |
+| N90 | 20903 | 1367 | 5972 | 32769 | NA |
+| L50 | 5 | 2 | 3 | 5 | 5 |
+| L90 | 23 | 3 | 5 | 20 | NA |
+| GC (%) | 35.22 | 31.69 | 34.69 | 35.25 | 35.25|
  
  
 ### Final numbers of reads and coverage
