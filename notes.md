@@ -25,7 +25,7 @@ LacR2ae
 (etc.)
 ```
 
-A planned pipeline update will calculate requested coverage and generate a single pair of readfiles.
+A planned pipeline update will [calculate requested coverage](https://github.com/hoytpr/Lacto_genome/blob/main/files/calculations.sh) and generate a single pair of readfiles.
 Until then, these sequential 1M read files are renamed as `.fastq` files in the next steps when they are concatenated.
  
 
