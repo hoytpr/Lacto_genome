@@ -132,7 +132,7 @@ $ wc -l gLacR2aaabacadfixed.fastq
  
 | | Genome |	Plasmid-1ab | Plasmid2 |
 | :--- | :--- | :--- | :--- |
-| N50 | 134484\* | 4564 | 11477|
+| N50 | 164357\* | 4564 | 11477|
 | GC% | 35.25 | 31.69 | 34.69 |
 
 *Updated October 26, 2021
@@ -148,7 +148,7 @@ More QUAST outputs (default contig size cutoff = 500 bp) for each assembly are s
 | Largest contig | 435796 | 4753 | 12568 | 435796 |
 | Total length (>= 0 bp) | 2518618 | **12772** | **57382** | **2448464** |
 | Total length (>= 1000 bp) | 2497578 | 11842 | 55552 | 2430184 |
-| N50 | 134484 | 4564 | 11477 | 134484 |
+| N50 | 164357\* | 4564 | 11477 | 134484 |
 | N90 | 20903 | 1367 | 5972 | 32769 |
 | L50 | 5 | 2 | 3 | 5 |
 | L90 | 23 | 3 | 5 | 20 |
