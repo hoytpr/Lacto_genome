@@ -31,7 +31,7 @@ Run Number: 210309_NB501827_0133_AHMV5HAFX2
 
 Data Archive Date: 2021-03-10
 
-Archive Location: The University of Oklahoma Petastore (soon to be OURRstore)
+Archive Location: The University of Oklahoma OURRstore Regional archives
 
 Primary Data Filenames: `L_lactis_S1_LALL_R1_001.fastq.gz` and `L_lactis_S1_LALL_R2_001.fastq.gz`
 
@@ -65,7 +65,7 @@ For testing and assemblies 2M reads `fastq` files were named according to the nu
 Initially 8M reads were assembled using SPAdes 3.15.0 ([Citations](/citations.md#cit04)) using the `--careful` and `--plasmid` options as in **[Script 5](/scripts.md#scr05)**. This step is important for the visualization and separation of plasmid sequences from the genomic assembly. 
 
 <a name="band01"></a>
-Plasmid output assembly graph pathways (`.gfa` files) are the most important part of this output. In this case the file `assembly_graph_after_simplification.gfa` is output. The `.gfa` file was opened using `Bandage` v. 0.8.1 [http://rrwick.github.io/Bandage/](http://rrwick.github.io/Bandage/) ([Citations](/citations.md#cit06)). The default assembly graph image created (colored by read depth) is shown below:
+Plasmid output assembly graph pathways (`.gfa` files) are the most important part of this *de novo* assembly output. In this case the file `assembly_graph_after_simplification.gfa` is output. The `.gfa` file was opened using `Bandage` v. 0.8.1 [http://rrwick.github.io/Bandage/](http://rrwick.github.io/Bandage/) ([Citations](/citations.md#cit06)). The default assembly graph image created (colored by read depth) is shown below:
 
 ![Lactococcus assembly using --plasmid --careful](/fig/graph1.png)
 
@@ -87,7 +87,7 @@ This graph shows that SPAdes predicts at least two plasmids with one set of pred
 
   ### Read data separation
   
-  - The nodes of the presumptive plasmids can be selected, and the sequences can be output from Bandage as `.fasta` files (*e.g.* "Bandage_plasmid1.fasta" and "Bandage_plasmid2.fasta"). For a description of the differences between `Bandage` nodes and edges, vs. assembly contigs, please see the [Bandage Wiki Page](https://github.com/rrwick/Bandage/wiki). Alternatively, for use in pipelines, the SPAdes output `.gfa` file `assembly_graph_with_scaffolds.gfa` can be converted to a fasta file by first extracting the node read sequences, then converting those to a `.fasta` file as shown in **[Script 4](/scripts.md#scr04)**.
+  - The nodes and edges of the presumptive plasmids can be selected, and the sequences can be output from Bandage as `.fasta` files (*e.g.* "Bandage_plasmid1.fasta" and "Bandage_plasmid2.fasta"). For a description of the differences between `Bandage` nodes and edges, vs. assembly contigs, please see the [Bandage Wiki Page](https://github.com/rrwick/Bandage/wiki). Alternatively, for use in pipelines, the SPAdes output `.gfa` file `assembly_graph_with_scaffolds.gfa` can be converted to a fasta file by first extracting the node read sequences, then converting those to a `.fasta` file as shown in **[Script 4](/scripts.md#scr04)**.
   - To identify reads corresponding to these plasmid sequences, the Bandage `.fasta` outputs were converted into a Blast+ database (v. 2.8.1). **[Script 6](/scripts.md#scr06)** ([Citations](/citations.md#cit05))
   - The complete set of Lactococcus reads `.fastq` files was converted to `.fasta` files **[Script 7](/scripts.md#scr07)**.
   - The Blast database was queried with the Lactococcus reads `.fasta` files outputting the read names that match the plasmid node sequences as in **[Script 8](/scripts.md#scr08)**.
@@ -132,9 +132,10 @@ $ wc -l gLacR2aaabacadfixed.fastq
  
 | | Genome |	Plasmid-1ab | Plasmid2 |
 | :--- | :--- | :--- | :--- |
-| N50 | 134484 | 4564 | 11477|
+| N50 | 134484\* | 4564 | 11477|
 | GC% | 35.25 | 31.69 | 34.69 |
 
+*Updated October 26, 2021
 More QUAST outputs (default contig size cutoff = 500 bp) for each assembly are shown below:
  
 | Genome stats | PrHT3_with_plasmids | PrHT3_Plasmid-1ab | PrHT3_Plasmid2| PrHT3_genome_only |
