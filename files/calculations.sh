@@ -23,9 +23,9 @@ rd1=$((r1/n2))
 rd2=$((r2/n2))
 tords=$((rd1+rd2))
 tobp=$((tords*sr))
-bpaa1=`wc -l < ${gffq1}`
-bpaa2=`wc -l < ${gffq2}`
 numrds=$((tbp/sr))
 numlns=$((numrds*n2)) 
 split -d -l${numlns} ${gffq1} ${fs1} 
 split -d -l${numlns} ${gffq2} ${fs1}
+cp ${fs1}00 ${fs1}_00.fastq
+cp ${fs2}00 ${fs2}_00.fastq
