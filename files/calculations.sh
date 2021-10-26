@@ -8,7 +8,9 @@
 ###################################
 n2=2
 sr=75
-fs1="genus"
+fs="genus"
+fs1=${fs}1
+fs2=${fs}2
 genome=2500000
 coverage=100
 tbp=$((genome*coverage))
@@ -26,6 +28,6 @@ tobp=$((tords*sr))
 numrds=$((tbp/sr))
 numlns=$((numrds*n2)) 
 split -d -l${numlns} ${gffq1} ${fs1} 
-split -d -l${numlns} ${gffq2} ${fs1}
+split -d -l${numlns} ${gffq2} ${fs2}
 cp ${fs1}00 ${fs1}_00.fastq
 cp ${fs2}00 ${fs2}_00.fastq
