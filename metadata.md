@@ -136,6 +136,7 @@ $ wc -l gLacR2aaabacadfixed.fastq
 | GC% | 35.25 | 31.69 | 34.69 |
 
 *Updated October 26, 2021
+
 More QUAST outputs (default contig size cutoff = 500 bp) for each assembly are shown below:
  
 | Genome stats | PrHT3_with_plasmids | PrHT3_Plasmid-1ab | PrHT3_Plasmid2| PrHT3_genome_only |
