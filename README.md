@@ -8,6 +8,8 @@
 
 General Description is on the **[Project](/project.md)** page.
 
+These data were submitted to NCBI and used the INSDC standards for genome assembly submission.
+
 The bioinformatics of this project will be placed in the following files.
 
 1. [Metadata](/metadata.md) 
