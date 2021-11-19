@@ -12,7 +12,7 @@
 ### L_lactis_S1_LALL_R1.trim.fastq.gz 
 ### L_lactis_S1_LALL_R2.trim.fastq.gz
 ### Scripts used (specific for this project)
-#### See [citations for these software](/citations.md)
+###
 #
 #### Trimmomatic Command: 
 
@@ -113,6 +113,4 @@ samtools index -b gLAC_final.sorted.bam
         -o lactodata_out
 ```
 
-| [To README Page](/README.md) | [To metadata page](/metadata.md) |
-| --- | --- |
 
