@@ -65,7 +65,7 @@ Preliminary SPAdes assemblies predict at least two plasmids. One set of predicte
 
 The Lactococcus genome and plasmid reads were separated and independently re-asembled and mapped to referece sequeces (except for Plasmid1ab).
 
-The script used for these processes was [lactoscript-only.sh](/files/lactoscript-only.sh)
+The script used for these processes was **[lactoscript-only.sh](/files/lactoscript-only.sh)**.
 
 The genome `.BAM` file was submitted with a scaffolded contig assembly to NCBI as part of BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925).
 
