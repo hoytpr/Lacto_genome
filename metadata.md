@@ -5,7 +5,7 @@
 
 # Lactococcus lactis PrHT3 Metadata
 
-Genomic DNA was received on 2021-02-26 at the Oklahoma State University Genomics Center.
+Genomic DNA was received on 2021-02-26 at the [Oklahoma State University Genomics Center](https://genomics.okstate.edu/).
 
 DNA quality by Tapestation analysis:
 
@@ -51,6 +51,8 @@ Number of Reads surviving Trimmomatic and `re-pair` Read2: 135,271,743
 
 ### ASSEMBLY
 
+Data wrangling and assembly were performed at the [Genomics Center](https://genomics.okstate.edu/).
+
 Assembly readfile names: `L_lactis_S1_LALL_R1.trim.Gtrim.fixed.fastq`, `L_lactis_S1_LALL_R2.trim.Gtrim.fixed.fastq`
 
 Preliminary SPAdes assemblies predict at least two plasmids. One set of predicted plasmid scaffolds have much higher read counts than the other. Based on these data, three processes were performed to allow for independent assemblies:
@@ -67,7 +69,7 @@ The script used for these processes was [lactoscript-only.sh](/files/lactoscript
 
 The genome `.BAM` file was submitted with a scaffolded contig assembly to NCBI as part of BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925).
 
-The Plasmid 2 consensus sequence was found by Blast (NCBI) to be over 98% identical to [CP065736.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065736.1), an unnamed 58,335 bp plasmid asociated with our reference strain [CP065737.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1). It was was converted to a `.BAM` file for submission to NCBI with its assembly under **BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925)**. 
+The Plasmid 2 consensus sequence was found by Blast (NCBI) to be over 98% identical to [CP065736.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065736.1), an unnamed 58,335 bp plasmid asociated with our reference strain [CP065737.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1). It was was converted to a `.BAM` file for submission by the [Genomics Center](https://genomics.okstate.edu/) to NCBI with its assembly under **BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925)**. 
  
 The Plasmid 1 (later named Plasmid-1ab) assembly did not show an overall contiguous homology greater than 60% to any plasmids or genomes in the NCBI databases. Because Plasmid 1 had no identifiable reference sequence, it was assembled into contigs and submitted and assembly, and as `.fastq` reads to the SRA.
 
