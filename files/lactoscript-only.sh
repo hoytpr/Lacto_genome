@@ -1,12 +1,15 @@
 #!/bin/bash
-####################################
-#### Bash script of Lactococcus  ###
-#### lactis assembly including   ###
-#### separation of plasmid reads ###
-#### prior to genome assembly.   ###
-#### Author: Peter R. Hoyt       ###
-#### © 2021 "Free to use"        ###
-####################################
+#####################################################################
+#### Bash script of Lactococcus lactis assembly including         ###
+#### separation of plasmid reads prior to genome assembly.        ###
+#### This is provided in the hopes it will be useful, but         ###
+#### without ANY warranty whatsoever, not even                    ###
+#### an implied warranty for fitness for a specific application.  ###
+#### You should acquire a copy of the GNU General Public License  ###
+#### which can be optained a <http:gnu.org/licenses>.             ###
+#### Author: Peter R. Hoyt                                        ###
+#### © 2021 "Free to use"                                         ###
+#####################################################################
 #
 ### Primary read files:
 ### L_lactis_S1_LALL_R1.trim.fastq.gz 
