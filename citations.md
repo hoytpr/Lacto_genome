@@ -74,5 +74,5 @@ Bushnell B, Rood J, Singer E (2017) BBMerge – Accurate paired shotgun read mer
 
 https://sourceforge.net/projects/bbmap/
 
-| [To README Page](/README.md) | [To metadata page](/metadata.md) | [To scripts page](/scripts.md) |
+| [To README Page](/README.md) | [To metadata page](/metadata.md) | [To scripts page](/files/lactoscript-only.sh) |
 | --- | --- | --- |
