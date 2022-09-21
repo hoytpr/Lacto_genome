@@ -1,7 +1,7 @@
 <h1 id="notes">Notes</h1>
 
 <p><a name="01"></a>
-<code class="language-plaintext highlighter-rouge">1.</code> <a href="/files/NexteraPE-PE-G.fa">NexteraPE-PE-G.fa</a> is a downloadable custom adapter removal file designed to also remove poly(G) stretches of up to 35 consecutive G nucleotides in the data which sometimes occur with the NextSeq500 sequencer (usually in read-2).</p>
+<code class="language-plaintext highlighter-rouge">1.</code> <a href="/files/NexteraPE-PE-G.fa">NexteraPE-PE-G.fa</a> is a downloadable custom adapter removal file designed to also remove poly(G) stretches of 35 consecutive G nucleotides (or more) in the reads data which can occur with Illumina “two-color” technology sequencers (usually in read-2).</p>
 
 <p><a name="02"></a>
 <code class="language-plaintext highlighter-rouge">2.</code> The outputs are a series of <code class="language-plaintext highlighter-rouge">fastq.</code> files 4M lines long (1M reads each). The first set are:</p>
@@ -21,6 +21,25 @@ LacR2ae
 (etc.)
 </code></pre></div></div>
 <p>These are renamed as <code class="language-plaintext highlighter-rouge">.fastq</code> files in the next steps when they are concatenated.</p>
+
+<p><a name="03"></a>
+<code class="language-plaintext highlighter-rouge">3.</code> This could also be done with a  well-known <code class="language-plaintext highlighter-rouge">sed</code> script such as:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sed -n '1~4s/^@/&gt;/p;2~4p' LacR2aaab.fastq &gt; LacR2aaab.fasta
+</code></pre></div></div>
+
+<p><a name="04"></a>
+<code class="language-plaintext highlighter-rouge">4.</code> The same type of piping used in script 10 could have been used here.</p>
+
+<p><a name="05"></a>
+<code class="language-plaintext highlighter-rouge">5.</code> After removing plasmid reads, the Spades assembly contained no plasmid in the 
+<code class="language-plaintext highlighter-rouge">assembly_graph_with_scaffolds.gfa</code> and <code class="language-plaintext highlighter-rouge">assembly_graph.fastg</code> which were both empty files.</p>
+
+<p><a name="ncbi"></a>
+<code class="language-plaintext highlighter-rouge">6.</code> Currently, the PrHT3 genome and pPrHT3 plasmid2 are combined within “sample 1” of the NCBI
+BioProject, but were submitted as separate <code class="language-plaintext highlighter-rouge">.bam</code> files. Until this is resolved, the separated 
+<code class="language-plaintext highlighter-rouge">.bam</code> files are available by request.</p>
+
+<p><a href="/README.md">HOME</a></p>
 
 <ol>
   <li>For <a href="/fig/">figures click here</a></li>
