@@ -5,16 +5,18 @@
 
 # Validation of Lactococcus lactis PrHT3 Species
 
-The `CheckM` sfware was downloaded from  [the CheckM website](https://ecogenomics.github.io/CheckM/). It was installed using
+The `CheckM` software was downloaded from  [the CheckM website](https://ecogenomics.github.io/CheckM/). It was installed using
 the `conda` method as described on the [CheckM website](https://github.com/Ecogenomics/CheckM/wiki/Installation#how-to-install-checkm) onto the ["Pete" high performance computer at
 Oklahoma State University](https://hpcc.okstate.edu/)
 
 To ascertain the validity of the Lactococcus lactis strain designation
-the final L.lactic PrHT3 contigs (with and without plasmid sequences included)
+the final L. lactis PrHT3 contigs (with and without plasmid sequences included)
 were compared to the built-in set of lineage-specific taxon markers required for the 
 CheckM software downloaded from [https://data.ace.uq.edu.au/public/CheckM_databases/](https://data.ace.uq.edu.au/public/CheckM_databases/) 
 and compared to other known Lactococcus lactis genomes from the 
-NCBI RefSeq database. The known L. lactis genomes included both "complete" and incomplete genomes. They were:
+NCBI RefSeq database including both "complete" and incomplete genomes. 
+The NCBI genomes insured that Lactococcus lactis makers were well represented to CheckM.
+The files used were:
 - GCF_000478255.1_ASM47825v2_genomic.fna
 - GCF_004194355.1_ASM419435v1_genomic.fna
 - GCF_016028835.1_ASM1602883v1_genomic.fna
