@@ -26,19 +26,19 @@ The files used were:
 - GCF_020463755.1_ASM2046375v1_genomic.fna
 - GCF_023734755.1_ASM2373475v1_genomic.fna
 
-The final genomic DNA contigs submitted to NCBI were named:
-- PrHT3-FINAL-genomic-scaffolds.fna
+**The final genomic DNA contigs submitted to NCBI were named:**
+- PrHT3-FINAL-genomic-scaffolds.fna 
 
-*This and other contigs/assemblies were included in the CheckM analyses because some of the NCBI genomes contained plasmid DNA*
+(download these data [HERE](/files/PrHT3-FINAL-genomic-scaffolds.fna))
 
-**The final PrHT3 assembly that included the plasmid sequences was named:**
-- PrHT3-with-plasmids.fna  (download these data [HERE](/files/PrHT3-FINAL-genomic-scaffolds.fna))
+An unpublshed PrHT3 assembly that included the plasmid sequences was named:
+- PrHT3-with-plasmids.fna  
 
-The `PrHT3-with-plasmids.fna` 
-The other  
-contained plasmid DNA in the assemblies.
+The `PrHT3-with-plasmids.fna` and other contigs/assemblies were included in the CheckM analyses because some of the NCBI genomes contained plasmid DNA
 
-The results indicate that PrHT3 is Lactococcus lactis. The phylogenetic analyses are included in the image below
+**The results indicate that PrHT3 is Lactococcus lactis.** 
+
+The phylogenetic analyses are included in the image below
 
 ![PhyloLac.png](/img/PhyLoLac.png)
 
