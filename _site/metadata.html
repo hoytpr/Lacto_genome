@@ -1,8 +1,10 @@
+<p><a href="/README.md">HOME</a></p>
+
 <h1 id="lactococcus-metadata">Lactococcus Metadata</h1>
 
 <p>Genomic DNA was received on 2021-02-26 at the Oklahoma State University Genomics Center.</p>
 
-<p>Library kit:</p>
+<p>Library kit: KAPA/Roche HyperPlus (Cat.# KK8512)</p>
 
 <p>Sequencing Kit: Illumina (2 X 75bp) MID-output kit (150 cycles)</p>
 
@@ -28,9 +30,9 @@
 
 <p>Post-sequencing QC:Trimmomatic v. 0.38</p>
 
-<p>Trimmomatic Command: <strong>*<a href="/scripts.md#trim01">script 1</a></strong></p>
+<p>Trimmomatic Command: <strong>*<a href="/scripts.md#trim01">Script 1</a></strong></p>
 
-<p>Orphaned reads from Trimmomatic were discarded and trimmed reads were repaired using BBTools <code class="language-plaintext highlighter-rouge">re-pair</code> software v. 38.90 <strong><a href="/scripts.md#BB01">script 2</a></strong></p>
+<p>Orphaned reads from Trimmomatic were discarded and trimmed reads were repaired using BBTools <code class="language-plaintext highlighter-rouge">re-pair</code> software v. 38.90 <strong><a href="/scripts.md#BB01">Script 2</a></strong></p>
 
 <p>Number of Reads surviving Trimmomatic and <code class="language-plaintext highlighter-rouge">re-pair</code> Read1:135,271,743</p>
 
@@ -41,38 +43,214 @@
 <p>Current readfile names: L_lactis_S1_LALL_R1.trim.Gtrim.fixed.fastq, L_lactis_S1_LALL_R2
 .trim.Gtrim.fixed.fastq</p>
 
-<p>Genome reads are thresholded to 1-million read chunks <strong><a href="/scripts.md#thresh01">script3</a></strong></p>
+<p>All G-trimmed and re-paired reads were divided into to 1-million read “chunks” <strong><a href="/scripts.md#thresh01">Script 3</a></strong>
+These <code class="language-plaintext highlighter-rouge">.fastq</code> files containing 1M-4M reads each are created by <code class="language-plaintext highlighter-rouge">split</code> and then concatenated together at 1M read intervals to be tested for the best assembly. Subsequently, the use of ≤4M reads was found to provide good overall genome coverage for identifying plasmid elements, while higher numbers (8M) could be used with read mapping. 
+<strong><a href="/scripts.md#cat01">Script 4</a></strong></p>
 
-<p>Thresholded <code class="language-plaintext highlighter-rouge">.fastq</code> files containing 1M-4M reads each are created by <code class="language-plaintext highlighter-rouge">cat</code> at defined sizes to be tested for best assembly. Smaller and larger sizes were tested. The use of ≤4M reads total gave good overall genome coverage for identifying plasmid elements, while higher numbers (8M) could be used with read mapping. 
-<strong><a href="/scripts.md#cat01">script4</a></strong></p>
-
-<p>After testing, 2M read <code class="language-plaintext highlighter-rouge">fastq</code> files were named: <code class="language-plaintext highlighter-rouge">LacR1aaab.fastq</code>, and <code class="language-plaintext highlighter-rouge">LacR2aaab.fastq</code>. Similarly, 4M read <code class="language-plaintext highlighter-rouge">fastq</code> files were named: <code class="language-plaintext highlighter-rouge">LacR1aaabacad.fastq</code>, and <code class="language-plaintext highlighter-rouge">LacR2aaabacad.fastq</code>.</p>
+<p>For testing and assemblies 2M reads <code class="language-plaintext highlighter-rouge">fastq</code> files were named according to the number of 1M reads “chunks” were used for example; 2M reads files were named: <code class="language-plaintext highlighter-rouge">LacR1aaab.fastq</code>, and <code class="language-plaintext highlighter-rouge">LacR2aaab.fastq</code>. Similarly, 4M read <code class="language-plaintext highlighter-rouge">fastq</code> files were named: <code class="language-plaintext highlighter-rouge">LacR1aaabacad.fastq</code>, and <code class="language-plaintext highlighter-rouge">LacR2aaabacad.fastq</code>.</p>
 
 <h4 id="pre-assembly-assembly-with-plasmids">Pre-Assembly (Assembly with plasmids)</h4>
 
-<p>All Reads were assembled using SPAdes 3.15.0 using the –careful and –plasmid options as in <a href="/scripts.md#scr05">script 5</a>. This step was taken to allow for the removal of plasmid sequences from the genomic assembly if plasmids are present.</p>
+<p>Initially 8M reads were assembled using SPAdes 3.15.0 using the <code class="language-plaintext highlighter-rouge">--careful</code> and <code class="language-plaintext highlighter-rouge">--plasmid</code> options as in <strong><a href="/scripts.md#scr05">Script 5</a></strong>. This step allowed for the visualization and removal of any plasmid sequences from the genomic assembly.</p>
 
-<p>Plasmid output graph pathways are the most important part of this output. In this case the file <code class="language-plaintext highlighter-rouge">assembly_graph_after_simplification.gfa</code> is output. This file was opened using <code class="language-plaintext highlighter-rouge">Bandage</code> v. 0.8.1 <a href="http://rrwick.github.io/Bandage/">http://rrwick.github.io/Bandage/</a>. The default image created (colored by read depth) is shown below:</p>
+<p>Plasmid output assembly graph pathways (<code class="language-plaintext highlighter-rouge">.gfa</code> files) are the most important part of this output. In this case the file <code class="language-plaintext highlighter-rouge">assembly_graph_after_simplification.gfa</code> is output. The <code class="language-plaintext highlighter-rouge">.gfa</code> file was opened using <code class="language-plaintext highlighter-rouge">Bandage</code> v. 0.8.1 <a href="http://rrwick.github.io/Bandage/">http://rrwick.github.io/Bandage/</a>. The default assembly graph image created (colored by read depth) is shown below:</p>
 
-<p><img src="/fig/graph1.png" alt="Lactococcus assembly using --plasmid --careful" />.</p>
+<p><img src="/fig/graph1.png" alt="Lactococcus assembly using --plasmid --careful" /></p>
 
 <p>This graph shows several important issues:</p>
 <ol>
-  <li>The Illumina sequencing was very high quality as there only one (1) “dead-end”.</li>
-  <li>This graph clearly shsows a separate high-copy-number plasmid.</li>
-  <li>The graph <em>implies</em> there is another high-copy region within the genome assembly.</li>
+  <li>The Illumina sequencing was very high quality as there are no “dead-ends”.</li>
+  <li>This graph clearly shows at least one separate high-copy-number plasmid.</li>
+  <li>The graph shows there is another disproportionately high-copy region within the genome assembly.</li>
 </ol>
 
-<p>An additional outputs are the files <code class="language-plaintext highlighter-rouge">assembly_graph_with_scaffolds.gfa</code> and <code class="language-plaintext highlighter-rouge">assembly_graph.fastg</code> which are the SPAdes predicted plasmid sequence elements.</p>
+<p>Additional SPAdes outputs are the files <code class="language-plaintext highlighter-rouge">assembly_graph_with_scaffolds.gfa</code> and <code class="language-plaintext highlighter-rouge">assembly_graph.fastg</code> which contain only the SPAdes predicted plasmid sequence elements. The <code class="language-plaintext highlighter-rouge">assembly_graph.fastg</code> file is visualized with <code class="language-plaintext highlighter-rouge">Bandage</code> and shown below:</p>
 
-<p><img src="/fig/graph0_scaffolding.png" alt="Lactococcus predicted plasmids from SPAdes using --plasmid --careful" />.</p>
+<p><img src="/fig/graph0_scaffolding.png" alt="Lactococcus predicted plasmids from SPAdes using --plasmid --careful" /></p>
 
-<p>Now we can see that SPAdes predicts at least two plasmids with one set of predicted plasmid scaffolds having much higher read counts than the other (or the genomic). Based on these data three processes were performed</p>
+<p>This graph shows that SPAdes predicts at least two plasmids with one set of predicted plasmid scaffolds having much higher read counts than the other. Based on these data, three processes were performed to allow for independent assemblies:</p>
 
 <ol>
-  <li>Isolation of the high-copy read plasmid sequences</li>
-  <li>Isolation of the lower-copy read plasmid seqeuences</li>
+  <li>Isolation of the high-copy read plasmid sequences (Plasmid1)</li>
+  <li>Isolation of the lower-copy read plasmid sequences (Plasmid2)</li>
   <li>Removal of the presumptive plasmid reads from the rest of the genomic reads for assembly.</li>
 </ol>
+
+<p>### Read data separation</p>
+
+<ul>
+  <li>The nodes of the presumptive plasmids can be selected, and the sequences can be output from Bandage as <code class="language-plaintext highlighter-rouge">.fasta</code> files (<em>e.g.</em> “Bandage_plasmid1.fasta” and “Bandage_plasmid2.fasta”). For a description of the differences between <code class="language-plaintext highlighter-rouge">Bandage</code> nodes and edges, vs. assembly contigs, please see the <a href="https://github.com/rrwick/Bandage/wiki">Bandage Wiki Page</a>.</li>
+  <li>To identify reads corresponding to these plasmid sequences, the Bandage <code class="language-plaintext highlighter-rouge">.fasta</code> outputs were converted into a Blast+ database (v. 2.8.1) <strong><a href="/scripts.md#scr06">Script 6</a></strong>.</li>
+  <li>The complete set of Lactococcus reads <code class="language-plaintext highlighter-rouge">.fastq</code> files was converted to <code class="language-plaintext highlighter-rouge">.fasta</code> files <strong><a href="/scripts.md#scr07">Script 7</a></strong>.</li>
+  <li>The Blast database was queried with the Lactococcus reads <code class="language-plaintext highlighter-rouge">.fasta</code> files outputting the read names that match the plasmid node sequences <strong><a href="/scripts.md#scr08">Script 8</a></strong>.</li>
+  <li>The read names were cleaned up with an <code class="language-plaintext highlighter-rouge">awk</code> script <strong><a href="/scripts.md#scr09">Script 9</a></strong> to make a file with <strong><em>only</em></strong> read names</li>
+  <li>The cleaned read names can then be used directly on the original read <code class="language-plaintext highlighter-rouge">fastq</code> files to output the presumptive plasmid reads <strong><a href="/scripts.md#scr10">Script 10</a></strong> or to combine plasmid read names <strong><a href="/scripts.md#scr11">Script 11</a></strong> and create a <strong><em>genomic</em></strong> read names file by creating a file of <strong>all</strong> read names and removing all presumptive plasmid read names from the file <strong><a href="/scripts.md#scr12">Script 12</a></strong>.</li>
+  <li>Use the genomics read names to extract the genomics fastq reads <strong><a href="scripts.md#scr13">Script 13</a></strong>.</li>
+  <li>Determine the number of genomic reads remaining.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wc -l gLacR1aaabacadfixed.fastq
+14011972 gLacR1aaabacadfixed.fastq  #(3,502,993 reads)
+$ wc -l gLacR2aaabacadfixed.fastq
+14011972 gLacR2aaabacadfixed.fastq  #(3,502,993 reads)
+</code></pre></div></div>
+
+<ul>
+  <li>Reassemble the genome <strong><a href="scripts.md#scr14">Script 14</a></strong>.</li>
+</ul>
+
+<p>### Creating SAM and BAM files</p>
+
+<p>Genome SAM and BAM files were generated using Bowtie2 v. 2.3.4.1</p>
+
+<p>The Bowtie2 process begins with and building and “inspection” of the reference genome, genome followed by alignment 
+ of the reads to the reference genome, generating a <code class="language-plaintext highlighter-rouge">.SAM</code> file. Our reference genome was NCBI accession CP065737.1 throughout. <strong><a href="/scripts.md#15">Script 15</a></strong></p>
+
+<p>The <code class="language-plaintext highlighter-rouge">.SAM</code> file was converted to a BAM file, sorted, and indexed by Samtools v. 1.10 <strong><a href="/scripts.md#16">Spript 16</a></strong> and the <code class="language-plaintext highlighter-rouge">.BAM</code> file was submitted with a scaffolded contig assembly to NCBI as part of BioProject PRJNA731925.</p>
+
+<p>If needed, a consensus sequence of the newly assembled genome can be generated by bcftools/1.8 and samtools/1.10 <strong><a href="/scripts.md#17">Script 17</a></strong></p>
+
+<p>The Plasmid 2 consensus sequence was found by Blast (NCBI) to be over 98% identical to <a href="https://www.ncbi.nlm.nih.gov/nuccore/CP065736.1">CP065736.1</a>, an unnamed 58,335 bp plasmid asociated with our reference strain <a href="https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1">CP065737.1</a></p>
+
+<p>We used CP065736.1 as a reference “genome” to map our Plasmid 2 sequences as a <code class="language-plaintext highlighter-rouge">.SAM</code> files, and similarly to a <code class="language-plaintext highlighter-rouge">.BAM</code> file for submission to NCBI with assemblies under BioProject PRJNA731925.</p>
+
+<p>The Plasmid 1 consensus sequence did not show an overall homology greater than 60% to any plasmids or genomes in the NCBI databases. Because Plasmid 1 had no identifiable reference genome, it was submitted as <code class="language-plaintext highlighter-rouge">.fastq</code> reads to the SRA, and the assembly sequence as contigs rather than scaffolds. The NCBI with BioProject <a href="https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925">PRJNA731925</a>. <a href="/notes.md#ncbi">Note about current samples listed on NCBI.</a></p>
+
+<p>To determine the N50 of the separate molecules, the <code class="language-plaintext highlighter-rouge">quast</code> software <a href="/citations.md">see citations</a> was used to compare assembly results on <code class="language-plaintext highlighter-rouge">.fasta</code> files of the genome reads with plasmids, the genome reads without plasmids, and on each set of plasmid reads separately. 
+ These comparisons used <a href="https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1">CP065737.1</a> as the reference genome.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left">Genome</th>
+      <th style="text-align: left">Plasmid1ab</th>
+      <th style="text-align: left">Plasmid2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">N50</td>
+      <td style="text-align: left">134484</td>
+      <td style="text-align: left">4564</td>
+      <td style="text-align: left">11477</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">GC%</td>
+      <td style="text-align: left">35.22</td>
+      <td style="text-align: left">31.69</td>
+      <td style="text-align: left">34.69</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The QUAST outputs for each assembly are shown below:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Genome stats</th>
+      <th>PrHT3_with_plasmids</th>
+      <th>PrHT3_Plasmid1ab</th>
+      <th>PrHT3_Plasmid2</th>
+      <th>PrHT3_genome_only</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mismatches</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td># N’s</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td># contigs</td>
+      <td>77</td>
+      <td>4</td>
+      <td>7</td>
+      <td>66</td>
+    </tr>
+    <tr>
+      <td># contigs (&gt;= 0 bp)</td>
+      <td>119</td>
+      <td>8</td>
+      <td>13</td>
+      <td>98</td>
+    </tr>
+    <tr>
+      <td># contigs (&gt;= 1000 bp)</td>
+      <td>65</td>
+      <td>4</td>
+      <td>7</td>
+      <td>54</td>
+    </tr>
+    <tr>
+      <td>Largest contig</td>
+      <td>435796</td>
+      <td>4753</td>
+      <td>12568</td>
+      <td>435796</td>
+    </tr>
+    <tr>
+      <td>Total length (&gt;= 0 bp)</td>
+      <td>2518618</td>
+      <td>12772</td>
+      <td>57382</td>
+      <td><strong>2448464</strong></td>
+    </tr>
+    <tr>
+      <td>Total length (&gt;= 1000 bp)</td>
+      <td>2497578</td>
+      <td>11842</td>
+      <td>55552</td>
+      <td>2430184</td>
+    </tr>
+    <tr>
+      <td>N50</td>
+      <td>134484</td>
+      <td>4564</td>
+      <td>11477</td>
+      <td>134484</td>
+    </tr>
+    <tr>
+      <td>N90</td>
+      <td>20903</td>
+      <td>1367</td>
+      <td>5972</td>
+      <td>32769</td>
+    </tr>
+    <tr>
+      <td>L50</td>
+      <td>5</td>
+      <td>2</td>
+      <td>3</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>L90</td>
+      <td>23</td>
+      <td>3</td>
+      <td>5</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>GC (%)</td>
+      <td>35.22</td>
+      <td>31.69</td>
+      <td>34.69</td>
+      <td>35.25</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="/README.md">HOME</a></p>
 
 <p>For <a href="/fig/">figures click here</a></p>
