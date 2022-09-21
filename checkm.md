@@ -26,13 +26,20 @@ NCBI RefSeq database. The known L. lactis genomes included both "complete" and i
 
 The final genomic DNA contigs submitted to NCBI were named:
 - PrHT3-FINAL-genomic-scaffolds.fna
-**This and other contigs/assemblies were included in the CheckM analyses because some of the NCBI genomes contained plasmid DNA**
 
-The final PrHT3 assembly that included the plasmid sequences was named:
+*This and other contigs/assemblies were included in the CheckM analyses because some of the NCBI genomes contained plasmid DNA*
+
+**The final PrHT3 assembly that included the plasmid sequences was named:**
 - PrHT3-with-plasmids.fna  (download these data [HERE](/files/PrHT3-FINAL-genomic-scaffolds.fna))
 
 The `PrHT3-with-plasmids.fna` 
 The other  
 contained plasmid DNA in the assemblies.
 
-The results indicate that PrHT3 is Lactococcus lactis. The phylogenetic analyses are included in the image ![PhyloLac.png](/img/PhyLoLac.png), which is a partial visualization the the phylogenetic tree in Newick format named [concatenated.tre](/files/concatenated.tre). and the summary statistics ("strain heterogeneity") are available as file [bin_stats.analyze.tsv](/files/bin_stats.analyze.tsv). 
+The results indicate that PrHT3 is Lactococcus lactis. The phylogenetic analyses are included in the image below
+
+![PhyloLac.png](/img/PhyLoLac.png)
+
+This image is a partial visualization the the phylogenetic tree in Newick format named [concatenated.tre](/files/concatenated.tre). and the summary statistics ("strain heterogeneity") are available as file [bin_stats.analyze.tsv](/files/bin_stats.analyze.tsv). 
+
+[HOME](/README.md)
