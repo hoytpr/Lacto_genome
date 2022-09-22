@@ -48,11 +48,11 @@ The files used were:
 - GCF_016406265.1_ASM1640626v1_genomic.fna
 - GCF_016921015.1_ASM1692101v1_genomic.fna
 - GCF_020221755.1_ASM2022175v1_genomic.fna
-- GCF_020463755.1_ASM2046375v1_genomic.fna
+- GCF_020463755.1_ASM2046375v1_genomic.fna (the L. lactis reference genome)
 - GCF_023734755.1_ASM2373475v1_genomic.fna
 
 
-**The final genomic DNA contigs submitted to NCBI were named:**
+**The final genomic DNA contigs submitted to NCBI as a BAM alignment were named:**
 - PrHT3-FINAL-genomic-scaffolds.fna 
 
 (download these data [HERE](/files/PrHT3-FINAL-genomic-scaffolds.fna))
