@@ -74,5 +74,17 @@ Bushnell B, Rood J, Singer E (2017) BBMerge – Accurate paired shotgun read mer
 
 https://sourceforge.net/projects/bbmap/
 
+### CheckM
+
+Parks DH, Imelfort M, Skennerton CT, Hugenholtz P, Tyson GW. 2015. CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes. Genome Research, 25: 1043–1055.
+
+https://github.com/Ecogenomics/CheckM/wiki
+
+### Dendroscope
+
+D.H. Huson and C. Scornavacca, Dendroscope 3- An interactive viewer for rooted phylogenetic trees and networks, Systematic Biology (2012); doi: 10.1093/sysbio/sys062
+
+https://software-ab.informatik.uni-tuebingen.de/download/dendroscope3/welcome.html
+
 | [To README Page](/README.md) | [To metadata page](/metadata.md) | [To scripts page](/files/lactoscript-only.sh) |
 | --- | --- | --- |

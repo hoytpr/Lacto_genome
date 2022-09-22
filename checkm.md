@@ -66,13 +66,13 @@ The `PrHT3-with-plasmids.fna` was included in the CheckM analyses because some o
 
 **The results indicate that PrHT3 is Lactococcus lactis.** 
 
-The phylogenetic analyses are included in the image below and shows that identification
-of GCF_016028835.1_ASM1602883v1 for use with read mapping was appropriate because it 
+The phylogenetic analyses are included in the image below and show that identification
+and use of GCF_016028835.1_ASM1602883v1 for read mapping was appropriate because it 
 is the most highly related genome to PrHT3.
 
 ![PhyloLac.png](/img/PhyLoLac.png)
 
-This image is a partial visualization the the phylogenetic tree in Newick format named [concatenated.tre](/files/concatenated.tre). 
+This image is a partial visualization ([using Dendroscope version 3.5.9]) the the phylogenetic tree in Newick format named [concatenated.tre](/files/concatenated.tre). 
 
 The summary statistics ("strain heterogeneity") of CheckM are available as file [bin_stats.analyze.tsv](/files/bin_stats.analyze.tsv). 
 
