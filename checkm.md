@@ -24,8 +24,8 @@ checkm qa omarkers outputs --out_format 2
 ```
 The `data` folder conatined the required pre-determined CheckM marker set `checkm_data_2015_01_16.tar.gz`
 
-The `bins` folder contained the PrHT3 assemblies as contigs, and all Lactococcus lactis 
-genomes (in fasta format) downloaded from NCBI RefSeq.
+The `bins` folder contained the PrHT3 assemblies as contigs, and several 
+relevant Lactococcus lactis genomes (in fasta format) downloaded from NCBI RefSeq.
 
 The `lacout` folder holds analytics of the CheckM software inferred by NCBI
 genomes
