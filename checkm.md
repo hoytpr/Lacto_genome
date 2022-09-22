@@ -72,7 +72,7 @@ is the most highly related genome to PrHT3.
 
 ![PhyloLac.png](/img/PhyLoLac.png)
 
-This image is a partial visualization ([using Dendroscope version 3.5.9]) the the phylogenetic tree in Newick format named [concatenated.tre](/files/concatenated.tre). 
+This image is a partial visualization (using Dendroscope version 3.5.9) the the phylogenetic tree in Newick format named [concatenated.tre](/files/concatenated.tre). 
 
 The summary statistics ("strain heterogeneity") of CheckM are available as file [bin_stats.analyze.tsv](/files/bin_stats.analyze.tsv). 
 
