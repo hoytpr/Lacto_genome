@@ -6,7 +6,7 @@
 #### without ANY warranty whatsoever, not even                    ###
 #### an implied warranty for fitness for a specific application.  ###
 #### You should acquire a copy of the GNU General Public License  ###
-#### which can be obtained at <http:gnu.org/licenses>.             ###
+#### which can be obtained at <http:gnu.org/licenses>.            ###
 #### Author: Peter R. Hoyt                                        ###
 #### © 2021 "Free to use"                                         ###
 #####################################################################
