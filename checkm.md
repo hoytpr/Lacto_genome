@@ -44,7 +44,7 @@ The NCBI genomes insured that Lactococcus lactis makers were well represented to
 The files used were:
 - GCF_000478255.1_ASM47825v2_genomic.fna
 - GCF_004194355.1_ASM419435v1_genomic.fna
-- GCF_016028835.1_ASM1602883v1_genomic.fna
+- GCF_016028835.1_ASM1602883v1_genomic.fna (used to map reads for NCBI)
 - GCF_016406265.1_ASM1640626v1_genomic.fna
 - GCF_016921015.1_ASM1692101v1_genomic.fna
 - GCF_020221755.1_ASM2022175v1_genomic.fna
@@ -66,7 +66,9 @@ The `PrHT3-with-plasmids.fna` was included in the CheckM analyses because some o
 
 **The results indicate that PrHT3 is Lactococcus lactis.** 
 
-The phylogenetic analyses are included in the image below
+The phylogenetic analyses are included in the image below and shows that identification
+of GCF_016028835.1_ASM1602883v1 for use with read mapping was appropriate because it 
+is the most highly related genome to PrHT3.
 
 ![PhyloLac.png](/img/PhyLoLac.png)
 
