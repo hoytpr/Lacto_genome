@@ -90,7 +90,7 @@ QUAST default contig size cutoff = 500 bp.
 | Largest contig | 435796 | 4753 | 12568 | 435796 |
 | Total length (>= 0 bp) | 2518618 | **12772** | **57382** | **2448464** |
 | Total length (>= 1000 bp) | 2497578 | 11842 | 55552 | 2430184 |
-| N50 | 164357\* | 4564 | 11477 | 134484 |
+| N50 | 134484 | 4564 | 11477 | 134484 |
 | N90 | 20903 | 1367 | 5972 | 32769 |
 | L50 | 5 | 2 | 3 | 5 | 
 | L90 | 23 | 3 | 5 | 20 | 
@@ -107,7 +107,6 @@ QUAST default contig size cutoff = 500 bp.
 | GC% | 35.25 | 31.69 | 34.69 |
 | SRA Accesion | SRS9038781 | SRS9038783 | SRS9038781 |
 
-*Updated October 26, 2021
 
 ### Plasmid-1ab: Is it one or two plasmids?
 
