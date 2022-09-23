@@ -31,7 +31,7 @@ Run Number: 210309_NB501827_0133_AHMV5HAFX2
 
 Data Archive Date: 2021-03-10
 
-Archive Location: The University of [Oklahoma OURRstore Regional archives](https://ou.edu/oscer/resources/ourrstore--ou---regional-research-store)
+Archive Location: The University of Oklahoma [OURRstore Regional archives](https://ou.edu/oscer/resources/ourrstore--ou---regional-research-store)
 
 Primary Data Filenames: `L_lactis_S1_LALL_R1_001.fastq.gz` and `L_lactis_S1_LALL_R2_001.fastq.gz`
 
@@ -63,7 +63,7 @@ Preliminary SPAdes assemblies predict at least two plasmids. One set of predicte
 
 ### The scripting and assembly
 
-The Lactococcus genome and plasmid reads were separated and independently re-asembled and mapped to referece sequeces (except for Plasmid1ab).
+The Lactococcus genome and plasmid reads were separated and independently re-assembled and mapped to referece sequences (except for Plasmid1ab).
 
 The script used for these processes was **[lactoscript-only.sh](/files/lactoscript-only.sh)**.
 
@@ -71,7 +71,7 @@ The script used for these processes was **[lactoscript-only.sh](/files/lactoscri
 
 The genome `.BAM` file was submitted with a scaffolded contig assembly to NCBI as part of BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925).
 
-The Plasmid 2 consensus sequence was found by Blast (NCBI) to be over 98% identical to [CP065736.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065736.1), an unnamed 58,335 bp plasmid asociated with our reference strain [CP065737.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1). It was converted to a `.BAM` file for submission by the [Genomics Center](https://genomics.okstate.edu/) to NCBI with its assembly under **BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925)**. 
+The Plasmid 2 consensus sequence was found by Blast (NCBI) to be over 98% identical to [CP065736.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065736.1), an unnamed 58,335 bp plasmid associated with our reference strain [CP065737.1](https://www.ncbi.nlm.nih.gov/nuccore/CP065737.1). It was converted to a `.BAM` file for submission by the [Genomics Center](https://genomics.okstate.edu/) to NCBI with its assembly under **BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925)**. 
  
 The Plasmid 1 (later named Plasmid-1ab) assembly did not show an overall contiguous homology greater than 60% to any plasmids or genomes in the NCBI databases. Because Plasmid 1 had no identifiable reference sequence, it was assembled into contigs and submitted as a contig assembly, and as `.fastq` reads to the SRA. **Plasmid-1ab reads have BioSample Accession number [SAMN19301479](https://www.ncbi.nlm.nih.gov/biosample/19301479) and SRA; [SRS9038783](https://www.ncbi.nlm.nih.gov/sra?LinkName=biosample_sra&from_uid=19301479) on NCBI BioProject [PRJNA731925](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA731925)**
 
