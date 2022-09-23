@@ -55,7 +55,7 @@ The files used were:
 **The final BAM alignment submitted to NCBI also produced contigs named:**
 - PrHT3-FINAL-genomic-scaffolds.fna 
 
-(THese contigs were compared to L. lactis genomes. Download these data [HERE](/files/PrHT3-FINAL-genomic-scaffolds.fna))
+(These contigs were compared to L. lactis genomes. Download these data [HERE](/files/PrHT3-FINAL-genomic-scaffolds.fna))
 
 An unpublshed PrHT3 assembly that included the plasmid sequences was named:
 - PrHT3-with-plasmids.fna  
