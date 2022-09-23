@@ -22,7 +22,7 @@ checkm taxon_set genus Lactococcus omarkers
 checkm analyze -t 12 omarkers bins outputs --ali --nt
 checkm qa omarkers outputs --out_format 2
 ```
-The `data` folder conatined the required pre-determined CheckM marker set `checkm_data_2015_01_16.tar.gz`
+The `data` folder contained the required pre-determined CheckM marker set `checkm_data_2015_01_16.tar.gz`
 
 The `bins` folder contained the PrHT3 assemblies as contigs, and several 
 relevant Lactococcus lactis genomes (in fasta format) downloaded from NCBI RefSeq.
