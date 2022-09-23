@@ -31,7 +31,7 @@ Run Number: 210309_NB501827_0133_AHMV5HAFX2
 
 Data Archive Date: 2021-03-10
 
-Archive Location: The University of Oklahoma OURRstore Regional archives
+Archive Location: The University of [Oklahoma OURRstore Regional archives](https://ou.edu/oscer/resources/ourrstore--ou---regional-research-store)
 
 Primary Data Filenames: `L_lactis_S1_LALL_R1_001.fastq.gz` and `L_lactis_S1_LALL_R2_001.fastq.gz`
 
