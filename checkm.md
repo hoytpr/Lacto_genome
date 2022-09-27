@@ -13,14 +13,15 @@ The commands used to generate these data are:
 ```
 module load anaconda3/2021.05
 checkm data setRoot data
-checkm taxonomy_wf genus Lactococcus bins lacout
-checkm tree -r bins trees
-checkm tree_qa -o 1 -f otrees trees --tab_table
+checkm tree -t 12 -r bins trees
+checkm tree_qa -o 1 trees --tab_table --file otrees
 checkm lineage_set trees omarkers
 checkm taxon_list --rank genus
-checkm taxon_set genus Lactococcus omarkers
+checkm taxon_set genus Lactococcus lactococcus.ms
 checkm analyze -t 12 omarkers bins outputs --ali --nt
-checkm qa omarkers outputs --out_format 2
+checkm analyze -t 12 lactococcus.ms bins outputs2 --ali --nt
+checkm qa -t 12 omarkers outputs --file otrees2 --tab_table
+checkm qa -t 12 lactococcus.ms outputs2 --file lactrees --tab_table
 ```
 The `data` folder contained the required pre-determined CheckM marker set `checkm_data_2015_01_16.tar.gz`
 
