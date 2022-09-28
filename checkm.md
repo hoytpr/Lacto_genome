@@ -77,4 +77,6 @@ This image is a partial visualization (using Dendroscope version 3.5.9) of the p
 
 The summary statistics ("strain heterogeneity") of CheckM are available as file [bin_stats.analyze.tsv](/files/bin_stats.analyze.tsv). 
 
+A summary stats file you can open in Excel is **[Lactococcus_PhRT3_checkm-basic.txt](/files/Lactococcus_PhRT3_checkm-basic.txt)**.
+
 [HOME](/README.md)
