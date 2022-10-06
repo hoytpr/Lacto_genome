@@ -3,7 +3,7 @@
 
 ## Plasmid-1ab
 
-We were unable to resolve whether the high-copy-number plasmid was one plasmid or two plasmids (described below). After assembly, the total length of the submitted contigs was **17,155 bp**. Because the re-assembled plasmid contigs did not appear as contiguous 
+We were unable to resolve whether the high-copy-number plasmid was one plasmid or two plasmids (described below). After assembly, the total length of the submitted contigs was **17,155 bp**. These SPAdes-derived plasmid sequences were extensively used for searching the NCBI databases. Only three regions of 5,230 bp, 1,088 bp, and 608 bp were found as conserved contiguous sequence elements on different assemblies. These sequence elements were also assembled as part of the *L. lactis* genome. Functional annotation of proteins is beyond the scope of this initial genome announcement but genes associated with pathogenicity were represented on Plasmid 1(ab). Because the re-assembled plasmid contigs did not appear as contiguous 
 sequences when using Blast+ on the NCBI "nt" database (homologies that 
 appeared were fragmented) the plasmid was submitted as assembled contigs rather than a
 `.BAM` file. When using 4-million paired end reads, the mean read depth of plasmid-1ab nodes is 381x, while the genome nodes read depth is 54x. This suggests a plasmid copy number of over 7 per cell.
